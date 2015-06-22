@@ -1,0 +1,9 @@
+name = CLAS Module
+description = Provides CLAS standard components
+core = 7.x
+version = 7.x-0.1.5
+files[] = clas_module.module
+files[] = views/clas_module.views_default.inc
+stylesheets[all][] = /css/clas_styles.css
+dependencies[] = asu_degrees
+configure = admin/config/system/clas_module

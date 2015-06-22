@@ -1,0 +1,65 @@
+/*! 
+ * CLAS Innovation Theme Styles
+ */ 
+
+.clas-degrees-view .views-bootstrap-grid-plugin-style .row .col {
+	padding-top:30px;
+	padding-bottom:30px;
+}
+clas-degrees-view
+
+/* CLAS Degree Listing images */
+
+.clas-degrees-view .views-bootstrap-grid-plugin-style .views-field-field-degree-image {
+	float:left;
+	display:block;
+}
+.clas-degrees-view .views-bootstrap-grid-plugin-style .views-field-field-asu-degree:after {
+	content: " ";
+	display: table;
+	clear:both;
+}
+.clas-degrees-view .views-bootstrap-grid-plugin-style .views-field-field-asu-degree {
+	/*margin:45px 0px;*/
+}
+
+@media (max-width: 765px) {
+	.clas-degrees-view .views-bootstrap-grid-plugin-style .views-field-field-degree-image {
+		width:200px;
+		margin: 10px 10px 0 0;
+	}
+}
+@media (max-width: 520px) {
+	.clas-degrees-view .views-bootstrap-grid-plugin-style .views-field-field-degree-image {
+		float:none;
+		width:260px;
+		margin:0;
+	}
+}
+
+
+
+/* Override styles on news and events page */
+
+@media (min-width: 931px) {
+	.pane-asu-news-new-panel-pane-3 .view-asu-news-new .views-row {
+		height:auto;
+		min-height: 380px;
+		padding-bottom: 35px;
+	}
+}
+
+
+/* Gray nav bar additional styles */
+@media (max-width: 1200px) {
+	.tb-megamenu .nav > li > a {
+		padding: 21px 18px !important;
+		font-size:15px !important;
+	}
+}
+@media (max-width: 992px) {
+	.tb-megamenu .nav > li > a {
+		padding: 21px 12px !important;
+		font-size:14px !important;
+	}
+}

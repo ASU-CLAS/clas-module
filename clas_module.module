@@ -1,0 +1,124 @@
+<?php
+
+
+/**
+ * Implements hook_menu().
+ */
+function clas_module_menu() {
+	$items = array();
+
+	$items['admin/config/system/clas_module'] = array(
+		'title' => 'CLAS Module Settings',
+		'description' => 'Configure the CLAS Module',
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('clas_module_form'),
+		'access arguments' => array('access administration pages'),
+		'type' => MENU_NORMAL_ITEM,
+	);
+
+	return $items;
+}
+
+/**
+* Page callback: Current posts settings
+*
+* @see current_posts_menu()
+*/
+function clas_module_form($form, &$form_state) {
+	
+	$form['clas_unit'] = array(
+		'#type' => 'textfield',
+		'#title' => t('CLAS Unit'),
+		'#default_value' => variable_get('clas_unit', ''),
+		'#size' => 80,
+		'#maxlength' => 256,
+		'#description' => t('Limit the degree feed importer to pull only items from this unit.'),
+		'#required' => FALSE,
+	);
+
+	return system_settings_form($form);
+}
+
+
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function clas_module_image_default_styles() {
+  $styles = array();
+
+  // Based on asu_degree_image, slightly smaller
+  $styles['clas_degree_image'] = array(
+    'name' => 'clas_degree_image',
+    'label' => 'CLAS Degree Image',
+    'effects' => array(
+      2 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 220,
+          'height' => 158,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+
+function clas_module_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'clas_module') . '/views',
+    'template path' => drupal_get_path('module', 'clas_module') . '/themes',
+  );
+}
+
+/**
+ * Implements hook_feeds_after_parse().
+ */
+ /*
+function clas_module_feeds_after_parse(FeedsSource $source, FeedsParserResult $result) {
+	foreach (array_keys($result->items) as $item_key => $item_val) {
+		$parsed_data[$key]['DepartmentName'] = $cert;
+	}
+	
+	if (!empty($field)) {
+    return;
+  }
+
+  unset($result->items[$item_key]);
+	
+}
+*/
+
+
+/**
+* Implements hook_feeds_presave().
+*/
+function clas_module_feeds_presave(FeedsSource $source, $entity, $item) {
+	// check that this is fired only for the indented importer
+	if($source->importer->id=='asu_degrees_feed'){
+		// check that we like this name
+		
+		$limitToUnit = variable_get('clas_unit', '');
+		
+		if($limitToUnit != '') {
+			if($item['DepartmentName'] != $limitToUnit){
+				$entity->feeds_item->skip = TRUE;
+				drupal_set_message(t('Wrong Unit, Skipping...'), 'warning');
+			}
+		}
+	}
+}
+
+
+
