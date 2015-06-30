@@ -6,7 +6,14 @@
 	padding-top:30px;
 	padding-bottom:30px;
 }
-clas-degrees-view
+
+
+/* Degree list view switch buttons */
+.degree-switch-buttons {
+    text-align: right;
+    margin-bottom: 12px;
+}
+
 
 /* CLAS Degree Listing images */
 
@@ -36,6 +43,7 @@ clas-degrees-view
 		margin:0;
 	}
 }
+
 
 
 
