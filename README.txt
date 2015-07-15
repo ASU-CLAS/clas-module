@@ -1,5 +1,22 @@
 README.txt
-clas_module-7.x-0.1.5
+clas_module-7.x-1.3
+
+
+
+CHANGELOG
+
+1.3
+	* Added "Cherokee" panels layout
+	* Added code to remove webspark css from megamenu admin page
+
+1.2
+	* Added list style panes for clas_degrees views
+	* Added grid/list view button to view header
+
+
+
+
+INSTRUCTIONS
 
 1.	Install module
 
