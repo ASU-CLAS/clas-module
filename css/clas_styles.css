@@ -45,6 +45,10 @@
 }
 
 
+.file-responsive-image {
+	max-width:100%;
+}
+
 
 
 /* Override styles on news and events page */

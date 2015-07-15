@@ -1,7 +1,7 @@
 <?php
 // Plugin definition
 $plugin = array(
-  'title' => t('cherokee'),
+  'title' => t('Cherokee'),
   'icon' => 'cherokee.png',
   'category' => t('Panopoly'),
   'theme' => 'cherokee',
