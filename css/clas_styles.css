@@ -2,21 +2,93 @@
  * CLAS Innovation Theme Styles
  */ 
 
-.clas-degrees-view .views-bootstrap-grid-plugin-style .row .col {
-	padding-top:30px;
-	padding-bottom:30px;
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ /* needed for asu degree tabs */
+.node-type-asu-degree .ui-widget {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 1.44;
+    color: #2a2a2a;
+    background-color: white;
 }
+.node-type-asu-degree .container .asu-degree-tabs {
+    font-size: 20px;
+    margin-top: 48px;
+}
+.node-type-asu-degree .container .field-name-body, .asu-degree-short-description {
+    font-size: 20px;
+    margin-top: 48px;
+}
+.node-type-asu-degree .asu-degree-grey-section h2 {
+	font-size: 30px;
+}
+ 
+ 
+ 
+ 
+ 
+ 
 
+ /* Make College link in footer white instead of maroon */
+ 
+.megafoot h1 a {
+	color: #a9a9a9;
+    border-bottom: 1px dotted #a9a9a9;
+}
+.megafoot h1 a:hover,
+.megafoot h1 a:focus {
+	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+ 
 
 /* Degree list view switch buttons */
+
 .degree-switch-buttons {
     text-align: right;
     margin-bottom: 12px;
 }
 
 
+
+/* hide menu dropdowns in gray nav with the .nosub class */
+
+.tb-megamenu-item.nosub .tb-megamenu-submenu {
+	display:none !important;
+}
+.tb-megamenu-item.nosub a span.caret {
+	display:none !important;
+}
+.tb-megamenu-item.nosub.dropdown-submenu > a:after {
+	display:none !important;
+}
+
+
+
+/* make sure images in text panes don't extend outside the pane */
+
+.pane-content .field-type-text-long img {
+	max-width:100% !important;
+	height:auto !important;
+}
+.file-responsive-image {
+	max-width:100%;
+}
+
+
 /* CLAS Degree Listing images */
 
+.clas-degrees-view .views-bootstrap-grid-plugin-style .row .col {
+	padding-top:30px;
+	padding-bottom:30px;
+}
 .clas-degrees-view .views-bootstrap-grid-plugin-style .views-field-field-degree-image {
 	float:left;
 	display:block;
@@ -45,11 +117,6 @@
 }
 
 
-.file-responsive-image {
-	max-width:100%;
-}
-
-
 
 /* Override styles on news and events page */
 
@@ -63,6 +130,7 @@
 
 
 /* Gray nav bar additional styles */
+
 @media (max-width: 1200px) {
 	.tb-megamenu .nav > li > a {
 		padding: 21px 18px !important;

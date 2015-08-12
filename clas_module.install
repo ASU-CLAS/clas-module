@@ -1,0 +1,17 @@
+<?php
+
+include_once 'clas_module.field_base.inc';
+include_once 'clas_module.field_instance.inc';
+
+/**
+ * Implements hook_install().
+ */
+function clas_module_install() {
+  node_types_rebuild();
+  foreach (_clas_module_installed_fields() as $field) {
+    field_create_field($field);
+  }
+  foreach (_clas_module_installed_instances() as $fieldinstance) {
+    field_create_instance($fieldinstance);
+  }
+}

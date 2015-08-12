@@ -1,9 +1,13 @@
 name = CLAS Module
 description = Provides CLAS standard components
 core = 7.x
-version = 7.x-1.3
+version = 7.x-1.4
 files[] = clas_module.module
 files[] = views/clas_module.views_default.inc
 stylesheets[all][] = /css/clas_styles.css
 dependencies[] = asu_degrees
+dependencies[] = field_collection
+dependencies[] = quicktabs
+dependencies[] = quicktabs_field_collection
+dependencies[] = text
 configure = admin/config/system/clas_module

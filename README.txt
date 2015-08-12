@@ -1,19 +1,31 @@
 README.txt
-clas_module-7.x-1.3
+clas_module-7.x-1.4
 
 
 
 CHANGELOG
 
+1.4
+	* Added tabs field to asu degrees content type, only applies to grad degrees
+	* Modified CSS to make H2 tags on asu degree page slightly smaller
+	* Now requires 3 additional modules: Quick Tabs, Field Collection, Quick Tabs Field Collection
+
 1.3
 	* Added "Cherokee" panels layout
 	* Added code to remove webspark css from megamenu admin page
+	* Added CSS styles for class "nosub" that can be applied to tb-megamenu parent items to prevent children from displaying in nav bar
 
 1.2
 	* Added list style panes for clas_degrees views
 	* Added grid/list view button to view header
 
-
+1.1
+	* Added filtering of asu degree imports if the Unit field is set in admin/config/system/clas_module
+	
+1.0
+	* Added clas degree views as panes with slightly different styles than asu degree views
+	* Added clas_degree_image style
+	* Added CSS to adjust padding on gray nav bar items as the page condenses
 
 
 INSTRUCTIONS
