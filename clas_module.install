@@ -15,3 +15,16 @@ function clas_module_install() {
     field_create_instance($fieldinstance);
   }
 }
+
+/**
+ * Creates the needed fields on asu_degrees content type
+ */
+function clas_module_update_7101() {
+  node_types_rebuild();
+  foreach (_clas_module_installed_fields() as $field) {
+    field_create_field($field);
+  }
+  foreach (_clas_module_installed_instances() as $fieldinstance) {
+    field_create_instance($fieldinstance);
+  }
+}

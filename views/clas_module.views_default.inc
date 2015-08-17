@@ -1337,7 +1337,7 @@ $handler->display->display_options['filters']['type']['group'] = 1;
 $handler->display->display_options['filters']['field_asu_degree_program_value']['id'] = 'field_asu_degree_program_value';
 $handler->display->display_options['filters']['field_asu_degree_program_value']['table'] = 'field_data_field_asu_degree_program';
 $handler->display->display_options['filters']['field_asu_degree_program_value']['field'] = 'field_asu_degree_program_value';
-$handler->display->display_options['filters']['field_asu_degree_program_value']['value'] = 'grad';
+$handler->display->display_options['filters']['field_asu_degree_program_value']['value'] = 'graduate';
 $handler->display->display_options['filters']['field_asu_degree_program_value']['group'] = 1;
 /* Filter criterion: Content: Department (field_asu_degree_department) */
 $handler->display->display_options['filters']['field_asu_degree_department_value']['id'] = 'field_asu_degree_department_value';
