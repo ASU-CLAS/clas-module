@@ -39,8 +39,8 @@
  /* Make College link in footer white instead of maroon */
  
 .megafoot h1 a {
-	color: #a9a9a9;
-    border-bottom: 1px dotted #a9a9a9;
+	color: #ffb310;
+    border-bottom: 1px dotted #ffb310;
 }
 .megafoot h1 a:hover,
 .megafoot h1 a:focus {
