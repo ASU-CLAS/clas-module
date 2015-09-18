@@ -5,6 +5,9 @@ clas_module-7.x-1.4
 
 CHANGELOG
 
+1.5
+	* Added "Moscone Plus" layout
+
 1.4
 	* Added tabs field to asu degrees content type, only applies to grad degrees
 	* Modified CSS to make H2 tags on asu degree page slightly smaller
