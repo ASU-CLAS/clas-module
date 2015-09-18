@@ -1,0 +1,37 @@
+/**
+ * @file
+ * Moscone Plus panel layout
+**/
+
+.mosconeplus-container {
+  margin-bottom: 1em;
+}
+
+.mosconeplus-sidebar {
+  min-height: 1px;
+  width: 34.043%;
+  float: left;
+}
+
+  .mosconeplus-sidebar-inner {
+    margin-right: 20px;
+  }
+
+.mosconeplus-content {
+  min-height: 1px;
+  width: 65.957%;
+  float: left;
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .mosconeplus-content,
+  .mosconeplus-sidebar {
+    width: 100%;
+    float: none;
+  }
+  
+  .mosconeplus-sidebar-inner {
+    margin-right: 0;
+  }
+}
