@@ -1,9 +1,15 @@
 README.txt
-clas_module-7.x-1.4
-
+clas_module-7.x-1.6
 
 
 CHANGELOG
+
+1.6
+	* Added CLAS Social Icons
+	* Modified Event and News Content Type Layouts
+
+1.5
+	* Added "Moscone Plus" layout
 
 1.4
 	* Added tabs field to asu degrees content type, only applies to grad degrees

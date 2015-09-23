@@ -1,0 +1,22 @@
+name = CLAS Social Buttons
+description = CLAS Social Sharing Buttons 
+package = CLAS
+core = 7.x
+
+; Information added by Drupal.org packaging script on 2015-03-24
+version = "7.x-1.3"
+core = "7.x"
+project = "classocial"
+datestamp = "1427177587"
+
+
+dependencies[] = ctools
+dependencies[] = panelizer
+dependencies[] = uuid_features
+features[ctools][] = panelizer:panelizer:1
+features[features_api][] = api:2
+features[panelizer_defaults][] = node:asu_event:default
+features[panelizer_defaults][] = node:asu_news:default
+features[uuid_node][] = 9dd25b93-d935-4bea-b3da-dbe56e8304bd
+features[uuid_panelizer][] = node:9dd25b93-d935-4bea-b3da-dbe56e8304bd:page_manager
+mtime = 1442957807
