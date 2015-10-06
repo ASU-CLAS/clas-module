@@ -5,8 +5,8 @@ clas_module-7.x-1.6
 CHANGELOG
 
 1.6
-	* Added CLAS Social Icons
-	* Modified Event and News Content Type Layouts
+	* Added CLAS Social Icons Block
+	* Modified Event and News Content Type Layouts to include Social Icons Block
 
 1.5
 	* Added "Moscone Plus" layout

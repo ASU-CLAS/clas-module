@@ -3,12 +3,7 @@ description = CLAS Social Sharing Buttons
 package = CLAS
 core = 7.x
 
-; Information added by Drupal.org packaging script on 2015-03-24
-version = "7.x-1.3"
-core = "7.x"
-project = "classocial"
-datestamp = "1427177587"
-
+version = 7.x-1.0
 
 dependencies[] = ctools
 dependencies[] = panelizer
