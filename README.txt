@@ -67,7 +67,7 @@ INSTRUCTIONS
 Unit names as they appear in the ASU Degree feed XML:
 
 American Indian Studies Program
-Department of Chemistry and Biochemistry
+School of Molecular Sciences
 Department of English
 Department of Military Science
 Department of Physics
