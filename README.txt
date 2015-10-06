@@ -67,7 +67,6 @@ INSTRUCTIONS
 Unit names as they appear in the ASU Degree feed XML:
 
 American Indian Studies Program
-School of Molecular Sciences
 Department of English
 Department of Military Science
 Department of Physics
@@ -81,6 +80,7 @@ School of Human Evolution &amp; Social Change
 School of International Letters and Cultures
 School of Life Sciences
 School of Mathematical and Statistical Sciences
+School of Molecular Sciences
 School of Politics and Global Studies
 School of Social Transformation
 School of Transborder Studies
