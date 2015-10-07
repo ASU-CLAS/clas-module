@@ -1,0 +1,17 @@
+<?php
+
+include_once 'tempdirectory.field_base.inc';
+include_once 'tempdirectory.field_instance.inc';
+
+/**
+ * Implements hook_install().
+ */
+function tempdirectory_install() {
+  node_types_rebuild();
+  foreach (_tempdirectory_installed_fields() as $field) {
+    field_create_field($field);
+  }
+  foreach (_tempdirectory_installed_instances() as $fieldinstance) {
+    field_create_instance($fieldinstance);
+  }
+}

@@ -1,0 +1,39 @@
+name = CLAS Temporary Directory Module
+description = Provides Temp Directory
+core = 7.x
+version = 7.x-1.0
+package = CLAS
+files[] = tempdirectory.module
+files[] = views/tempdirectory.views_default.inc
+
+stylesheets[all][] = /css/tempdirectory_styles.css
+
+dependencies[] = features
+dependencies[] = text
+dependencies[] = asu_directory
+features[features_api][] = api:2
+features[features_override_items][] = panelizer_defaults.node:asu_directory_person:default
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-3b1211d8-63be-4e95-9565-4d0a80e31593|panel
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-3b1211d8-63be-4e95-9565-4d0a80e31593|position
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-437932a2-27c7-4e3e-a4cd-65571a51b7a1|panel
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-437932a2-27c7-4e3e-a4cd-65571a51b7a1|position
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-5d24335b-ec61-41c0-8633-311b8c3de94c|panel
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-5d24335b-ec61-41c0-8633-311b8c3de94c|position
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-948c5269-e52b-497d-b2b0-c80cec1bc80d|panel
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-96aa79cb-765c-49a5-b8f6-b681a344c510|panel
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-a976ab48-61e2-4adf-8a18-0068bfdeb031|panel
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-ba545aa0-27f2-4b90-af8f-92e37e08c96e|panel
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-d141fafa-3a92-4ae7-b559-ef6dd1dfff88|panel
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-fe33082a-787f-4f23-8a75-598722e68f71|panel
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|content|new-fe33082a-787f-4f23-8a75-598722e68f71|position
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|panels|toprow1
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|panels|toprow4col1
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|panels|toprow4col2
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|panels|toprow5col1
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|panels|toprow5col2
+features[features_overrides][] = panelizer_defaults.node:asu_directory_person:default.display|panels|toprow5col3
+features[features_override_items][] = field_instance.node-asu_directory_person-field_asu_directory_image
+features[features_overrides][] = field_instance.node-asu_directory_person-field_asu_directory_image.display|default|settings|image_style
+
+
+

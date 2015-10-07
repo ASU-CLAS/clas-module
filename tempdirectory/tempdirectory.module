@@ -1,0 +1,57 @@
+<?php
+
+include_once 'tempdirectory.features.inc';
+
+/**
+ * Implements hook_views_api().
+ */
+function tempdirectory_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'tempdirectory') . '/views',
+    'template path' => drupal_get_path('module', 'tempdirectory') . '/themes',
+  );
+}
+
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function tempdirectory_image_default_styles() {
+  $styles = array();
+
+  $styles['tempdirectory_image'] = array(
+    'name' => 'tempdirectory_image',
+    'label' => 'CLAS tempdirectory Image',
+    'effects' => array(
+      2 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 180,
+          'height' => 180,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+function tempdirectory_preprocess_field(&$vars) {
+   if ($vars['element']['#field_name'] == 'field_asu_directory_email') {
+	$newstring = '<a href="mailto:'.$vars['items'][0]['#markup'].'" ><i class="fa fa-envelope"></i>&nbsp;'.$vars['items'][0]['#markup'].'</a>';
+	$vars['items'][0]['#markup'] = $newstring;
+   }
+   if ($vars['element']['#field_name'] == 'field_asu_directory_displayname') {
+	$newstring2 = '<h1 class="asu-person-display-name">'.$vars['items'][0]['#markup'].'</h1>';
+	$vars['items'][0]['#markup'] = $newstring2;
+   }
+}

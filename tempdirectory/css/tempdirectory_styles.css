@@ -1,0 +1,64 @@
+
+ 
+ .node-type-asu-directory-person .field-name-field-asu-directory-title {
+	font-weight:bold;
+ }
+ h1.asu-person-display-name {
+	margin-bottom: 20px;
+    font-size: 38px;
+}
+.node-type-asu-directory-person .field-name-field-asu-directory-email {
+    margin-top: 0px !important;
+}
+
+.node-type-asu-directory-person .beast-top-row4-column1 {
+	width:26%;
+}
+.node-type-asu-directory-person .field-name-field-asu-directory-image img {
+	height: 140px;
+    width: 140px;
+}
+.node-type-asu-directory-person #content {
+	border:none !important;
+}
+.node-type-asu-directory-person .field-name-field-asu-directory-url {
+	display:none;
+}
+.node-type-asu-directory-person .field-name-field-asu-directory-deptcode {
+	display:none;
+}
+#quicktabs-asu_directory_profile_tabs .ui-tabs-panel {
+    border-right: none !important;
+}
+#quicktabs-asu_directory_profile_tabs .ui-tabs-nav {
+    border-right: none !important;
+}
+.views-field-field-asu-directory-image img {
+	width: 100px;
+	height: 100px;
+}
+
+.directory-sort a {
+    border-bottom: medium none !important;
+    color: black !important;
+    text-decoration: none !important;
+}
+.directory-sort {
+    background-color: #fff !important;
+}
+.view-clas-asu-directory-people table { 
+    border: none !important;
+}
+.view-clas-asu-directory-people {
+    padding: 15px;
+}
+.view-clas-asu-directory-people td {
+    border-top: 1px solid #b7b7b7;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: none !important;
+}
+.view-clas-asu-directory-people th {
+   border-left: none !important;
+   border-right: none !important;
+   border-bottom: 2px solid #b7b7b7;
