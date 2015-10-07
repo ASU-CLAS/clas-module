@@ -10,54 +10,84 @@
  */
 ?>
 
-<div class="panel-display mosconeplus clearfix container <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display mosconeplus clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
 <!-- Header -->
-  <div class="mosconeplus-container mosconeplus-header clearfix panel-panel row-fluid">
-    <div class="mosconeplus-container-inner mosconeplus-header-inner panel-panel-inner span12">
-      <?php print $content['header']; ?>
-    </div>
-  </div>
+	<section class="section">
+	    <div class="container">
+
+	      <div class="row row-1 mosconeplus-header row-full">
+	        <div class="column col-md-12">
+	          
+			  		<?php print $content['header']; ?>
+			  
+	        </div>
+	      </div>
+
+	    </div>
+	</section>
 <!-- Header -->
 
 <!-- Main Content -->
-  <div class="mosconeplus-container mosconeplus-column-content clearfix row-fluid">
+	<section class="section">
+		<div class="container">
 
-	<!-- Left Side -->
-	    <div class="mosconeplus-column-content-region mosconeplus-sidebar panel-panel span3">
-	      <div class="mosconeplus-column-content-region-inner mosconeplus-sidebar-inner panel-panel-inner">
-	        <?php print $content['sidebar']; ?>
-	      </div>
-	    </div>
-	<!-- Left Side -->    
+  		<div class="mosconeplus-container mosconeplus-column-content clearfix row">
 
-	<!-- Right Side -->
-	    <div class="mosconeplus-column-content-region mosconeplus-content panel-panel span9">
+				<!-- Left Side -->
+				    <div class="mosconeplus-column-content-region mosconeplus-sidebar panel-panel span3">
+				      <div class="mosconeplus-column-content-region-inner mosconeplus-sidebar-inner panel-panel-inner">
 
-	      <div class="mosconeplus-column-content-region-inner mosconeplus-content-inner panel-panel-inner">
-	        <?php print $content['rowone']; ?>
-	      </div>
+				        <?php print $content['sidebar']; ?>
 
-	      <div class="mosconeplus-column-content-region-inner mosconeplus-content-inner panel-panel-inner">
-	        <?php print $content['rowtwo']; ?>
-	      </div>
+				      </div>
+				    </div>
+				<!-- Left Side -->    
 
-	      <div class="mosconeplus-column-content-region-inner mosconeplus-content-inner panel-panel-inner">
-	        <?php print $content['rowthree']; ?>
-	      </div>	      
+				<!-- Right Side -->
+				    <div class="mosconeplus-column-content-region mosconeplus-content panel-panel span9">
 
-	    </div>
-	<!-- Right Side -->    
+				      <div class="mosconeplus-column-content-region-inner mosconeplus-content-inner panel-panel-inner">
 
-  </div>
+				        <?php print $content['rowone']; ?>
+
+				      </div>
+
+				      <div class="mosconeplus-column-content-region-inner mosconeplus-content-inner panel-panel-inner">
+
+				        <?php print $content['rowtwo']; ?>
+
+				      </div>
+
+				      <div class="mosconeplus-column-content-region-inner mosconeplus-content-inner panel-panel-inner">
+
+				        <?php print $content['rowthree']; ?>
+				        
+				      </div>	      
+
+				    </div>
+				<!-- Right Side -->    
+
+  		</div>
+
+			</div>
+		</section>
 <!-- Main Content -->
 
 <!-- Footer -->
-  <div class="mosconeplus-container mosconeplus-footer clearfix panel-panel row-fluid">
-    <div class="mosconeplus-container-inner mosconeplus-footer-inner panel-panel-inner span12">
-      <?php print $content['footer']; ?>
-    </div>
-  </div>
+		<section class="section">
+			<div class="container">
+
+				  <div class="mosconeplus-container mosconeplus-footer clearfix panel-panel row-full">
+				    <div class="mosconeplus-container-inner mosconeplus-footer-inner panel-panel-inner span12">
+
+				      <?php print $content['footer']; ?>
+
+				    </div>
+				  </div>
+
+				</div>
+			</section>
 <!-- Footer -->  
 
 </div><!-- /.mosconeplus -->
