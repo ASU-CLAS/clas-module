@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+ 
+function clas_paragraphs_theme() {
+  return array(
+    'paragraphs_item__clas_cta_footer' => array(
+      'render element' => 'elements',
+      'template' => 'paragraphs-item--clas-cta-footer',
+      'path' => drupal_get_path('module', 'clas_paragraphs') . '/theme',
+    ),
+    'paragraphs_item__clas_two_column_image_left' => array(
+      'render element' => 'elements',
+      'template' => 'paragraphs-item--clas-two-column-image-left',
+      'path' => drupal_get_path('module', 'clas_paragraphs') . '/theme',
+    ),
+    'paragraphs_item__clas_two_column_image_right' => array(
+      'render element' => 'elements',
+      'template' => 'paragraphs-item--clas-two-column-image-right',
+      'path' => drupal_get_path('module', 'clas_paragraphs') . '/theme',
+    ),
+    'paragraphs_item__clas_number_highlighter' => array(
+      'render element' => 'elements',
+      'template' => 'paragraphs-item--clas-number-highlighter',
+      'path' => drupal_get_path('module', 'clas_paragraphs') . '/theme',
+    ),            
+  );
+}

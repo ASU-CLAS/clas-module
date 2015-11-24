@@ -1,0 +1,5 @@
+name = CLAS Paragraphs
+description = CTA Footer, Numbers Highlighter, Image Left - Text Right, Text Left - Image Right
+package = CLAS
+core = 7.x
+version = 7.x-1.0
