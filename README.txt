@@ -1,13 +1,20 @@
 README.txt
-clas_module-7.x-1.6
+clas_module-7.x-1.7
 
-
-CHANGELOG
+1.7
+	* Added CLAS Paragraphs
+		-Call to Action Footer
+		-Photo Left Text Right
+		-Text Left Photo Right
+		-Numbers Highlighter
 
 1.6
 	* Added CLAS Social Icons Block
 	* Modified Event and News Content Type Layouts to include Social Icons Block
 
+1.5.1
+	* Fixed a bug with "Moscone Plus" layout
+	
 1.5
 	* Added "Moscone Plus" layout
 
