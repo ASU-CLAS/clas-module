@@ -1,0 +1,62 @@
+/**
+ * CLAS Edgy Paragraph Gold Icon
+ */
+
+.clas-edgy-paragraph-gold-icon-wrapper .inner-gold-bg-wrapper {
+  background-color: #ffb30f;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 450px;
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.clas-edgy-paragraph-gold-icon-wrapper [class*="col-md-"] {
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+
+@media (min-width: 931px) {
+  .clas-edgy-paragraph-gold-icon-wrapper [class*="col-md-"]:nth-of-type(1) {
+    padding-right: 5px;
+  }
+
+  .clas-edgy-paragraph-gold-icon-wrapper [class*="col-md-"]:nth-of-type(2) {
+    padding-left: 5px;
+  }
+}
+
+.clas-edgy-paragraph-gold-icon-wrapper .field-name-field-paragraph-left-links-gold,
+.clas-edgy-paragraph-gold-icon-wrapper .field-name-field-paragraph-right-links-gold {
+  margin-top: 30px;
+}
+
+.clas-edgy-paragraph-gold-icon-wrapper .field-name-field-paragraph-left-links-gold .field-item,
+.clas-edgy-paragraph-gold-icon-wrapper .field-name-field-paragraph-right-links-gold .field-item {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.clas-edgy-paragraph-gold-icon-wrapper .field-name-field-paragraph-left-links-gold .field-item a,
+.clas-edgy-paragraph-gold-icon-wrapper .field-name-field-paragraph-right-links-gold .field-item a {
+  border-bottom: 1px dotted #000;
+  color: #000;
+}
+
+.gold-bg-icon_option_1 {
+  background-image: url("../images/icon444.png");
+}
+
+.gold-bg-icon_option_2 {
+  background-image: url("../images/icon555.png");
+}
+
+.gold-bg-icon_option_3 {
+  background-image: url("../images/icon666.png");
+}
+
+.gold-bg-icon_option_4 {
+  background-image: url("../images/icon777.png");
+}

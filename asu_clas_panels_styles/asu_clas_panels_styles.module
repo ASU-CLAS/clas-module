@@ -1,0 +1,67 @@
+<?php
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+
+function asu_clas_panels_styles_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implements hook_init().
+ */
+function asu_clas_panels_styles_init() {
+  drupal_add_js(drupal_get_path('module', 'asu_clas_panels_styles') . '/plugins/styles/asu_clas_branding/js/asu_clas_branding.js', array('scope' => 'footer', 'group' => JS_THEME, 'weight' => 99));
+}
+
+/**
+ * Get pane/region styles depending on chosen classes.
+ *
+ * @return array
+ *   Array with prefix and suffix keys.
+ */
+function _asu_clas_panels_styles_get_styles($styles) {
+  if (isset($styles)) {
+    foreach ($styles as $key => $class) {
+      if ($class === 0) {
+        unset($styles[$key]);
+      }
+    }
+   return $styles ? ' ' . implode(' ', $styles) : '';
+  }
+}
+
+/**
+ * Create a region wrapper from provided attributes.
+ *
+ * @return array
+ *   Array with prefix and suffix keys.
+ */
+function _asu_clas_panels_styles_wrapper_wrap($item = array()) {
+  $wrap['prefix'] = NULL;
+  $wrap['suffix'] = NULL;
+  $wrap['attributes'] = NULL;
+
+  if (!empty($item['attributes'])) {
+    $value = $item['attributes'];
+    $wrap['attributes'] .= " class=\"$value\"";
+  }
+
+  $wrap['prefix'] = '<div ' . $wrap['attributes'] . '>';
+
+  $wrap['suffix'] = '</div>';
+
+  if (!empty($item['prefix'])) {
+    $wrap['prefix'] = $item['prefix'];
+  }
+
+  if (!empty($item['suffix'])) {
+    $wrap['suffix'] = $item['suffix'];
+  }
+
+  $wrap['prefix'] = PHP_EOL . $wrap['prefix'];
+
+  $wrap['suffix'] = $wrap['suffix'] . PHP_EOL;
+
+  return $wrap;
+}

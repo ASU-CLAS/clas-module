@@ -1,0 +1,37 @@
+/* Two Column Photos */
+
+.wrap-two-column-photos {
+    width: 100% !important;
+    max-width: none;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.center-container-two-column-photos {
+  height:100%;
+  display: table;
+  width:100%;
+  margin:0;
+}
+
+.center-row-two-column-photos {
+  height:50%;
+  width:100%;
+  display: table-row;
+}
+
+.center-row-two-column-photos > div {
+  height:100%;
+  width:50%;
+  display: table-cell;
+  border:0 solid #eee;
+  color:#fff;
+  vertical-align:middle;
+}
+
+.bg-one-two-column-photos {
+  background:#efefef url('https://dev-cm1.ws.asu.edu/sites/default/files/panoramic_landscape_by_compot_stock_1.jpg');
+}
+.bg-two-two-column-photos {
+  background:#efefef url('https://dev-cm1.ws.asu.edu/sites/default/files/16927823902_6bb66fd5fc_k.jpg');
+}

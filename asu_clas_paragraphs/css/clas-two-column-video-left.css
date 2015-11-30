@@ -1,0 +1,25 @@
+
+
+.row.clas-two-column-video-left-wrapper {
+  background-color: #2a2a2a;
+  color: #fff;
+  background-image: url('../images/sunburst-gray.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  padding: 40px 40px;
+}
+
+.clas-two-column-video-left-wrapper h2 {
+  color: #fff;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.clas-two-column-video-left-wrapper .video-header-link a {
+  color: #ffb130;
+  border-bottom: 1px dotted #ffb130;
+}
+
+.clas-two-column-video-left-wrapper .col-md-6 {
+  padding: 30px 40px;
+}

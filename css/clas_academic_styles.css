@@ -2,14 +2,8 @@
  * CLAS Innovation Theme Styles
  */ 
 
- 
- 
- 
- 
-  
- 
- 
- /* needed for asu degree tabs */
+
+/* needed for asu degree tabs */
 .node-type-asu-degree .ui-widget {
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
@@ -30,14 +24,8 @@
 	font-size: 30px;
 }
  
- 
- 
- 
- 
- 
 
- /* Make College link in footer white instead of maroon */
- 
+/* Make College link in footer gold instead of maroon */
 .megafoot h1 a {
 	color: #ffb310;
     border-bottom: 1px dotted #ffb310;
@@ -56,31 +44,6 @@
     margin-bottom: 12px;
 }
 
-
-
-/* hide menu dropdowns in gray nav with the .nosub class */
-
-.tb-megamenu-item.nosub .tb-megamenu-submenu {
-	display:none !important;
-}
-.tb-megamenu-item.nosub a span.caret {
-	display:none !important;
-}
-.tb-megamenu-item.nosub.dropdown-submenu > a:after {
-	display:none !important;
-}
-
-
-
-/* make sure images in text panes don't extend outside the pane */
-
-.pane-content .field-type-text-long img {
-	max-width:100% !important;
-	height:auto !important;
-}
-.file-responsive-image {
-	max-width:100%;
-}
 
 
 /* CLAS Degree Listing images */
@@ -117,7 +80,6 @@
 }
 
 
-
 /* Override styles on news and events page */
 
 @media (min-width: 931px) {
@@ -128,18 +90,3 @@
 	}
 }
 
-
-/* Gray nav bar additional styles */
-
-@media (max-width: 1200px) {
-	.tb-megamenu .nav > li > a {
-		padding: 21px 18px !important;
-		font-size:15px !important;
-	}
-}
-@media (max-width: 992px) {
-	.tb-megamenu .nav > li > a {
-		padding: 21px 12px !important;
-		font-size:14px !important;
-	}
-}

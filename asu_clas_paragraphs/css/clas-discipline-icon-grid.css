@@ -1,0 +1,89 @@
+
+.clas-discipline-icon-grid {
+  text-align: center;
+  padding: 60px 50px;
+}
+
+.disc-icon-link {
+  min-height: 60px;
+  text-align: left;
+}
+
+.disc-icon-link a {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.disc-icon-link strong {
+  font-size: 20px;
+}
+
+.disc-icon-wrapper {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.clas-discipline-icon-grid .disc-icon-icon {
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 60px 60px;
+  min-height: 60px;
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_1 {
+  background-image: url('../images/icon888.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_2 {
+  background-image: url('../images/icon999.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_3 {
+  background-image: url('../images/icon1111.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_4 {
+  background-image: url('../images/icon2222.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_5 {
+  background-image: url('../images/icon3333.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_6 {
+  background-image: url('../images/icon4444.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_7 {
+  background-image: url('../images/icon5555.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_8 {
+  background-image: url('../images/icon6666.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_9 {
+  background-image: url('../images/icon7777.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_10 {
+  background-image: url('../images/icon8888.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_11 {
+  background-image: url('../images/icon9999.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_12 {
+  background-image: url('../images/icon11111.png');
+}
+
+.disc-btn-callouts {
+  margin-top: 50px;
+}
+
+.disc-btn-callouts a {
+  margin: 0 10px;
+}
+
+

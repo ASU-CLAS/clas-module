@@ -1,6 +1,6 @@
-name = CLAS Social Buttons
-description = CLAS Social Sharing Buttons 
-package = CLAS
+name = ASU CLAS Social Buttons
+description = Provides a Social Sharing Buttons block for use on News and Events pages
+package = ASU CLAS
 core = 7.x
 
 version = 7.x-1.0

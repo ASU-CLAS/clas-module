@@ -1,0 +1,43 @@
+/*
+ * CLAS Two Column Gold Starburst Right
+ */
+
+.two-column-gold-starburst-right {
+  margin-bottom: 30px !important;
+}
+
+@media (min-width: 992px) {
+  .two-column-gold-starburst-right .col-md-8 {
+    padding-right: 90px;
+  }
+}
+
+.two-column-gold-starburst-right-title {
+  font-size: 36px;
+}
+
+.two-column-gold-starburst-right-text {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.65;
+}
+
+.two-column-gold-starburst-right-sidebar {
+  background-color: #ffb130;
+  background-image: url("../images/background-starburst-sidebar.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding: 45px;
+}
+
+.two-column-gold-starburst-right-sidebar-title {
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.two-column-gold-starburst-right-sidebar-text {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.6;
+}

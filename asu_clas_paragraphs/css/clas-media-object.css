@@ -1,0 +1,15 @@
+/**
+ * CLAS Media Object
+ */
+
+.clas-media-object .media-title > h3 {
+  margin-top: 0;
+}
+
+.clas-media-object .media-image {
+  margin-bottom: 1em;
+}
+
+.clas-media-object .media-body {
+  margin-bottom: 1em;
+}

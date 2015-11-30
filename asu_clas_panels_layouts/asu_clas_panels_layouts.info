@@ -1,0 +1,9 @@
+name = ASU CLAS Panels Layouts
+description = "Extends ASU Webspark appearance and functionality for ASU's College of Liberal Arts and Sciences Webspark sites."
+package = ASU CLAS
+core = 7.x
+version = 7.x-1.x
+
+stylesheets[all][] = css/asu_clas_panels_layouts.css
+
+dependencies[] = webspark_featurescustom

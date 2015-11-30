@@ -1,0 +1,33 @@
+/**
+ * CLAS Number Highlighter
+ */
+
+.row-number-highlighter {
+  background-color: #353535;
+  padding: 78px 0 !important;
+}
+
+@media (min-width: 931px) {
+  .row-number-highlighter .col-sm-4 {
+    padding: 0 100px;
+  }
+}
+
+.stat-title {
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.stat-number {
+  color: #ffb130;
+  font-family: "Roboto", sans-serif;
+  font-size: 96px;
+  font-weight: 100;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.stat-text {
+  color: #fff;
+}

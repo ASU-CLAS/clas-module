@@ -1,0 +1,20 @@
+/* Full Background Image Callout */
+
+.full-background-image-callout-text {
+	color: #FFFFFF;
+	margin-top: 10%;
+}
+
+.full-background-image-callout-background {
+
+
+	background-repeat: no-repeat;
+    background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size:cover;
+	/*max-height: 400px;*/
+	min-height: 400px;
+
+}

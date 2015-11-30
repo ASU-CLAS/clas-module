@@ -1,0 +1,27 @@
+/**
+ * ASU CLAS Branding: Panels Styles module.
+ */
+
+.pane-background-black {
+  background-color: #000;
+}
+
+.pane-background-white {
+  background-color: #fff;
+}
+
+.pane-background-midnight {
+  background-color: #2a2a2a;
+}
+
+.pane-background-gray {
+  background-color: #f1f1f1;
+}
+
+.pane-background-charcoal {
+  background-color: #353535;
+}
+
+.pane-background-gold {
+  background-color: #ffb30f;
+}

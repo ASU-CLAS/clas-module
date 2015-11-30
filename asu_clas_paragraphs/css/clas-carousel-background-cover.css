@@ -1,0 +1,74 @@
+
+.carousel-background-cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #2a2a2a;
+  position: relative;
+  text-align: center;
+}
+
+.carousel-background-cover .item {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+}
+
+.carousel-background-cover-direction-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 999;
+}
+
+.carousel-background-cover-direction-nav:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.carousel-background-cover-direction-nav a {
+  border: none;
+  color: #fff;
+  font-size: 0;
+  margin: 0 10px;
+}
+
+.carousel-background-cover-direction-nav a:before,
+.carousel-background-cover-direction-nav a:after {
+  display: inline-block;
+  font-family: "FontAwesome", sans-serif;
+  font-size: 96px;
+}
+
+.carousel-background-cover-prev {
+  float: left;
+  left: 0;
+}
+
+.carousel-background-cover-prev:before {
+  content: "\f104";
+}
+
+.carousel-background-cover-next {
+  float: right;
+  right: 0;
+}
+
+.carousel-background-cover-next:after {
+  content: "\f105";
+}
+
+.background-cover-text {
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  background-color:rgba(255, 255, 255, 0.9);
+  padding: 12px 20px;
+  margin-right: 15%;
+}
