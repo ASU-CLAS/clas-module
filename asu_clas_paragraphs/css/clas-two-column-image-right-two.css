@@ -1,0 +1,9 @@
+.clas-two-column-image-right-option-two-wrapper .pipe-links {
+  line-height: 45px;
+}
+.clas-two-column-image-right-option-two-wrapper .pipe-link {
+  margin: 0 8px;
+}
+.clas-two-column-image-right-option-two-wrapper .pipe-links .pipe-link:first-child {
+  margin-left: 0;
+}

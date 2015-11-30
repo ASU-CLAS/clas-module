@@ -1,0 +1,9 @@
+name = ASU CLAS CSS
+description = "Extends ASU Webspark appearance and functionality; fixes CSS idiosyncrasies."
+package = ASU CLAS
+core = 7.x
+version = 7.x-1.x
+
+stylesheets[all][] = css/asu-clas.css
+
+dependencies[] = webspark_featurescustom

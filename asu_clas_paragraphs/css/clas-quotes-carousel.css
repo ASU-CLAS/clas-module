@@ -1,0 +1,32 @@
+/**
+ * CLAS Quotes Carousel
+ */
+
+.carousel-quotes {
+  background-color: #353535;
+  color: #fff;
+  text-align: left;
+}
+
+.carousel-quote-photo img {
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  max-width: 168px;
+  text-align: center;
+}
+
+.carousel-quote-text {
+  font-size: 26px;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+
+.carousel-quote-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.carousel-quote-title {
+  font-size: 18px;
+}

@@ -1,0 +1,92 @@
+/*! 
+ * CLAS Innovation Theme Styles
+ */ 
+
+
+/* needed for asu degree tabs */
+.node-type-asu-degree .ui-widget {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 1.44;
+    color: #2a2a2a;
+    background-color: white;
+}
+.node-type-asu-degree .container .asu-degree-tabs {
+    font-size: 20px;
+    margin-top: 48px;
+}
+.node-type-asu-degree .container .field-name-body, .asu-degree-short-description {
+    font-size: 20px;
+    margin-top: 48px;
+}
+.node-type-asu-degree .asu-degree-grey-section h2 {
+	font-size: 30px;
+}
+ 
+
+/* Make College link in footer gold instead of maroon */
+.megafoot h1 a {
+	color: #ffb310;
+    border-bottom: 1px dotted #ffb310;
+}
+.megafoot h1 a:hover,
+.megafoot h1 a:focus {
+	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+ 
+
+/* Degree list view switch buttons */
+
+.degree-switch-buttons {
+    text-align: right;
+    margin-bottom: 12px;
+}
+
+
+
+/* CLAS Degree Listing images */
+
+.clas-degrees-view .views-bootstrap-grid-plugin-style .row .col {
+	padding-top:30px;
+	padding-bottom:30px;
+}
+.clas-degrees-view .views-bootstrap-grid-plugin-style .views-field-field-degree-image {
+	float:left;
+	display:block;
+}
+.clas-degrees-view .views-bootstrap-grid-plugin-style .views-field-field-asu-degree:after {
+	content: " ";
+	display: table;
+	clear:both;
+}
+.clas-degrees-view .views-bootstrap-grid-plugin-style .views-field-field-asu-degree {
+	/*margin:45px 0px;*/
+}
+
+@media (max-width: 765px) {
+	.clas-degrees-view .views-bootstrap-grid-plugin-style .views-field-field-degree-image {
+		width:200px;
+		margin: 10px 10px 0 0;
+	}
+}
+@media (max-width: 520px) {
+	.clas-degrees-view .views-bootstrap-grid-plugin-style .views-field-field-degree-image {
+		float:none;
+		width:260px;
+		margin:0;
+	}
+}
+
+
+/* Override styles on news and events page */
+
+@media (min-width: 931px) {
+	.pane-asu-news-new-panel-pane-3 .view-asu-news-new .views-row {
+		height:auto;
+		min-height: 380px;
+		padding-bottom: 35px;
+	}
+}
+

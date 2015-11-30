@@ -1,0 +1,51 @@
+<?php
+/**
+ * @file
+ * ASU CLAS CSS Module
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function clas_css_preprocess_html(&$variables) {
+  $stylesheets = array(
+    '/css/asu-clas.css',
+  );
+
+  foreach ($stylesheets as $stylesheet) {
+    drupal_add_css(drupal_get_path('module', 'clas_css') . $stylesheet, array('group' => CSS_THEME, 'weight' => '99'));
+  }
+}
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ *
+ * Add Bootstrap 'lead' class to TinyMCE.
+ * @link http://getbootstrap.com/css/
+ */
+function clas_css_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['profile']->editor == 'tinymce') {
+    $custom_styles = ';Lead=lead';
+    $custom_styles .= ';Paragraph Intro=intro';
+    $custom_styles .= ';Research Area Discipline=research-area-discipline';
+    $custom_styles .= ';Research Area Faculty=research-area-faculty';
+    $custom_styles .= ';Mark Highlight=mark-highlight';
+
+    $settings['theme_advanced_styles'] .= $custom_styles;
+  }
+
+  return $settings;
+}
+
+
+/**
+ * Implements hook_css_alter().
+ */
+function clas_css_css_alter(&$css) {
+	// disable the webspark megamenu CSS for admin pages because they interfere with tb-megamenu admin pages
+	$args = explode('/', request_path());
+	if($args[0] == "admin") {
+		unset($css[drupal_get_path('module','webspark_megamenu').'/css/webspark_megamenu.css']); 
+	}
+	
+}

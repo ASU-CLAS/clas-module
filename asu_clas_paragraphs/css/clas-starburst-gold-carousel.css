@@ -1,0 +1,47 @@
+/**
+ * CLAS Starburst Gold Carousel
+ */
+
+.carousel-starburst-gold {
+  background-color: #ffb30f;
+  background-image: url("../images/background-starburst-carousel-gold.png");
+  color: #2a2a2a;
+}
+
+.starburst-gold-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.starburst-gold-text {
+  font-size: 36px;
+  font-weight: 200;
+  line-height: 1.44;
+}
+
+/**
+ * Slider Customizations
+ */
+
+.carousel-starburst-gold > .clas-carousel-direction-nav a {
+  color: #000;
+}
+
+.carousel-starburst-gold > .clas-carousel-direction-nav .clas-carousel-prev,
+.carousel-starburst-gold > .clas-carousel-direction-nav .clas-carousel-prev:before {
+  background-image: url("../images/arrow-left-black.svg") !important;
+}
+
+.carousel-starburst-gold > .clas-carousel-direction-nav .clas-carousel-next,
+.carousel-starburst-gold > .clas-carousel-direction-nav .clas-carousel-next:before {
+  background-image: url("../images/arrow-right-black.svg") !important;
+}
+
+.carousel-starburst-gold > .clas-carousel-control-paging a {
+  background-color: #fff;
+}
+
+.carousel-starburst-gold > .clas-carousel-control-paging a[class*="active"] {
+  background-color: #000;
+}

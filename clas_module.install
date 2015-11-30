@@ -3,8 +3,6 @@
 include_once 'clas_module.field_base.inc';
 include_once 'clas_module.field_instance.inc';
 
-include_once 'clas_module.features.inc';
-
 /**
  * Implements hook_install().
  */

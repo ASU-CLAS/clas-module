@@ -1,5 +1,8 @@
 <?php
 
+
+include_once 'clas_paragraphs.features.inc';
+
 /**
  * Implements hook_theme().
  */
@@ -28,3 +31,23 @@ function clas_paragraphs_theme() {
     ),            
   );
 }
+
+/**
+ * Implementation of hook_entity_info_alter().
+ */
+function clas_paragraphs_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['clas_paragraph_pane'] = array(
+    'label' => t('CLAS Paragraph Pane'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'pane icon' => drupal_get_path('module', 'clas_paragraphs') . '/images/icon_clas_paragraph_pane.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_pane_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/clas-paragraph-pane',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+

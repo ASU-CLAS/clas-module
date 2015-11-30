@@ -1,0 +1,267 @@
+/**
+ * CLAS Remove Bootstrap Gutters
+ */
+
+.row.no-gutter,
+.row.no-gutters,
+.row-fluid.no-gutter,
+.row-fluid.no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter > [class*="col-"],
+.row.no-gutters > [class*="col-"],
+.row-fluid.no-gutter > [class*="col-"],
+.row-fluid.no-gutters > [class*="col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/**
+ * CLAS Paragraphs Field Help Text Description
+ */
+
+.field-name-field-clas-paragraph-bundle .description {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+.featherlight-loading .featherlight-content {
+  background-color: #fff;
+  min-height: 70px;
+}
+
+.featherlight-loading .featherlight-close-icon,
+.featherlight-loading .featherlight-previous,
+.featherlight-loading .featherlight-next {
+  display: none;
+}
+
+.featherlight-spinner {
+  -webkit-animation: rotate-plane 1.2s infinite ease-in-out;
+  animation: rotate-plane 1.2s infinite ease-in-out;
+  background-color: #ffb30f;
+  display: block;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30px;
+}
+
+@-webkit-keyframes rotate-plane {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+  }
+}
+
+@keyframes rotate-plane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+
+/**
+ * Featherlight Caption
+ */
+
+.featherlight-caption {
+  background-color: #ccc;
+  font-weight: 500;
+  padding: 4px;
+  position: relative;
+  text-align: center;
+}
+
+/**
+ * CLAS Full-Width Panes
+ */
+
+.pane-bundle-clas-paragraph-pane .pane-content {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/**
+ * CLAS Flexslider
+ */
+
+.clas-carousel {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding: 40px 0;
+  position: relative;
+  text-align: center;
+}
+
+@media (min-width: 931px) {
+  .clas-carousel {
+    padding: 80px 0;
+  }
+
+  .clas-carousel .row {
+    max-width: 860px !important;
+  }
+}
+
+/**
+ * CLAS Flexslider Slide Controls (Direction Nav)
+ */
+
+.clas-carousel-direction-nav {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .clas-carousel-direction-nav {
+    display: block;
+  }
+}
+
+.clas-carousel-direction-nav:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.clas-carousel-direction-nav a {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  border: none;
+  color: #ededed;
+  font-size: 0;
+  height: 54px;
+  margin: 0 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  z-index: 10;
+}
+
+.clas-carousel-direction-nav a:before {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  content: "";
+  display: block;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.25s ease-in-out;
+  width: 100%;
+}
+
+.clas-carousel-direction-nav a:hover:before {
+  opacity: 1;
+}
+
+.clas-carousel-prev {
+  background-image: url("../images/arrow-left.svg");
+  left: 0;
+}
+
+.clas-carousel-prev:before {
+  background-image: url("../images/arrow-left-gold.svg");
+}
+
+.clas-carousel-next {
+  background-image: url("../images/arrow-right.svg");
+  right: 0;
+}
+
+.clas-carousel-next:before {
+  background-image: url("../images/arrow-right-gold.svg");
+}
+
+/**
+* CLAS Flexslider Slide Pager (Control Nav)
+*/
+
+.clas-carousel-control-paging {
+  bottom: 1em;
+  display: block;
+  list-style: none;
+  margin: 0 auto;
+  position: absolute;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .clas-carousel-control-paging {
+    display: none;
+  }
+}
+
+.clas-carousel-control-paging li {
+  display: inline;
+  margin: 4px;
+}
+
+.clas-carousel-control-paging a {
+  background-color: #ededed;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 0;
+  padding: 6px;
+}
+
+.clas-carousel-control-paging a[class*="active"] {
+  background-color: #ffb130;
+}
+
+/**
+ * CLAS "Zig Zag" Layout
+ */
+
+.zig-zag .row {
+  margin-bottom: 30px !important;
+}
+
+@media (min-width: 931px) {
+  .zig-zag .row {
+    padding: 60px 0;
+  }
+
+  .zig-zag .col-sm-6:nth-of-type(0) {
+    padding-right: 300px;
+  }
+}
+
+.zig-zag .zig-zag-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.zig-zag .zig-zag-text {
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+
+.zig-zag .zig-zag-links {
+  margin-bottom: 1em;
+}

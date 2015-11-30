@@ -1,0 +1,153 @@
+/**
+ * Webspark Band-Aid
+ *
+ * Remove egregious padding on Panel Panes set with customized gray background.
+ */
+
+.pane-bundle-clas-paragraph-pane.js-darkgraybg,
+.pane-bundle-clas-paragraph-pane.js-lightgraybg {
+  padding: 0;
+}
+
+/**
+ * Add Bootstrap intro (Lead) paragraph style
+ *
+ * TODO: Move this to clas_module?
+ */
+
+.lead {
+  font-size: 26px;
+  font-weight: 100;
+  line-height: 1.44;
+}
+
+.intro {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+/**
+ * CLAS blockquote style
+ *
+ * TODO: Move this to clas_module?
+ * TODO: Add CSS to TinyMCE WYSIWYG?
+ */
+
+mark,
+.mark-highlight {
+  background-color: #ffb30f;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+/**
+ * CLAS blockquote style
+ *
+ * TODO: Move this to clas_module?
+ * TODO: Add CSS to TinyMCE WYSIWYG?
+ */
+
+.announcement {
+  background-color: #f1f1f1;
+  border-left: none;
+  margin-bottom: 60px;
+  margin-top: 40px;
+  padding: 40px;
+  padding-top: 20px;
+}
+
+.announcement > p:nth-child(1) {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/**
+ * Webspark Accordion Content
+ *
+ * TODO: Report formatting issue to Webspark team
+ * @link https://github.com/ASU/webspark-drops-drupal7/issues
+ */
+
+.ui-tabs .ui-tabs-panel {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ui-tabs .pane-content {
+  color: #2a2a2a;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+/**
+ * CLAS Research Areas
+ *
+ * TODO: Move this to clas_module?
+ * TODO: Add CSS to TinyMCE WYSIWYG?
+ */
+
+.research-area-list,
+.research-area-list [class*="col-"] {
+  margin-bottom: 2em;
+}
+
+.research-area-list h3 {
+  margin-top: 0;
+}
+
+.research-area-list h3 img {
+  position: relative;
+  vertical-align: middle;
+}
+
+.research-area-discipline {
+  color: #a40047;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.research-area-faculty {
+  color: #a40047;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+
+
+/* Moved from previous CLAS module version */
+
+/* Make College link in footer gold instead of maroon */
+.megafoot h1 a {
+	color: #ffb310;
+    border-bottom: 1px dotted #ffb310;
+}
+.megafoot h1 a:hover,
+.megafoot h1 a:focus {
+	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+
+/* hide menu dropdowns in gray nav with the .nosub class */
+.tb-megamenu-item.nosub .tb-megamenu-submenu {
+	display:none !important;
+}
+.tb-megamenu-item.nosub a span.caret {
+	display:none !important;
+}
+.tb-megamenu-item.nosub.dropdown-submenu > a:after {
+	display:none !important;
+}
+
+/* make sure images in text panes don't extend outside the pane */
+.pane-content .field-type-text-long img {
+	max-width:100% !important;
+	height:auto !important;
+}
+.file-responsive-image {
+	max-width:100%;
+}
+
+

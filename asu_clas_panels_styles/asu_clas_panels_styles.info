@@ -1,0 +1,11 @@
+name = ASU CLAS Panels Styles
+description = A CTools Style Plugin that provides custom pane styles.
+core = 7.x
+package = ASU CLAS
+version = 7.x-1.x
+
+stylesheets[all][] = plugins/styles/asu_clas_branding/css/asu_clas_branding.css
+
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = panels

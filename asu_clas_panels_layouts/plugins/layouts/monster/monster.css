@@ -1,0 +1,47 @@
+/**
+ * @file
+ * Monster panel layout.
+ */
+
+.row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+div.panels-ipe-placeholder h3 {
+  width: 100%;
+}
+
+div.panels-ipe-placeholder,
+#panels-dnd-main .section > .container > .row {
+  margin-top: 1.0em;
+}
+
+.page-admin .monster .column {
+  margin-bottom: 1.0em;
+}
+
+.page-admin .monster .section-top #panels-dnd-main div.panel-region,
+.panels-ipe-editing .monster .section-top div.panels-ipe-placeholder {
+  background-color: #ffecee;
+}
+
+.page-admin .monster .section-middle #panels-dnd-main div.panel-region,
+.panels-ipe-editing .monster .section-middle div.panels-ipe-placeholder {
+  background-color: #f8f9dc;
+}
+
+.page-admin .monster .section-bottom #panels-dnd-main div.panel-region,
+.panels-ipe-editing .monster .section-bottom div.panels-ipe-placeholder {
+  background-color: #ecffef;
+}
+
+@media only screen and (max-width: 480px) {
+  .monster-double-column .column,
+  .monster-triple-column .column,
+  .monster-quad-column .column {
+    float: none;
+    width: 100%;
+  }
+}

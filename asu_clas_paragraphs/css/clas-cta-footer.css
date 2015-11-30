@@ -1,0 +1,46 @@
+/**
+ * CLAS Call To Action Footer
+ */
+
+.region-footer .block-asu-clas-paragraphs {
+  background-color: #f1f1f1;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.cta-section {
+  background-color: #f1f1f1;
+  padding: 40px 0;
+}
+
+@media (min-width: 931px) {
+  .cta-section {
+    padding: 110px 0;
+  }
+}
+
+.cta-icon {
+  margin-bottom: 1em;
+}
+
+.cta-title {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.cta-text {
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 2em;
+}
+
+.btn.btn-lg.cta-button {
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 2em;
+  margin-top: 0;
+  padding: 16px 32px;
+}

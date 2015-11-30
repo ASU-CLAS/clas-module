@@ -43,6 +43,7 @@ function clas_module_theme($existing, $type, $theme, $path) {
 /**
  * Implementation of hook_entity_info_alter().
  */
+ /*
 function clas_module_entity_info_alter(&$entity_info) {
   $entity_info['fieldable_panels_pane']['bundles']['clas_paragraph_pane'] = array(
     'label' => t('CLAS Paragraph Pane'),
@@ -58,7 +59,7 @@ function clas_module_entity_info_alter(&$entity_info) {
     ),
   );
 }
-
+*/
 
 /**
  * Implements hook_menu().
@@ -164,7 +165,7 @@ function clas_module_feeds_after_parse(FeedsSource $source, FeedsParserResult $r
 * Implements hook_feeds_presave().
 */
 function clas_module_feeds_presave(FeedsSource $source, $entity, $item) {
-	// check that this is fired only for the indented importer
+	// check that this is fired only for the degree feed importers
 	if($source->importer->id=='asu_degrees_feed'){
 		// check that we like this name
 		
@@ -179,31 +180,6 @@ function clas_module_feeds_presave(FeedsSource $source, $entity, $item) {
 	}
 }
 
-
-/**
- * Implements hook_css_alter().
- */
-function clas_college_module_css_alter(&$css) {
-	// disable the webspark megamenu CSS for admin pages because they interfere with tb-megamenu admin pages
-	$args = explode('/', request_path());
-	if($args[0] == "admin") {
-		unset($css[drupal_get_path('module','webspark_megamenu').'/css/webspark_megamenu.css']); 
-	}
-	
-}
-
-
-/**
- * Implements hook_ctools_plugin_directory().
- *
- * It simply tells panels where to find the .inc files that define various
- * types of plugins: layouts, styles, args, contexts, content_types.
- */
-function clas_module_ctools_plugin_directory($owner, $plugin_type) {
-  if ($owner == 'panels' && $plugin_type == 'layouts') {
-    return "plugins/$plugin_type";
-  }
-}
 
 
 

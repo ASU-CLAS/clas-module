@@ -1,0 +1,49 @@
+<?php
+/**
+ * @file
+ * ASU CLAS Panels Layouts Module
+ */
+
+/**
+ * Get module name.
+ *
+ * Helper function to return name of module.
+ */
+function asu_clas_panels_layouts_get_module_name($display = NULL) {
+  $module_machine_name = basename(__FILE__, '.module');
+
+  $module_info = system_get_info('module', $module_machine_name);
+
+  if ($display == 'machine_name') {
+    $output = $module_machine_name;
+  }
+  else {
+    $output = $module_info['name'];
+  }
+
+  return $output;
+}
+
+/**
+ * Implements hook_help().
+ */
+function asu_clas_panels_layouts_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#asu_clas_panels_layouts":
+      return '<p>' . t('For technical support with this module, please contact <a href="@email">Tyler Kilbourne</a>.', array(
+        '@email' => 'mailto:tyk@asu.edu?subject=' . sprintf(asu_clas_panels_layouts_get_module_name()),
+      )) . '</p>';
+
+      break;
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ *
+ */
+function asu_clas_panels_layouts_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'panels' && $plugin_type == 'layouts') {
+    return "plugins/$plugin_type";
+  }
+}

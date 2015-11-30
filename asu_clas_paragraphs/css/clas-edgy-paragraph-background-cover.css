@@ -1,0 +1,35 @@
+/**
+ * CLAS Edgy Paragraph Background Cover
+ */
+
+.clas-edgy-paragraph-background-cover-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.clas-edgy-paragraph-background-cover-wrapper .col-md-6 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.clas-edgy-paragraph-background-cover-wrapper .cta-text {
+  color: #fff;
+}
+
+.clas-edgy-paragraph-background-cover-wrapper .inner-bg-cover-wrapper {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 160px 80px 0;
+}
+
+.clas-edgy-paragraph-background-cover-wrapper h2 {
+  color: #fff;
+}
+
+.clas-edgy-paragraph-background-cover-wrapper .btn.btn-lg.cta-button {
+  margin-top: 20px;
+}
