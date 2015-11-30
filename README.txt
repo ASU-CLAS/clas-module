@@ -3,10 +3,8 @@ clas_module-7.x-1.7
 
 1.7
 	* Added CLAS Paragraphs
-		-Call to Action Footer
-		-Photo Left Text Right
-		-Text Left Photo Right
-		-Numbers Highlighter
+	* Added CLAS pane styles
+	* Reorganized module structure to seperate academic specific features
 
 1.6
 	* Added CLAS Social Icons Block
