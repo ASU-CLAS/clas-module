@@ -161,6 +161,7 @@ function asu_clas_paragraphs_theme() {
 /**
  * Implementation of hook_entity_info_alter().
  */
+ /*
 function asu_clas_paragraphs_entity_info_alter(&$entity_info) {
   $entity_info['fieldable_panels_pane']['bundles']['clas_paragraph_pane'] = array(
     'label' => t('ASU CLAS Paragraph Pane'),
@@ -176,6 +177,7 @@ function asu_clas_paragraphs_entity_info_alter(&$entity_info) {
     ),
   );
 }
+*/
 
 /**
  * Helper function for taking a group of links and separating them out with a pipe
