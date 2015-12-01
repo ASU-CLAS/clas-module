@@ -1,8 +1,18 @@
 /* Full Background Image Callout */
 
 .full-background-image-callout-text {
+	font-size: 21px;
+	margin-bottom: 35px;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.44;
 	color: #FFFFFF;
-	margin-top: 10%;
+	margin-top: 35px;
+	
+}
+
+.full-background-image-callout-text h2, .full-background-image-callout-text h3, .full-background-image-callout-text h4 {
+	color: #FFFFFF;
 }
 
 .full-background-image-callout-background {
@@ -17,4 +27,14 @@
 	/*max-height: 400px;*/
 	min-height: 400px;
 
+}
+.full-background-image-callout-background h2.pane-title {
+	color: #FFFFFF;
+    padding-top: 35px;
+    text-align: center;
+}
+.full-background-image-callout-background h2.pane-title a {
+	color: #FFFFFF;
+	text-decoration:none;
+	border:none;
 }

@@ -39,9 +39,9 @@
 <div class="row full-background-image-callout" needthisbg="<?php print $photo; ?>">
 
 	<div class="col-md-12 text-center">
-		<h4 class="full-background-image-callout-text">
+		<div class="full-background-image-callout-text">
 			<?php print $content['field_callout_body']['#items'][0]['safe_value']; ?>
-		</h4>
+		</div>
 	</div>
 
 </div>
