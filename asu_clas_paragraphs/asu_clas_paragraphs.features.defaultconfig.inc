@@ -75,7 +75,7 @@ function asu_clas_paragraphs_defaultconfig_field_default_fields() {
           'clas_two_column_image_left' => 'clas_two_column_image_left',
           'clas_two_column_image_right' => 'clas_two_column_image_right',
           'clas_two_column_image_right_2' => 'clas_two_column_image_right_2',
-          'clas_two_column_photos' => 'clas_two_column_photos',
+          'clas_full_bg_image_co' => 'clas_full_bg_image_co',
           'clas_two_column_video_left' => 'clas_two_column_video_left',
         ),
         'bundle_weights' => array(
@@ -94,7 +94,7 @@ function asu_clas_paragraphs_defaultconfig_field_default_fields() {
           'clas_two_column_image_left' => -22,
           'clas_two_column_image_right' => -21,
           'clas_two_column_image_right_2' => -23,
-          'clas_two_column_photos' => -20,
+          'clas_full_bg_image_co' => -20,
           'clas_two_column_video_left' => -19,
         ),
         'default_edit_mode' => 'open',
