@@ -313,7 +313,7 @@ function asu_clas_paragraphs_cta_footer_content_setup($footer_fpid) {
     $paragraph->field_text_2[LANGUAGE_NONE][0]['value'] = 'Learn more about the application process';
     $paragraph->field_button_title_2[LANGUAGE_NONE][0]['value'] = 'Apply Now';
     $paragraph->field_link_2[LANGUAGE_NONE][0]['value'] = '#';
-    $paragraph->field_icon_3[LANGUAGE_NONE][0] = (array)$icon_2_file;
+    $paragraph->field_icon_3[LANGUAGE_NONE][0] = (array)$icon_3_file;
     $paragraph->field_title_3[LANGUAGE_NONE][0]['value'] = 'Graduate Admissions';
     $paragraph->field_text_3[LANGUAGE_NONE][0]['value'] = 'Learn more about the application process';
     $paragraph->field_button_title_3[LANGUAGE_NONE][0]['value'] = 'Apply Now';
