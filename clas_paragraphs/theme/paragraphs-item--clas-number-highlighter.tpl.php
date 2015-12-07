@@ -57,25 +57,27 @@ $field_right_text = $field_right_text[0]['value'];
 
 ?>
 
-<div class="row number-highlighter-row">
+<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
+	<div class="row number-highlighter-row">
 
-	<div class="column col-xs-12 col-sm-12 col-md-12 text-center statbar-title">
-		<h2 class="statbar-title"><?php echo $field_number_highlighter_title; ?></h2>
+		<div class="column col-xs-12 col-sm-12 col-md-12 text-center statbar-title">
+			<h2 class="statbar-title"><?php echo $field_number_highlighter_title; ?></h2>
+		</div>
+
+		<div class="column col-sm-4">
+			<p class="statbar-number"><?php echo $field_left_number; ?></p>
+			<p class="statbar-description"><?php echo $field_left_text; ?></p>
+		</div>
+
+		<div class="column col-sm-4">
+			<p class="statbar-number"><?php echo $field_middle_number; ?></p>
+			<p class="statbar-description"><?php echo $field_middle_text; ?></p>
+		</div>
+
+		<div class="column col-sm-4">
+			<p class="statbar-number"><?php echo $field_right_number; ?></p>
+			<p class="statbar-description"><?php echo $field_right_text; ?></p>
+		</div>
+
 	</div>
-
-	<div class="column col-sm-4">
-		<p class="statbar-number"><?php echo $field_left_number; ?></p>
-		<p class="statbar-description"><?php echo $field_left_text; ?></p>
-	</div>
-
-	<div class="column col-sm-4">
-		<p class="statbar-number"><?php echo $field_middle_number; ?></p>
-		<p class="statbar-description"><?php echo $field_middle_text; ?></p>
-	</div>
-
-	<div class="column col-sm-4">
-		<p class="statbar-number"><?php echo $field_right_number; ?></p>
-		<p class="statbar-description"><?php echo $field_right_text; ?></p>
-	</div>
-
 </div>
