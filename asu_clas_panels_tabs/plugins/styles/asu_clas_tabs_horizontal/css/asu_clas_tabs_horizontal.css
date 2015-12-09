@@ -1,0 +1,89 @@
+/**
+ * Horizontally-Centered Tabs
+ */
+
+.asu-clas-tabs-horizontal {
+  background-color: transparent;
+}
+
+.asu-clas-tabs-horizontal-gray {
+  margin-top: -24px;
+}
+
+.asu-clas-tabs-horizontal .item-list {
+  border-bottom: 1px solid #ddd;
+  float: left;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.asu-clas-tabs-horizontal-gray .item-list {
+  background-color: #f1f1f1;
+}
+
+.asu-clas-tabs-horizontal.ui-tabs .ui-tabs-nav {
+  clear: left;
+  float: left;
+  left: 50%;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.asu-clas-tabs-horizontal.ui-tabs .ui-tabs-nav {
+  border-bottom: none !important;
+}
+
+.asu-clas-tabs-horizontal.ui-tabs .ui-tabs-nav li {
+  display: block;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  right: 50%;
+}
+
+.asu-clas-tabs-horizontal.ui-tabs .ui-tabs-nav li a {
+  border-bottom-color: #ddd !important;
+}
+
+.asu-clas-tabs-horizontal.ui-tabs .ui-tabs-nav li a ins {
+  text-decoration: none;
+}
+
+.asu-clas-tabs-horizontal.ui-tabs .ui-tabs-nav li a span {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .asu-clas-tabs-horizontal.ui-tabs .ui-tabs-nav li a ins {
+    display: none;
+  }
+
+  .asu-clas-tabs-horizontal.ui-tabs .ui-tabs-nav li a span {
+    display: block;
+  }
+}
+
+.asu-clas-tabs-horizontal.ui-tabs .ui-tabs-nav li.ui-state-default a {
+  background-color: #fff;
+  color: #222;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .asu-clas-tabs-horizontal.ui-tabs .ui-tabs-nav li.ui-state-default a {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.asu-clas-tabs-horizontal.ui-tabs .ui-tabs-nav li.ui-state-active a {
+  background-color: #fff;
+  border-bottom-color: #fff !important;
+}

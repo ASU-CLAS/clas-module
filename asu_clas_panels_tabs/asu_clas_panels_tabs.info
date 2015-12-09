@@ -1,0 +1,11 @@
+name = ASU CLAS Panels Tabs
+description = Show Panel Panes in a region as jQuery UI Tabs branded for ASU's CLAS.
+core = 7.x
+package = ASU CLAS
+version = 7.x-1.x
+
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = panels
+
+stylesheets[all][] = plugins/styles/asu_clas_tabs_horizontal/css/asu_clas_tabs_horizontal.css
