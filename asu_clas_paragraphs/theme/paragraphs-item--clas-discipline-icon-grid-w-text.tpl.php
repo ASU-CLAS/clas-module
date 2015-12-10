@@ -31,6 +31,10 @@
 $field_paragraph_title = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_title_dwt_grid');
 $field_paragraph_title = $field_paragraph_title[0]['value'];
 
+//-- Text
+$field_paragraph_text = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_text_dwt_grid');
+$field_paragraph_text = $field_paragraph_text[0]['value'];
+
 //-- Icons
 
 //$field_paragraph_icon_1_icon = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_icon_1_icon');
@@ -44,6 +48,7 @@ $field_paragraph_btn_callouts = field_get_items('paragraphs_item', $variables['p
 
 <div class="clas-discipline-icon-grid-t-text">
   <h2><?php print $field_paragraph_title; ?></h2>
+  <?php print $field_paragraph_text; ?>
 
     <div class="row">
 
@@ -80,5 +85,3 @@ $field_paragraph_btn_callouts = field_get_items('paragraphs_item', $variables['p
   </div>
 
 </div>
-
-

@@ -62,38 +62,40 @@ if (!empty($column_template_type[0]['value'])) {
 
   <div class="row">
 
-    <?php foreach ($content['field_paragraph_icon_callouts'] as $key => $field_collection): ?>
-    <?php if (is_numeric($key) && !empty($field_collection['entity']['field_collection_item'])): ?>
-    <?php $field_icon = current($field_collection['entity']['field_collection_item']); ?>
+    <?php if (!empty($content['field_paragraph_icon_callouts']) && is_array($content['field_paragraph_icon_callouts'])): ?>
+      <?php foreach ($content['field_paragraph_icon_callouts'] as $key => $field_collection): ?>
+        <?php if (is_numeric($key) && !empty($field_collection['entity']['field_collection_item'])): ?>
+          <?php $field_icon = current($field_collection['entity']['field_collection_item']); ?>
 
-  	<div class="<?php print $column_classes; ?> disc-icon-wrapper">
-      <div class="row">
-        <div class="col-xs-6 col-sm-3 col-md-3 disc-icon-icon disc-icon-<?php print $field_icon['field_paragraph_discipline_icon']['#items'][0]['value']; ?>"></div>
-        <div class="col-xs-6 col-sm-9 col-md-9 disc-icon-link">
-          <?php if (!empty($field_icon['field_paragraph_icon_link']['#items'][0]['url']) && !empty($field_icon['field_paragraph_icon_title']['#items'][0]['value'])): ?>
-          <?php print l($field_icon['field_paragraph_icon_title']['#items'][0]['value'], $field_icon['field_paragraph_icon_link']['#items'][0]['url'], array('html' => TRUE)); ?>
-          <?php elseif(!empty($field_icon['field_paragraph_icon_title']['#items'][0]['value'])): ?>
-          <strong><?php print $field_icon['field_paragraph_icon_title']['#items'][0]['value'] ?></strong>
-          <?php endif; ?>
-        </div>
-      </div>
-  	</div>
+          <div class="<?php print $column_classes; ?> disc-icon-wrapper">
+            <div class="row">
+              <div class="col-xs-6 col-sm-3 col-md-3 disc-icon-icon disc-icon-<?php print $field_icon['field_paragraph_discipline_icon']['#items'][0]['value']; ?>">
+              </div>
 
+              <div class="col-xs-6 col-sm-9 col-md-9 disc-icon-link">
+                <?php if (!empty($field_icon['field_paragraph_icon_link']['#items'][0]['url']) && !empty($field_icon['field_paragraph_icon_title']['#items'][0]['value'])): ?>
+                  <?php print l($field_icon['field_paragraph_icon_title']['#items'][0]['value'], $field_icon['field_paragraph_icon_link']['#items'][0]['url'], array('html' => TRUE)); ?>
+                <?php elseif(!empty($field_icon['field_paragraph_icon_title']['#items'][0]['value'])): ?>
+                  <strong><?php print $field_icon['field_paragraph_icon_title']['#items'][0]['value'] ?></strong>
+                <?php endif; ?>
+              </div>
+            </div>
+          </div>
+
+        <?php endif; ?>
+      <?php endforeach; ?>
     <?php endif; ?>
-    <?php endforeach; ?>
 
   </div>
 
   <div class="disc-btn-callouts">
     <?php if (!empty($field_paragraph_btn_callouts)): ?>
-    <?php foreach ($field_paragraph_btn_callouts as $field_paragraph_btn_callout): ?>
-    <a class="btn btn-gold btn-lg btn-cta cta-button cta-button-link" href="<?php echo $field_paragraph_btn_callout['url']; ?>">
-      <?php echo $field_paragraph_btn_callout['title']; ?>
-    </a>
-    <?php endforeach; ?>
+      <?php foreach ($field_paragraph_btn_callouts as $field_paragraph_btn_callout): ?>
+        <a class="btn btn-gold btn-lg btn-cta cta-button cta-button-link" href="<?php echo $field_paragraph_btn_callout['url']; ?>">
+          <?php echo $field_paragraph_btn_callout['title']; ?>
+        </a>
+      <?php endforeach; ?>
     <?php endif; ?>
   </div>
 
 </div>
-
-

@@ -704,6 +704,10 @@ function asu_clas_paragraphs_field_default_field_bases() {
         'icon_option_10' => 'Option 10 (Checkerboard)',
         'icon_option_11' => 'Option 11 (World Globe)',
         'icon_option_12' => 'Option 12 (Split Molecule)',
+        'icon_option_13' => 'Option 13 (Hourglass)',
+        'icon_option_14' => 'Option 14 (Nano Particle)',
+        'icon_option_15' => 'Option 15 (Pinwheel)',
+        'icon_option_16' => 'Option 16 (Planetary Rings)',
       ),
       'allowed_values_function' => '',
     ),
@@ -740,6 +744,10 @@ function asu_clas_paragraphs_field_default_field_bases() {
         'icon_option_10' => 'Option 10 (Checkerboard)',
         'icon_option_11' => 'Option 11 (World Globe)',
         'icon_option_12' => 'Option 12 (Split Molecule)',
+        'icon_option_13' => 'Option 13 (Hourglass)',
+        'icon_option_14' => 'Option 14 (Nano Particle)',
+        'icon_option_15' => 'Option 15 (Pinwheel)',
+        'icon_option_16' => 'Option 16 (Planetary Rings)',
       ),
       'allowed_values_function' => '',
     ),
@@ -1671,6 +1679,33 @@ function asu_clas_paragraphs_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_paragraph_text_disc_grid',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_paragraph_text_dwt_grid'
+  $field_bases['field_paragraph_text_dwt_grid'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_paragraph_text_dwt_grid',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(

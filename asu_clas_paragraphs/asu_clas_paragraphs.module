@@ -159,27 +159,6 @@ function asu_clas_paragraphs_theme() {
 }
 
 /**
- * Implementation of hook_entity_info_alter().
- */
- /*
-function asu_clas_paragraphs_entity_info_alter(&$entity_info) {
-  $entity_info['fieldable_panels_pane']['bundles']['clas_paragraph_pane'] = array(
-    'label' => t('ASU CLAS Paragraph Pane'),
-    'pane category' => t('CLAS'),
-    'pane top level' => FALSE, // set to true to make this show as a top level icon
-    'pane icon' => drupal_get_path('module', 'asu_clas_paragraphs') . '/images/icon_clas_paragraph_pane.png',
-    'admin' => array(
-      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_pane_type',
-      'bundle argument' => 4,
-      // Note that this has all _ replaced with - from the bundle name.
-      'real path' => 'admin/structure/fieldable-panels-panes/manage/clas-paragraph-pane',
-      'access arguments' => array('administer fieldable panels panes'),
-    ),
-  );
-}
-*/
-
-/**
  * Helper function for taking a group of links and separating them out with a pipe
  * @param array $items - an array of items to convert to string separated by pipes
  */
@@ -260,7 +239,7 @@ function asu_clas_paragraphs_cta_footer_setup() {
   $pane_values['bundle'] = 'clas_paragraph_pane';
   $pane_values['uid'] = 1;
   $pane_values['created'] = time();
-  $pane_values['reusable'] = 1;
+  $pane_values['reusable'] = 0;
   $pane_values['admin_title'] = 'clas-cta-footer';
   $pane_values['category'] = 'Reusable Content';
   $pane_values['admin_description'] = 'Auto-created fieldable panel pane for ASU CLAS Global Footer';
@@ -307,17 +286,17 @@ function asu_clas_paragraphs_cta_footer_content_setup($footer_fpid) {
     $paragraph->field_title_1[LANGUAGE_NONE][0]['value'] = 'Degree Programs';
     $paragraph->field_text_1[LANGUAGE_NONE][0]['value'] = 'Undergraduate and Graduate Opportunities';
     $paragraph->field_button_title_1[LANGUAGE_NONE][0]['value'] = 'Explore Degrees';
-    $paragraph->field_link_1[LANGUAGE_NONE][0]['value'] = '#';
+    $paragraph->field_link_1[LANGUAGE_NONE][0]['value'] = '/degrees/undergrad';
     $paragraph->field_icon_2[LANGUAGE_NONE][0] = (array)$icon_2_file;
     $paragraph->field_title_2[LANGUAGE_NONE][0]['value'] = 'Undergraduate Admissions';
     $paragraph->field_text_2[LANGUAGE_NONE][0]['value'] = 'Learn more about the application process';
     $paragraph->field_button_title_2[LANGUAGE_NONE][0]['value'] = 'Apply Now';
-    $paragraph->field_link_2[LANGUAGE_NONE][0]['value'] = '#';
-    $paragraph->field_icon_3[LANGUAGE_NONE][0] = (array)$icon_3_file;
+    $paragraph->field_link_2[LANGUAGE_NONE][0]['value'] = '/admissions/undergraduate-admissions';
+    $paragraph->field_icon_3[LANGUAGE_NONE][0] = (array)$icon_2_file;
     $paragraph->field_title_3[LANGUAGE_NONE][0]['value'] = 'Graduate Admissions';
     $paragraph->field_text_3[LANGUAGE_NONE][0]['value'] = 'Learn more about the application process';
     $paragraph->field_button_title_3[LANGUAGE_NONE][0]['value'] = 'Apply Now';
-    $paragraph->field_link_3[LANGUAGE_NONE][0]['value'] = '#';
+    $paragraph->field_link_3[LANGUAGE_NONE][0]['value'] = '/admissions/graduate-admissions';
     $paragraph->is_new = TRUE;
     $paragraph->setHostEntity('fieldable_panels_pane', $pane);
     $paragraph->save();
@@ -325,5 +304,7 @@ function asu_clas_paragraphs_cta_footer_content_setup($footer_fpid) {
     variable_set('asu_class_footer_content_installed', 1);
 
     watchdog('asu_clas_paragraphs', 'Footer content has been installed.');
+
+    drupal_set_message(t(sprintf('ASU CLAS Global Footer block installed. <a href="%s">Edit the Fieldable Panels Pane</a> to make customizations.', '/admin/structure/fieldable-panels-panes/view/1/edit')), 'status');
   }
 }

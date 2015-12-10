@@ -25,7 +25,8 @@
 
 .clas-discipline-icon-grid .disc-icon-icon {
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right center;
+  background-size: 60px 60px;
   min-height: 60px;
 }
 
@@ -75,6 +76,22 @@
 
 .clas-discipline-icon-grid .disc-icon-icon_option_12 {
   background-image: url('../images/icon11111.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_13 {
+  background-image: url('../images/icon-option-13.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_14 {
+  background-image: url('../images/icon-option-14.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_15 {
+  background-image: url('../images/icon-option-15.png');
+}
+
+.clas-discipline-icon-grid .disc-icon-icon_option_16 {
+  background-image: url('../images/icon-option-16.png');
 }
 
 .disc-btn-callouts {
