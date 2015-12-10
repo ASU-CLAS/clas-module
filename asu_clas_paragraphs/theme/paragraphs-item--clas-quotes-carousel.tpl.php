@@ -30,7 +30,7 @@
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
 
-    <div class="clas-carousel carousel-quotes">
+    <div class="carousel-quotes">
       <div class="row carousel-quotes-slider clearfix">
 
         <?php foreach ($content['field_carousel_collection'] as $key => $field_collection): ?>

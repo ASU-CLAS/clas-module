@@ -6,6 +6,16 @@
   background-color: #353535;
   color: #fff;
   text-align: left;
+  padding: 80px 0;
+  position: relative;
+}
+
+.carousel-quotes .clas-carousel-next {
+  right: 20px;
+}
+
+.carousel-quotes .clas-carousel-prev {
+  left: 20px;
 }
 
 .carousel-quote-photo img {
