@@ -203,6 +203,11 @@
   background-image: url("../images/arrow-right-gold.svg");
 }
 
+.clas-carousel-disabled {
+  cursor: not-allowed;
+  opacity: 0.05;
+}
+
 /**
 * CLAS Flexslider Slide Pager (Control Nav)
 */
