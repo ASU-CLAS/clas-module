@@ -87,6 +87,8 @@ if (!empty($column_template_type[0]['value'])) {
       <?php endforeach; ?>
     <?php endif; ?>
 
+	<br class="clear" />
+
     <div class="disc-btn-callouts">
       <?php if (!empty($field_paragraph_btn_callouts)): ?>
         <?php foreach ($field_paragraph_btn_callouts as $field_paragraph_btn_callout): ?>

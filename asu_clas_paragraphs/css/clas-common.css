@@ -92,6 +92,15 @@
  * CLAS Full-Width Panes
  */
 
+.clear {
+  clear: both;
+  display: block;
+}
+
+/**
+ * CLAS Full-Width Panes
+ */
+
 .pane-bundle-clas-paragraph-pane .pane-content {
   max-width: 100% !important;
   padding-left: 0 !important;
