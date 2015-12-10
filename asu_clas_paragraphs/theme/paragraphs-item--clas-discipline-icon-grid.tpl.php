@@ -55,12 +55,13 @@ if (!empty($column_template_type[0]['value'])) {
 
 ?>
 
-<div class="clas-discipline-icon-grid">
-  <h2><?php print $field_paragraph_title; ?></h2>
-
-  <?php print $field_paragraph_text; ?>
+<div class="container clas-discipline-icon-grid">
 
   <div class="row">
+
+    <h2><?php print $field_paragraph_title; ?></h2>
+
+    <?php print $field_paragraph_text; ?>
 
     <?php if (!empty($content['field_paragraph_icon_callouts']) && is_array($content['field_paragraph_icon_callouts'])): ?>
       <?php foreach ($content['field_paragraph_icon_callouts'] as $key => $field_collection): ?>
@@ -86,16 +87,16 @@ if (!empty($column_template_type[0]['value'])) {
       <?php endforeach; ?>
     <?php endif; ?>
 
-  </div>
+    <div class="disc-btn-callouts">
+      <?php if (!empty($field_paragraph_btn_callouts)): ?>
+        <?php foreach ($field_paragraph_btn_callouts as $field_paragraph_btn_callout): ?>
+          <a class="btn btn-gold btn-lg btn-cta cta-button cta-button-link" href="<?php echo $field_paragraph_btn_callout['url']; ?>">
+            <?php echo $field_paragraph_btn_callout['title']; ?>
+          </a>
+        <?php endforeach; ?>
+      <?php endif; ?>
+    </div>
 
-  <div class="disc-btn-callouts">
-    <?php if (!empty($field_paragraph_btn_callouts)): ?>
-      <?php foreach ($field_paragraph_btn_callouts as $field_paragraph_btn_callout): ?>
-        <a class="btn btn-gold btn-lg btn-cta cta-button cta-button-link" href="<?php echo $field_paragraph_btn_callout['url']; ?>">
-          <?php echo $field_paragraph_btn_callout['title']; ?>
-        </a>
-      <?php endforeach; ?>
-    <?php endif; ?>
   </div>
 
 </div>

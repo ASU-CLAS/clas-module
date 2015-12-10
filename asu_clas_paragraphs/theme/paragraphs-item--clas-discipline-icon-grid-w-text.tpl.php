@@ -46,11 +46,11 @@ $field_paragraph_btn_callouts = field_get_items('paragraphs_item', $variables['p
 
 ?>
 
-<div class="clas-discipline-icon-grid-t-text">
-  <h2><?php print $field_paragraph_title; ?></h2>
-  <?php print $field_paragraph_text; ?>
+<div class="container clas-discipline-icon-grid-t-text">
 
-    <div class="row">
+  <div class="row">
+    <h2><?php print $field_paragraph_title; ?></h2>
+    <?php print $field_paragraph_text; ?>
 
     <?php foreach ($content['field_paragraph_icon_dw_callouts'] as $key => $field_collection): ?>
     <?php if (is_numeric($key) && !empty($field_collection['entity']['field_collection_item'])): ?>
@@ -79,8 +79,6 @@ $field_paragraph_btn_callouts = field_get_items('paragraphs_item', $variables['p
 
     <?php endif; ?>
     <?php endforeach; ?>
-
-    </div>
 
   </div>
 
