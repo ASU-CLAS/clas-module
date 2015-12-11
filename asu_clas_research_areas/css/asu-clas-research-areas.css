@@ -1,0 +1,60 @@
+/**
+ * CLAS Remove Bootstrap Gutters
+ */
+
+.row.no-gutter,
+.row.no-gutters,
+.row-fluid.no-gutter,
+.row-fluid.no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter > [class*="col-"],
+.row.no-gutters > [class*="col-"],
+.row-fluid.no-gutter > [class*="col-"],
+.row-fluid.no-gutters > [class*="col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/**
+ * Research Areas Vertical List
+ */
+
+.research-area-list-vertical .views-row {
+  margin-bottom: 1em !important;
+}
+
+.research-area-list-vertical .research-area-image {
+  max-width: 100%;
+}
+
+.research-area-list-vertical .research-area-name {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.research-area-list-vertical .research-area-description {
+  font-size: 14px;
+}
+
+/**
+ * Research Areas Horizontal List
+ */
+
+.research-area-grid-horizontal .row {
+  margin-bottom: 1em !important;
+}
+
+.research-area-grid-horizontal .research-area-image {
+  max-width: 100%;
+}
+
+.research-area-grid-horizontal .research-area-name {
+  margin-bottom: 0;
+}
+
+.research-area-grid-horizontal .research-area-description {
+  font-size: 14px;
+}

@@ -1,0 +1,11 @@
+name = ASU CLAS Research Areas
+description = Creates default Research Area taxonomy and populates with terms
+core = 7.x
+package = ASU CLAS
+version = 7.x-1.0
+project = asu_clas_research_areas
+
+; Dependencies
+dependencies[] = taxonomy
+dependencies[] = views
+dependencies[] = views_bootstrap
