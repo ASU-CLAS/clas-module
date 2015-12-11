@@ -54,7 +54,7 @@ $field_paragraph_list_items = isset($content['field_sb_list_item']) ? $content['
 /**
  * List Text
  */
-$field_paragraph_list_text = isset($content['field_sb_list_text']) ? $content['field_sb_list_item'] : NULL;
+$field_paragraph_list_text = isset($content['field_sb_list_text']) ? $content['field_sb_list_text'] : NULL;
 ?>
 
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
