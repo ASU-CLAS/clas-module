@@ -93,78 +93,323 @@ function _asu_clas_research_areas_add_taxonomy_terms() {
 
   // School of Molecular Sciences
   $chemistry = array(
-    'Energy & Sustainability',
-    'Biosphere and Geologic Systems',
-    'Molecular Basis of Health',
-    'Fundamental Molecular Science',
-    'Materials and Nanoscience',
-    'Structure and Function of Biosystems',
-    'Chemical Biology',
-    'Molecular Education and Outreach',
-    'Materials and Nanoscience',
+    0 => array(
+      'name' => 'Energy & Sustainability',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'icon-09.png',
+    ),
+    1 => array(
+      'name' => 'Biosphere and Geologic Systems',
+      'description' => NULL,
+      'weight' => 2,
+      'icon' => 'icon-11.png',
+    ),
+    2 => array(
+      'name' => 'Molecular Basis of Health',
+      'description' => NULL,
+      'weight' => 4,
+      'icon' => 'icon-05.png',
+    ),
+    3 => array(
+      'name' => 'Fundamental Molecular Science',
+      'description' => NULL,
+      'weight' => 6,
+      'icon' => 'icon-07.png',
+    ),
+    4 => array(
+      'name' => 'Materials and Nanoscience',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'icon-10.png',
+    ),
+    5 => array(
+      'name' => 'Structure and Function of Biosystems',
+      'description' => NULL,
+      'weight' => 3,
+      'icon' => 'icon-12.png',
+    ),
+    6 => array(
+      'name' => 'Chemical Biology',
+      'description' => NULL,
+      'weight' => 5,
+      'icon' => 'icon-06.png',
+    ),
+    7 => array(
+      'name' => 'Molecular Education and Outreach',
+      'description' => NULL,
+      'weight' => 7,
+      'icon' => 'icon-08.png',
+    ),
+    8 => array(
+      'name' => 'Materials and Nanoscience',
+      'description' => NULL,
+      'weight' => 1,
+      'icon' => 'icon-10.png',
+    ),
   );
 
   // Department of English
   $english = array(
-    'Textual Studies',
-    'Historical Studies',
-    'Transdisciplinary Studies',
-    'Creative Studies',
-    'Pedagogical Studies',
+    1 => array(
+      'name' => 'Textual Studies',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'icon-17.png',
+    ),
+    2 => array(
+      'name' => 'Historical Studies',
+      'description' => NULL,
+      'weight' => 1,
+      'icon' => 'icon-18.png',
+    ),
+    3 => array(
+      'name' => 'Transdisciplinary Studies',
+      'description' => NULL,
+      'weight' => 2,
+      'icon' => 'icon-19.png',
+    ),
+    4 => array(
+      'name' => 'Creative Studies',
+      'description' => NULL,
+      'weight' => 3,
+      'icon' => 'icon-20.png',
+    ),
+    5 => array(
+      'name' => 'Pedagogical Studies',
+      'description' => NULL,
+      'weight' => 4,
+      'icon' => 'icon-21.png',
+    ),
   );
 
   // School of Mathematical and Statistical Sciences
   $math = array(
-    'Applied Mathematics',
-    'Theoretical Mathematics',
-    'Mathematics Education',
-    'Statistics',
+    1 => array(
+      'name' => 'Applied Mathematics',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'icon-01.png',
+    ),
+    2 => array(
+      'name' => 'Theoretical Mathematics',
+      'description' => NULL,
+      'weight' => 1,
+      'icon' => 'icon-02.png',
+    ),
+    3 => array(
+      'name' => 'Mathematics Education',
+      'description' => NULL,
+      'weight' => 2,
+      'icon' => 'icon-03.png',
+    ),
+    4 => array(
+      'name' => 'Statistics',
+      'description' => NULL,
+      'weight' => 3,
+      'icon' => 'icon-04.png',
+    ),
   );
 
   // Department of Physics
   $physics = array(
-    'Biophysics & Biological Physics',
-    'Cosmology, Particle and Astrophysics',
-    'Nanoscience and Materials Physics',
-    'Physics and Society',
+    1 => array(
+      'name' => 'Biophysics & Biological Physics',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'icon-13.png',
+    ),
+    2 => array(
+      'name' => 'Cosmology, Particle and Astrophysics',
+      'description' => NULL,
+      'weight' => 1,
+      'icon' => 'icon-15.png',
+    ),
+    3 => array(
+      'name' => 'Nanoscience and Materials Physics',
+      'description' => NULL,
+      'weight' => 2,
+      'icon' => 'icon-14.png',
+    ),
+    4 => array(
+      'name' => 'Physics and Society',
+      'description' => NULL,
+      'weight' => 3,
+      'icon' => 'icon-16.png',
+    ),
   );
 
   // Department of Psychology
   $psychology = array(
-    'Behavioral Neuroscience',
-    'Clinical Psychology',
-    'Cognitive Science',
-    'Developmental Psychology',
-    'Quantitative Psychology',
-    'Social Psychology',
+    1 => array(
+      'name' => 'Behavioral Neuroscience',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    2 => array(
+      'name' => 'Clinical Psychology',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    3 => array(
+      'name' => 'Cognitive Science',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    4 => array(
+      'name' => 'Developmental Psychology',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    5 => array(
+      'name' => 'Quantitative Psychology',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    6 => array(
+      'name' => 'Social Psychology',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
   );
 
   // School of Geographical Sciences and Urban Planning
   $sgsup = array(
-    'Computational Spatial Science',
-    'Place, Identities and Culture',
-    'Earth Systems & Climate Science',
-    'Sustainability Science & Studies',
-    'Community Development for Social Equity',
-    'Spatial and Economic Analysis',
-    'Transportation Planning & Policy',
-    'Urban Design & Sustainable Cities',
+    1 => array(
+      'name' => 'Computational Spatial Science',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    2 => array(
+      'name' => 'Place, Identities and Culture',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    3 => array(
+      'name' => 'Earth Systems & Climate Science',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    4 => array(
+      'name' => 'Sustainability Science & Studies',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    5 => array(
+      'name' => 'Community Development for Social Equity',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    6 => array(
+      'name' => 'Spatial and Economic Analysis',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    7 => array(
+      'name' => 'Transportation Planning & Policy',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    8 => array(
+      'name' => 'Urban Design & Sustainable Cities',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
   );
 
   // School of Human Evolution & Social Change
   $shesc = array(
-    'Applied Mathematics for the Life and Social Sciences',
-    'Archaeology',
-    'Bioarchaeology',
-    'Environmental Social Science',
-    'Evolutionary Anthropology',
-    'Global Health & Medical Anthropology',
-    'Paleoanthropology',
-    'Sociocultural Anthropology',
+    0 => array(
+      'name' => 'Applied Mathematics for the Life and Social Sciences',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    1 => array(
+      'name' => 'Archaeology',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    2 => array(
+      'name' => 'Bioarchaeology',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    3 => array(
+      'name' => 'Environmental Social Science',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    4 => array(
+      'name' => 'Evolutionary Anthropology',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    5 => array(
+      'name' => 'Global Health & Medical Anthropology',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    6 => array(
+      'name' => 'Paleoanthropology',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    7 => array(
+      'name' => 'Sociocultural Anthropology',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'placeholder-50x50.png',
+    ),
   );
 
   // School of International Letters and Cultures
-  $silc = array();
+  $silc = array(
+    1 => array(
+      'name' => 'Foreign Language Immersion',
+      'description' => NULL,
+      'weight' => 0,
+      'icon' => 'icon-22.png',
+    ),
+    2 => array(
+      'name' => 'Stronger Community Relationships',
+      'description' => NULL,
+      'weight' => 1,
+      'icon' => 'icon-25.png',
+    ),
+    3 => array(
+      'name' => 'Transformative Experiences',
+      'description' => NULL,
+      'weight' => 2,
+      'icon' => 'icon-24.png',
+    ),
+    4 => array(
+      'name' => 'Greater Cultural Awareness',
+      'description' => NULL,
+      'weight' => 3,
+      'icon' => 'icon-23.png',
+    ),
+  );
 
   switch($clas_unit) {
     case 'School of Molecular Sciences':
@@ -198,7 +443,9 @@ function _asu_clas_research_areas_add_taxonomy_terms() {
   _asu_clas_research_areas_add_terms($term_names, 'Research Area', ASU_CLAS_TAXONOMY_NAME);
 }
 
-// Enable the /taxonomy/term/%taxonomy_term Page Manager plugin.
+/**
+ * Enable the /taxonomy/term/%taxonomy_term Page Manager plugin.
+ */
 function _asu_clas_research_areas_panelizer_setup() {
   variable_set('page_manager_term_view_disabled', FALSE);
 }
@@ -219,17 +466,25 @@ function _asu_clas_research_areas_add_terms($term_names, $vocabulary_name, $voca
   }
 
   if (is_object($vocab) && property_exists($vocab, 'vid') && $vocab->vid > 0) {
-
     foreach ($term_names as $term_name) {
-      $term = taxonomy_get_term_by_name($term_name, $vocabulary_machine_name);
+      $term = taxonomy_get_term_by_name($term_name['name'], $vocabulary_machine_name);
 
       if (count($term) == 0) {
+        $icon = file_get_contents(drupal_get_path('module', 'asu_clas_research_areas') . '/images/' . $term_name['icon']);
+        $icon_object = file_save_data($icon, 'public://' . $term_name['icon'], FILE_EXISTS_RENAME);
+
         $term = (object) array(
-          'name' => $term_name,
           'vid' => $vocab->vid,
+          'name' => $term_name['name'],
+          'description' => $term_name['description'],
+          'field_research_area_image' => array(
+            LANGUAGE_NONE => array(
+              0 => (array) $icon_object,
+            ),
+          ),
         );
 
-        taxonomy_term_save($term);
+        $status = taxonomy_term_save($term);
       }
     }
   }
