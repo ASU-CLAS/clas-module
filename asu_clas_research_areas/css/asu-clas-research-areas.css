@@ -29,8 +29,14 @@
  * Research Areas Vertical List
  */
 
+.research-area-list-vertical {
+}
+
 .research-area-list-vertical .views-row {
   margin-bottom: 1em !important;
+}
+
+.research-area-grid-horizontal .research-area-term {
 }
 
 .research-area-list-vertical .research-area-image {
@@ -38,6 +44,7 @@
 }
 
 .research-area-list-vertical .research-area-name {
+  font-weight: bold;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -50,16 +57,25 @@
  * Research Areas Horizontal List
  */
 
+.research-area-grid-horizontal {
+}
+
 .research-area-grid-horizontal .row {
   margin-bottom: 1em !important;
 }
 
+.research-area-grid-horizontal .research-area-term {
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
 .research-area-grid-horizontal .research-area-image {
-  max-width: 100%;
 }
 
 .research-area-grid-horizontal .research-area-name {
+  font-weight: bold;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .research-area-grid-horizontal .research-area-description {

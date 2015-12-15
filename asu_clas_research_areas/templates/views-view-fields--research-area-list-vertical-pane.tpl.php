@@ -25,7 +25,7 @@
  */
 ?>
 
-<div class="row no-gutters">
+<div class="row no-gutters research-area-term">
   <div class="col-md-1">
     <?php if (!empty($fields['field_research_area_image']->content)): ?>
       <?php print $fields['field_research_area_image']->content; ?>
