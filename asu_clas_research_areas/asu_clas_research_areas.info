@@ -6,6 +6,17 @@ version = 7.x-1.0
 project = asu_clas_research_areas
 
 ; Dependencies
+dependencies[] = asu_clas_panels_layouts
+dependencies[] = panelizer
 dependencies[] = taxonomy
 dependencies[] = views
 dependencies[] = views_bootstrap
+
+; Features
+features[ctools][] = page_manager:pages_default:1
+features[defaultconfig][] = default_page_manager_handlers:term_view_panelizer_node
+features[defaultconfig][] = panelizer_defaults:taxonomy_term:research_area:default
+features[defaultconfig][] = strongarm:panelizer_defaults_taxonomy_term_research_area
+features[features_api][] = api:2
+features[page_manager_handlers][] = term_view_panelizer_node
+mtime = 1450132913

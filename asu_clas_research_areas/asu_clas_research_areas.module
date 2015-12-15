@@ -21,6 +21,27 @@ function asu_clas_research_areas_views_api() {
   );
 }
 
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function asu_clas_research_areas_ctools_plugin_api($module, $api) {
+  if ($module == 'panels' && $api == 'pipelines') {
+    return array('version' => 1);
+  }
+
+  if ($module == 'panelizer' && $api == 'panelizer') {
+    return array('version' => 1);
+  }
+
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
+}
+
+/**
+ * Include Views exports.
+ */
+
 function asu_clas_research_areas_views_default_views() {
   $files = file_scan_directory(drupal_get_path('module', 'asu_clas_research_areas') . '/views', '/.*\.inc$/');
 
@@ -65,4 +86,45 @@ function asu_clas_research_areas_image_default_styles() {
   );
 
   return $styles;
+}
+
+/**
+ * Implements hook_default_page_manager_handlers().
+ */
+function asu_clas_research_areas_default_page_manager_handlers() {
+  $export = array();
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE;
+  $handler->api_version = 1;
+  $handler->name = 'term_view_panelizer_node';
+  $handler->task = 'term_view';
+  $handler->subtask = '';
+  $handler->handler = 'panelizer_node';
+  $handler->weight = -99;
+  $handler->conf = array(
+    'title' => 'ASU CLAS Research Areas',
+    'contexts' => array(),
+    'relationships' => array(),
+    'context' => 'argument_term_1',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'machine_name' => array(
+              'research_area' => 'research_area',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+
+  $export['term_view_panelizer_node'] = $handler;
+
+  return $export;
 }

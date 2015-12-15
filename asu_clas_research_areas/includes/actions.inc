@@ -448,6 +448,19 @@ function _asu_clas_research_areas_add_taxonomy_terms() {
  */
 function _asu_clas_research_areas_panelizer_setup() {
   variable_set('page_manager_term_view_disabled', FALSE);
+
+  $panelizer_defaults = array(
+    'status' => TRUE,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => TRUE,
+        'default' => TRUE,
+        'choice' => FALSE,
+      ),
+    ),
+  );
+
+  variable_set('panelizer_defaults_taxonomy_term_research_area', $panelizer_defaults);
 }
 
 /**
