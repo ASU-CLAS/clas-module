@@ -34,6 +34,11 @@
 </div>
 
 <div class="col-md-10">
-  <?php print $fields['name']->content; ?>
-  <?php print $fields['description']->content; ?>
+  <?php if (isset($fields['name'])): ?>
+    <?php print $fields['name']->content; ?>
+  <?php endif; ?>
+
+  <?php if (isset($fields['description'])): ?>
+    <?php print $fields['description']->content; ?>
+  <?php endif; ?>
 </div>
