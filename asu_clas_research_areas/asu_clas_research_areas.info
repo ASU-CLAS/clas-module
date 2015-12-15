@@ -13,10 +13,7 @@ dependencies[] = views
 dependencies[] = views_bootstrap
 
 ; Features
-features[ctools][] = page_manager:pages_default:1
-features[defaultconfig][] = default_page_manager_handlers:term_view_panelizer_node
-features[defaultconfig][] = panelizer_defaults:taxonomy_term:research_area:default
-features[defaultconfig][] = strongarm:panelizer_defaults_taxonomy_term_research_area
-features[features_api][] = api:2
-features[page_manager_handlers][] = term_view_panelizer_node
-mtime = 1450132913
+__drupal_alter_by_ref[][fieldable_panels_pane][text] = text
+features[uuid_fpp][] = 48d62963-a3d7-4e0d-bfad-3dc433ec861d
+features[uuid_fpp][] = f2c279fd-7c27-4b66-a856-9fe264bfe2da
+mtime = 1450186588
