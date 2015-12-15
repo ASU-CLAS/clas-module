@@ -12,12 +12,12 @@ function asu_clas_research_areas_uuid_features_default_fpps() {
 
   $fpps[] = array(
     'timestamp' => 1450187076,
-    'title' => 'The Team',
+    'title' => 'Team',
     'log' => '',
     'bundle' => 'text',
     'link' => 0,
     'path' => '',
-    'reusable' => 0,
+    'reusable' => 1,
     'admin_title' => '',
     'admin_description' => '',
     'category' => 'Reusable Content',
@@ -44,7 +44,7 @@ function asu_clas_research_areas_uuid_features_default_fpps() {
     'bundle' => 'text',
     'link' => 0,
     'path' => '',
-    'reusable' => 0,
+    'reusable' => 1,
     'admin_title' => '',
     'admin_description' => '',
     'category' => 'Reusable Content',
@@ -56,9 +56,9 @@ function asu_clas_research_areas_uuid_features_default_fpps() {
     'field_basic_text_text' => array(
       'und' => array(
         0 => array(
-          'value' => '<p>Lorem ipsum dolor set amit.</p>',
+          'value' => '<p><strong>Lorem ipsum dolor set amit.</strong></p><p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
           'format' => 'panopoly_wysiwyg_text',
-          'safe_value' => '<p>Lorem ipsum dolor set amit.</p>
+          'safe_value' => '<p><strong>Lorem ipsum dolor set amit.</strong></p><p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 ',
         ),
       ),

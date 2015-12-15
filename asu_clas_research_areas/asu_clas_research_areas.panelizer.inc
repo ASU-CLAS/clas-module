@@ -107,6 +107,48 @@ function asu_clas_research_areas_panelizer_defaults() {
     $display->content['new-e2a678fb-8976-4fb5-9f82-093d1819197f'] = $pane;
     $display->panels['rowone'][0] = 'new-e2a678fb-8976-4fb5-9f82-093d1819197f';
     $pane = new stdClass();
+    $pane->pid = 'new-d5defe83-c59a-44ea-a463-c51c3550fd57';
+    $pane->panel = 'rowthree';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:f2c279fd-7c27-4b66-a856-9fe264bfe2da';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'Full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd5defe83-c59a-44ea-a463-c51c3550fd57';
+    $display->content['new-d5defe83-c59a-44ea-a463-c51c3550fd57'] = $pane;
+    $display->panels['rowthree'][0] = 'new-d5defe83-c59a-44ea-a463-c51c3550fd57';
+    $pane = new stdClass();
+    $pane->pid = 'new-d4c49793-189e-430a-aaea-370647d7db5a';
+    $pane->panel = 'rowthree';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:48d62963-a3d7-4e0d-bfad-3dc433ec861d';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'Full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'd4c49793-189e-430a-aaea-370647d7db5a';
+    $display->content['new-d4c49793-189e-430a-aaea-370647d7db5a'] = $pane;
+    $display->panels['rowthree'][1] = 'new-d4c49793-189e-430a-aaea-370647d7db5a';
+    $pane = new stdClass();
     $pane->pid = 'new-2193cbae-b933-4b96-ae62-93efbdd17f75';
     $pane->panel = 'rowtwo';
     $pane->type = 'entity_field';
@@ -115,12 +157,14 @@ function asu_clas_research_areas_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'file_rendered',
+      'formatter' => 'image',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
         'file_view_mode' => 'default',
+        'image_style' => '',
+        'image_link' => '',
       ),
       'context' => array(),
       'override_title' => 0,
