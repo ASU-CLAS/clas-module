@@ -468,6 +468,13 @@ function _asu_clas_research_areas_panelizer_setup() {
 }
 
 /**
+ * Set Pathauto Taxonomy Term Path pattern.
+ */
+function _asu_clas_research_areas_set_pathauto_taxonomy_term_pattern() {
+  variable_set('pathauto_taxonomy_term_research_area_pattern', 'research/research-areas/[term:name]');
+}
+
+/**
  * Helper function to add terms to taxonomy.
  */
 function _asu_clas_research_areas_add_terms($term_names, $vocabulary_name, $vocabulary_machine_name) {

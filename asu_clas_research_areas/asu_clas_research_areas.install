@@ -9,6 +9,7 @@
 function asu_clas_research_areas_install() {
   module_load_include('inc', 'asu_clas_research_areas', 'includes/actions');
 
+  _asu_clas_research_areas_set_pathauto_taxonomy_term_pattern();
   _asu_clas_research_areas_create_taxonomy();
   _asu_clas_research_areas_create_taxonomy_fields();
   _asu_clas_research_areas_add_taxonomy_terms();
