@@ -23,12 +23,11 @@
  */
 
 .pane-taxonomy-term-field-featured-image {
-  float: right;
   max-width: 250px;
+  max-height: 200px;
 }
 
 .pane-term-description {
-  float: left;
 }
 
 /**
