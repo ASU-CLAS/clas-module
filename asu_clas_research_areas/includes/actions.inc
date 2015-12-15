@@ -48,6 +48,21 @@ function _asu_clas_research_areas_create_taxonomy_fields() {
   );
 
   field_create_instance($instance);
+
+  $instance = array(
+    'field_name' => 'field_featured_image',
+    'entity_type' => 'taxonomy_term',
+    'bundle' => ASU_CLAS_TAXONOMY_NAME,
+    'label' => 'Research Area Featured Image',
+    'description' => '',
+    'required' => FALSE,
+    'widget' => array(
+      'type' => 'media_generic',
+      'weight' => 2
+    ),
+  );
+
+  field_create_instance($instance);
 }
 
 /**
