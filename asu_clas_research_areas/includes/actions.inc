@@ -77,7 +77,11 @@ function _asu_clas_research_areas_add_taxonomy_terms() {
       18 => 'School of Molecular Sciences'
     );
 
-    variable_set('clas_unit', $units[2]);
+    $clas_unit = variable_get('clas_unit');
+
+    if (empty($clas_unit)) {
+      variable_set('clas_unit', $units[2]);
+    }
   }
 
   $clas_unit = variable_get('clas_unit');
