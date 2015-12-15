@@ -63,12 +63,20 @@ if (!empty($column_template_type[0]['value'])) {
 
     <?php print $field_paragraph_text; ?>
 
+    <?php
+      if ($research_areas_view = views_embed_view('research_areas', 'research_area_grid_horizontal_pane')) {
+        $hide = TRUE;
+
+        printf('<section class="research-areas-view">%s</section>', $research_areas_view);
+      }
+    ?>
+
     <?php if (!empty($content['field_paragraph_icon_callouts']) && is_array($content['field_paragraph_icon_callouts'])): ?>
       <?php foreach ($content['field_paragraph_icon_callouts'] as $key => $field_collection): ?>
         <?php if (is_numeric($key) && !empty($field_collection['entity']['field_collection_item'])): ?>
           <?php $field_icon = current($field_collection['entity']['field_collection_item']); ?>
 
-          <div class="<?php print $column_classes; ?> disc-icon-wrapper">
+          <div class="<?php echo $hide === TRUE ? 'hide ' : NULL; ?><?php print $column_classes; ?> disc-icon-wrapper">
             <div class="row">
               <div class="col-xs-6 col-sm-3 col-md-3 disc-icon-icon disc-icon-<?php print $field_icon['field_paragraph_discipline_icon']['#items'][0]['value']; ?>">
               </div>
