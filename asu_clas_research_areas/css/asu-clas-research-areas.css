@@ -22,12 +22,33 @@
  * Research Areas Term Page
  */
 
-.pane-taxonomy-term-field-featured-image {
-  max-width: 250px;
-  max-height: 200px;
+.research-area-taxonomy-term-name .pane-title {
+  font-size: 36px;
+  margin-top: 0;
 }
 
-.pane-term-description {
+.research-area-taxonomy-term-image {
+  margin-bottom: 1em;
+  max-height: 200px;
+  max-width: 250px;
+}
+
+@media (min-width: 700px) {
+  .research-area-taxonomy-term-image {
+    float: right;
+    margin-left: 1em;
+  }
+}
+
+.research-area-taxonomy-term-image .pane-title {
+  display: none;
+}
+
+.research-area-taxonomy-term-description .pane-title {
+  display: none;
+}
+
+.research-area-taxonomy-term-tabs {
 }
 
 /**
