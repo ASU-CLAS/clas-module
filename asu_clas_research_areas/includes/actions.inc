@@ -59,27 +59,50 @@ function _asu_clas_research_areas_create_taxonomy_fields() {
 
   field_create_instance($instance);
 
+  $image = file_get_contents(drupal_get_path('module', 'asu_clas_research_areas') . '/images/placeholder-200x200.png');
+  $image_object = file_save_data($image, 'public://placeholder-200x200.png', FILE_EXISTS_RENAME);
+
   $instance = array(
-    'field_name' => 'field_featured_image',
-    'entity_type' => 'taxonomy_term',
     'bundle' => ASU_CLAS_TAXONOMY_NAME,
-    'label' => 'Research Area Featured Image',
-    'description' => '',
-    'required' => FALSE,
     'default_value' => array(),
-    'widget' => array(
-      'type' => 'media_generic',
-      'weight' => 2
-    ),
+    'deleted' => 0,
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'type' => 'image',
+        'module' => 'image',
         'settings' => array(
-          'image_style' => 'medium',
           'image_link' => NULL,
+          'image_style' => 'medium',
         ),
+        'type' => 'image',
+        'weight' => 1,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_featured_image',
+    'label' => 'Research Area Featured Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => $image_object->fid,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'type' => 'media_generic',
+      'weight' => 2,
     ),
   );
 
