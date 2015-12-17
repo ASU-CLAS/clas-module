@@ -1,0 +1,153 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function asu_clas_research_areas_preprocess_html(&$variables) {
+  drupal_add_css(drupal_get_path('module', 'asu_clas_research_areas') . '/css/asu-clas-research-areas.css', array('group' => CSS_THEME, 'weight' => '99'));
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function asu_clas_research_areas_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'asu_clas_research_areas'),
+    'template path' => drupal_get_path('module', 'asu_clas_research_areas') . '/templates',
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function asu_clas_research_areas_ctools_plugin_api($module, $api) {
+  if ($module == 'panels' && $api == 'pipelines') {
+    return array('version' => 1);
+  }
+
+  if ($module == 'panelizer' && $api == 'panelizer') {
+    return array('version' => 1);
+  }
+
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
+}
+
+/**
+ * Include Views exports.
+ */
+
+function asu_clas_research_areas_views_default_views() {
+  $files = file_scan_directory(drupal_get_path('module', 'asu_clas_research_areas') . '/views', '/.*\.inc$/');
+
+  foreach ($files as $filepath => $file) {
+    require $filepath;
+
+    if (isset($view)) {
+      $views[$view->name] = $view;
+    }
+  }
+
+  return $views;
+}
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function asu_clas_research_areas_image_default_styles() {
+  $styles = array();
+
+  $styles['asu_clas_research_area_icon'] = array(
+    'name' => 'asu_clas_research_area_icon',
+    'label' => 'CLAS Research Area Icon',
+    'effects' => array(
+      2 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 50,
+          'height' => 50,
+        ),
+        'weight' => 1,
+      ),
+    ),
+    'storage' => IMAGE_STORAGE_NORMAL,
+  );
+
+  $styles['asu_clas_research_area_image'] = array(
+    'name' => 'asu_clas_research_area_image',
+    'label' => 'CLAS Research Area Image',
+    'effects' => array(
+      2 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 250,
+          'height' => 200,
+        ),
+        'weight' => 1,
+      ),
+    ),
+    'storage' => IMAGE_STORAGE_NORMAL,
+  );
+
+  return $styles;
+}
+
+/**
+ * Implements hook_default_page_manager_handlers().
+ */
+function asu_clas_research_areas_default_page_manager_handlers() {
+  $export = array();
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE;
+  $handler->api_version = 1;
+  $handler->name = 'term_view_panelizer_node';
+  $handler->task = 'term_view';
+  $handler->subtask = '';
+  $handler->handler = 'panelizer_node';
+  $handler->weight = -99;
+  $handler->conf = array(
+    'title' => 'ASU CLAS Research Areas',
+    'contexts' => array(),
+    'relationships' => array(),
+    'context' => 'argument_term_1',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'machine_name' => array(
+              'research_area' => 'research_area',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+
+  $export['term_view_panelizer_node'] = $handler;
+
+  return $export;
+}

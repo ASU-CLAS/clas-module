@@ -1,0 +1,57 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function asu_clas_research_areas_install() {
+  module_load_include('inc', 'asu_clas_research_areas', 'includes/actions');
+
+  _asu_clas_research_areas_set_pathauto_taxonomy_term_pattern();
+  _asu_clas_research_areas_create_taxonomy();
+  _asu_clas_research_areas_create_taxonomy_fields();
+  _asu_clas_research_areas_add_taxonomy_terms();
+  _asu_clas_research_areas_panelizer_setup();
+}
+
+/**
+ * Implements hook_disable().
+ */
+function asu_clas_research_areas_disable() {
+  return TRUE;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function asu_clas_research_areas_uninstall() {
+  $vocab = taxonomy_vocabulary_machine_name_load('research_area');
+
+  taxonomy_vocabulary_delete($vocab->vid);
+
+  field_delete_field('research_area_icon');
+  field_delete_field('research_area_image');
+  field_delete_field('research_area_isearch_relation');
+
+  if ($view = views_get_view('research_areas')) {
+    views_delete_view($view);
+  }
+
+  if ($view = views_get_view('research_areas_faculty')) {
+    views_delete_view($view);
+  }
+
+  $image_styles = array(
+    'asu_clas_research_area_icon',
+    'asu_clas_research_area_image',
+  );
+
+  foreach ($image_styles as $image_style) {
+    $style = image_style_load($image_style);
+
+    image_style_flush($style);
+    image_style_delete($style);
+  }
+}
