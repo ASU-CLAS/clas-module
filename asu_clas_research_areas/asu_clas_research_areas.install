@@ -42,4 +42,16 @@ function asu_clas_research_areas_uninstall() {
   if ($view = views_get_view('research_areas_faculty')) {
     views_delete_view($view);
   }
+
+  $image_styles = array(
+    'asu_clas_research_area_icon',
+    'asu_clas_research_area_image',
+  );
+
+  foreach ($image_styles as $image_style) {
+    $style = image_style_load($image_style);
+
+    image_style_flush($style);
+    image_style_delete($style);
+  }
 }
