@@ -77,6 +77,41 @@ $handler->display->display_options['filters']['parent']['field'] = 'parent';
 
 /* Display: Vertical List */
 $handler = $view->new_display('panel_pane', 'Vertical List', 'research_area_list_vertical_pane');
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: Research Area Icon */
+$handler->display->display_options['fields']['research_area_icon']['id'] = 'research_area_icon';
+$handler->display->display_options['fields']['research_area_icon']['table'] = 'field_data_research_area_icon';
+$handler->display->display_options['fields']['research_area_icon']['field'] = 'research_area_icon';
+$handler->display->display_options['fields']['research_area_icon']['label'] = '';
+$handler->display->display_options['fields']['research_area_icon']['element_class'] = 'research-area-image';
+$handler->display->display_options['fields']['research_area_icon']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['research_area_icon']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['research_area_icon']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['research_area_icon']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['research_area_icon']['settings'] = array(
+  'image_style' => 'asu_clas_research_area_icon',
+  'image_link' => '',
+);
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_type'] = 'h3';
+$handler->display->display_options['fields']['name']['element_class'] = 'research-area-name';
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+/* Field: Taxonomy term: Term description */
+$handler->display->display_options['fields']['description']['id'] = 'description';
+$handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['description']['field'] = 'description';
+$handler->display->display_options['fields']['description']['label'] = '';
+$handler->display->display_options['fields']['description']['element_class'] = 'research-area-description';
+$handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
 $handler->display->display_options['allow']['use_pager'] = 0;
 $handler->display->display_options['allow']['items_per_page'] = 0;
 $handler->display->display_options['allow']['offset'] = 0;
@@ -174,7 +209,7 @@ $handler->display->display_options['fields']['research_area_icon']['element_defa
 $handler->display->display_options['fields']['research_area_icon']['hide_empty'] = TRUE;
 $handler->display->display_options['fields']['research_area_icon']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['research_area_icon']['settings'] = array(
-  'image_style' => 'clas_research_area_icon',
+  'image_style' => 'asu_clas_research_area_icon',
   'image_link' => '',
 );
 /* Field: Taxonomy term: Name */
@@ -233,7 +268,7 @@ $handler->display->display_options['fields']['research_area_icon']['element_defa
 $handler->display->display_options['fields']['research_area_icon']['hide_empty'] = TRUE;
 $handler->display->display_options['fields']['research_area_icon']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['research_area_icon']['settings'] = array(
-  'image_style' => 'clas_research_area_icon',
+  'image_style' => 'asu_clas_research_area_icon',
   'image_link' => '',
 );
 /* Field: Taxonomy term: Name */

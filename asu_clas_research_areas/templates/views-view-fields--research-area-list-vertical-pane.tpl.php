@@ -27,15 +27,20 @@
 
 <div class="row no-gutters research-area-term">
   <div class="col-md-1">
-    <?php if (!empty($fields['field_research_area_icon']->content)): ?>
-      <?php print $fields['field_research_area_icon']->content; ?>
+    <?php if (!empty($fields['research_area_icon']->content)): ?>
+      <?php print $fields['research_area_icon']->content; ?>
     <?php else: ?>
       <?php print theme_image(array('path' => drupal_get_path('module', 'asu_clas_research_areas') . '/images/placeholder-50x50.png', 'width' => 50, 'height' => 50)); ?>
     <?php endif; ?>
   </div>
 
   <div class="col-md-11">
-    <?php print $fields['name']->content; ?>
-    <?php print $fields['description']->content; ?>
+    <?php if (isset($fields['name'])): ?>
+      <?php print $fields['name']->content; ?>
+    <?php endif; ?>
+
+    <?php if (isset($fields['description'])): ?>
+      <?php print $fields['description']->content; ?>
+    <?php endif; ?>
   </div>
 </div>
