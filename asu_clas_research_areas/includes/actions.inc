@@ -348,11 +348,67 @@ function _asu_clas_research_areas_add_taxonomy_terms() {
       'weight' => 0,
       'icon' => 'icon-01.png',
     ),
+    10 => array(
+      'name' => 'Mathematical Biology',
+      'description' => NULL,
+      'parent' => 0,
+      'weight' => 10,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    11 => array(
+      'name' => 'Computational Mathematics',
+      'description' => NULL,
+      'parent' => 0,
+      'weight' => 10,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    12 => array(
+      'name' => 'Systems and Control Theory',
+      'description' => NULL,
+      'parent' => 0,
+      'weight' => 10,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    13 => array(
+      'name' => 'Non-linear Dynamical Systems',
+      'description' => NULL,
+      'parent' => 0,
+      'weight' => 10,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    14 => array(
+      'name' => 'Probability',
+      'description' => NULL,
+      'parent' => 0,
+      'weight' => 10,
+      'icon' => 'placeholder-50x50.png',
+    ),
     2 => array(
       'name' => 'Theoretical Mathematics',
       'description' => NULL,
       'weight' => 1,
       'icon' => 'icon-02.png',
+    ),
+    20 => array(
+      'name' => 'Algebra and Combinatorics',
+      'description' => NULL,
+      'parent' => 0,
+      'weight' => 10,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    21 => array(
+      'name' => 'Analysis',
+      'description' => NULL,
+      'parent' => 0,
+      'weight' => 10,
+      'icon' => 'placeholder-50x50.png',
+    ),
+    22 => array(
+      'name' => 'Geometry',
+      'description' => NULL,
+      'parent' => 0,
+      'weight' => 10,
+      'icon' => 'placeholder-50x50.png',
     ),
     3 => array(
       'name' => 'Mathematics Education',
@@ -653,7 +709,9 @@ function _asu_clas_research_areas_add_terms($term_names, $vocabulary_name, $voca
         $term = (object) array(
           'vid' => $vocab->vid,
           'name' => $term_name['name'],
+          'tid' => '',
           'description' => $term_name['description'],
+          'parent' => isset($term_name['parent']) ? $term_name['parent'] : 0,
           'research_area_icon' => array(
             LANGUAGE_NONE => array(
               0 => (array) $icon_object,
