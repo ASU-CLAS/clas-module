@@ -1,11 +1,11 @@
 <?php
 
 $view = new view();
-$view->name = 'asu_clas_research_area_faculty';
+$view->name = 'research_areas_faculty';
 $view->description = '';
 $view->tag = 'default';
 $view->base_table = 'node';
-$view->human_name = 'ASU CLAS Research Area Faculty';
+$view->human_name = 'ASU CLAS Research Areas Faculty';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
