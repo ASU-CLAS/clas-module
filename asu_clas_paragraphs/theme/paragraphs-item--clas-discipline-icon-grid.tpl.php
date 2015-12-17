@@ -76,7 +76,7 @@ if (!empty($column_template_type[0]['value'])) {
         <?php if (is_numeric($key) && !empty($field_collection['entity']['field_collection_item'])): ?>
           <?php $field_icon = current($field_collection['entity']['field_collection_item']); ?>
 
-          <div class="<?php echo $hide === TRUE ? 'hide ' : NULL; ?><?php print $column_classes; ?> disc-icon-wrapper">
+          <div class="<?php echo (isset($hide) && $hide === TRUE) ? 'hide ' : NULL; ?><?php print $column_classes; ?> disc-icon-wrapper">
             <div class="row">
               <div class="col-xs-6 col-sm-3 col-md-3 disc-icon-icon disc-icon-<?php print $field_icon['field_paragraph_discipline_icon']['#items'][0]['value']; ?>">
               </div>

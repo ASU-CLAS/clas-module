@@ -69,7 +69,7 @@ $field_paragraph_btn_callouts = field_get_items('paragraphs_item', $variables['p
     <div class="row">
     <?php endif; ?>
 
-    	<div class="<?php echo $hide === TRUE ? 'hide ' : NULL; ?>col-xs-12 col-sm-6 col-md-6 disc-icon-wrapper">
+    	<div class="<?php echo (isset($hide) && $hide === TRUE) ? 'hide ' : NULL; ?>col-xs-12 col-sm-6 col-md-6 disc-icon-wrapper">
         <div class="row">
           <div class="col-xs-3 col-sm-3 col-md-2 disc-icon-icon disc-icon-<?php print $field_icon['field_paragraph_dwt_icon']['#items'][0]['value']; ?>"></div>
           <div class="col-xs-9 col-sm-9 col-md-10 dwt-icon-link">
