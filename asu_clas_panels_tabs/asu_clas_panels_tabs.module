@@ -1,0 +1,50 @@
+<?php
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function asu_clas_panels_tabs_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'panels' && $plugin == 'styles') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_init().
+ */
+function asu_clas_panels_tabs_init() {
+  drupal_add_js(drupal_get_path('module', 'asu_clas_panels_tabs') . '/plugins/styles/asu_clas_tabs_horizontal/js/asu_clas_tabs_horizontal.js', array('scope' => 'footer', 'group' => JS_THEME, 'weight' => 99));
+}
+
+/**
+ * Implements hook_panels_pane_content_alter().
+ */
+function asu_clas_panels_tabs_panels_pane_content_alter(&$content, $pane, $args, $context, $renderer, $display) {
+  foreach ($display->panel_settings as $key => $values) {
+    if ($key == 'style_settings') {
+      continue;
+    }
+
+    if ((is_array($values) && !empty($values['style']) && $values['style'] == 'asu_clas_tabs_horizontal' && $pane->panel == $key) || ($key === 'style' && $values === 'asu_clas_tabs_horizontal')) {
+      if (!empty($content->title)) {
+        asu_clas_panels_tabs_pane_titles($display->did, $pane->pid, $content->title);
+
+        $content->title = '';
+      }
+    }
+  }
+}
+
+/**
+ * Helper function to get or set Panels Pane title.
+ */
+function asu_clas_panels_tabs_pane_titles($did = NULL, $pid = NULL, $title = NULL) {
+  $cache = &drupal_static(__FUNCTION__, array());
+
+  if (!isset($title)) {
+    return isset($cache[$did][$pid]) ? $cache[$did][$pid] : NULL;
+  }
+
+  $cache[$did][$pid] = $title;
+
+  return $title;
+}
