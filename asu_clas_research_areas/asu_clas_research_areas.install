@@ -31,5 +31,7 @@ function asu_clas_research_areas_uninstall() {
 
   taxonomy_vocabulary_delete($vocab->vid);
 
-  field_delete_field('field_research_area_image');
+  field_delete_field('research_area_icon');
+  field_delete_field('research_area_image');
+  field_delete_field('research_area_isearch_relation');
 }

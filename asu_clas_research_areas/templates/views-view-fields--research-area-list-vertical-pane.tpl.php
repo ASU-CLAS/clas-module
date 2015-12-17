@@ -27,8 +27,8 @@
 
 <div class="row no-gutters research-area-term">
   <div class="col-md-1">
-    <?php if (!empty($fields['field_research_area_image']->content)): ?>
-      <?php print $fields['field_research_area_image']->content; ?>
+    <?php if (!empty($fields['field_research_area_icon']->content)): ?>
+      <?php print $fields['field_research_area_icon']->content; ?>
     <?php else: ?>
       <?php print theme_image(array('path' => drupal_get_path('module', 'asu_clas_research_areas') . '/images/placeholder-50x50.png', 'width' => 50, 'height' => 50)); ?>
     <?php endif; ?>

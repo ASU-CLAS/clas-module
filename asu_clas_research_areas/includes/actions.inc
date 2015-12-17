@@ -4,7 +4,6 @@
  */
 
 define('ASU_CLAS_TAXONOMY_NAME', 'research_area');
-define('ASU_CLAS_TAXONOMY_FIELD', 'field_research_area_image');
 
 /**
  * Create Taxonomy
@@ -23,22 +22,23 @@ function _asu_clas_research_areas_create_taxonomy() {
 }
 
 /**
- * Create Taxonomy Field
+ * Create Taxonomy Fields
  */
 function _asu_clas_research_areas_create_taxonomy_fields() {
+  // "Research Area Icon" field.
   $field = array(
-    'field_name' => ASU_CLAS_TAXONOMY_FIELD,
+    'field_name' => 'research_area_icon',
     'type' => 'image',
-    'label' => 'Research Area Image',
+    'label' => 'Research Area Icon',
   );
 
   field_create_field($field);
 
   $instance = array(
-    'field_name' => ASU_CLAS_TAXONOMY_FIELD,
+    'field_name' => 'research_area_icon',
     'entity_type' => 'taxonomy_term',
     'bundle' => ASU_CLAS_TAXONOMY_NAME,
-    'label' => 'Research Area Image',
+    'label' => 'Research Area Icon',
     'description' => '',
     'required' => FALSE,
     'widget' => array(
@@ -50,7 +50,7 @@ function _asu_clas_research_areas_create_taxonomy_fields() {
         'label' => 'hidden',
         'type' => 'image',
         'settings' => array(
-          'image_style' => 'clas_research_area_image',
+          'image_style' => 'clas_research_area_icon',
           'image_link' => NULL,
         ),
       ),
@@ -58,6 +58,15 @@ function _asu_clas_research_areas_create_taxonomy_fields() {
   );
 
   field_create_instance($instance);
+
+  // "Research Area Image" field.
+  $field = array(
+    'field_name' => 'research_area_image',
+    'type' => 'image',
+    'label' => 'Research Area Image',
+  );
+
+  field_create_field($field);
 
   $image = file_get_contents(drupal_get_path('module', 'asu_clas_research_areas') . '/images/placeholder-200x200.png');
   $image_object = file_save_data($image, 'public://placeholder-200x200.png', FILE_EXISTS_RENAME);
@@ -73,7 +82,7 @@ function _asu_clas_research_areas_create_taxonomy_fields() {
         'module' => 'image',
         'settings' => array(
           'image_link' => NULL,
-          'image_style' => 'medium',
+          'image_style' => 'asu_clas_research_area_image',
         ),
         'type' => 'image',
         'weight' => 1,
@@ -86,8 +95,8 @@ function _asu_clas_research_areas_create_taxonomy_fields() {
       ),
     ),
     'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_featured_image',
-    'label' => 'Research Area Featured Image',
+    'field_name' => 'research_area_image',
+    'label' => 'Research Area Image',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -103,6 +112,91 @@ function _asu_clas_research_areas_create_taxonomy_fields() {
     'widget' => array(
       'type' => 'media_generic',
       'weight' => 2,
+    ),
+  );
+
+  field_create_instance($instance);
+
+  // "Research Area iSearch Reference" field.
+  $field = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'research_area_isearch_relation',
+    'foreign keys' => array(
+      'taxonomy_term_data' => array(
+        'columns' => array(
+          'target_id' => 'tid',
+        ),
+        'table' => 'taxonomy_term_data',
+      ),
+    ),
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'isearch_expertise' => 'isearch_expertise',
+        ),
+      ),
+      'target_type' => 'taxonomy_term',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
+  field_create_field($field);
+
+  $instance = array(
+    'bundle' => ASU_CLAS_TAXONOMY_NAME,
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 2,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'research_area_isearch_relation',
+    'label' => 'Research Area iSearch Relationship',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 4,
     ),
   );
 
@@ -560,7 +654,7 @@ function _asu_clas_research_areas_add_terms($term_names, $vocabulary_name, $voca
           'vid' => $vocab->vid,
           'name' => $term_name['name'],
           'description' => $term_name['description'],
-          'field_research_area_image' => array(
+          'research_area_icon' => array(
             LANGUAGE_NONE => array(
               0 => (array) $icon_object,
             ),

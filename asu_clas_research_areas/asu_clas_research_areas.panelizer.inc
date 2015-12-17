@@ -161,7 +161,7 @@ function asu_clas_research_areas_panelizer_defaults() {
     $pane->pid = 'new-2193cbae-b933-4b96-ae62-93efbdd17f75';
     $pane->panel = 'rowtwo';
     $pane->type = 'entity_field';
-    $pane->subtype = 'taxonomy_term:field_featured_image';
+    $pane->subtype = 'taxonomy_term:research_area_image';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -172,7 +172,7 @@ function asu_clas_research_areas_panelizer_defaults() {
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
         'file_view_mode' => 'default',
-        'image_style' => '',
+        'image_style' => 'asu_clas_research_area_image',
         'image_link' => '',
       ),
       'context' => array(),

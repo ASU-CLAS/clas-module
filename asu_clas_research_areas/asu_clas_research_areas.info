@@ -2,7 +2,7 @@ name = ASU CLAS Research Areas
 description = Creates default Research Area taxonomy and populates with terms
 core = 7.x
 package = ASU CLAS
-version = 7.x-1.0
+version = 7.x-1.x
 project = asu_clas_research_areas
 
 ; Dependencies
@@ -10,10 +10,10 @@ dependencies[] = asu_clas_panels_layouts
 dependencies[] = panelizer
 dependencies[] = taxonomy
 dependencies[] = views
-dependencies[] = views_bootstrap
 
 ; Features
 __drupal_alter_by_ref[][fieldable_panels_pane][text] = text
 features[uuid_fpp][] = 48d62963-a3d7-4e0d-bfad-3dc433ec861d
 features[uuid_fpp][] = f2c279fd-7c27-4b66-a856-9fe264bfe2da
+features[uuid_fpp][] = f780d7d5-d268-46eb-b88a-aa2878f0d243
 mtime = 1450186588
