@@ -41,7 +41,7 @@ function asu_clas_paragraphs_defaultconfig_field_default_fields() {
       'bundle' => 'clas_paragraph_pane',
       'default_value' => NULL,
       'deleted' => 0,
-      'description' => '<strong>Bundle examples:</strong> <a href="#clas-01">CTA Footer</a>, <a href="#clas-02">Two Column Image Right</a>, <a href="#clas-03">Two Column Image Left</a>, <a href="#clas-04">Two Column Gold Starburst Right</a>, <a href="#clas-05">Starburst Gray Carousel</a>, <a href="#clas-06">Starburst Gold Carousel</a>, <a href="#clas-07">Quotes Carousel</a>, <a href="#clas-08">Number Highlighter</a>, <a href="#clas-09">Two Column Image Right Two</a>, <a href="#clas-10">Two Column Video Left</a>, <a href="#clas-11">Two Column Edgy Gold Icons</a>, <a href="#clas-12">Two Column Edgy Background Cover</a>, <a href="#clas-13">Discipline Icon Grid</a>, <a href="#clas-14">Carousel Background Cover</a>, <a href="#clas-15">Media Object</a>, <a href="#clas-16">Discipline Icon Grid with Text</a>.',
+      'description' => '<p><strong>Bundle Examples:</strong></p> <p><a href="#clas-01">CTA Footer</a>, <a href="#clas-02">Two Column Image Right</a>, <a href="#clas-03">Two Column Image Left</a>, <a href="#clas-04">Two Column Gold Starburst Right</a>, <a href="#clas-05">Starburst Gray Carousel</a>, <a href="#clas-06">Starburst Gold Carousel</a>, <a href="#clas-07">Quotes Carousel</a>, <a href="#clas-08">Number Highlighter</a>, <a href="#clas-09">Two Column Image Right Two</a>, <a href="#clas-10">Two Column Video Left</a>, <a href="#clas-11">Two Column Edgy Gold Icons</a>, <a href="#clas-12">Two Column Edgy Background Cover</a>, <a href="#clas-13">Discipline Icon Grid</a>, <a href="#clas-14">Carousel Background Cover</a>, <a href="#clas-15">Media Object</a>, <a href="#clas-16">Discipline Icon Grid with Text</a>.</p>',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -75,7 +75,7 @@ function asu_clas_paragraphs_defaultconfig_field_default_fields() {
           'clas_two_column_image_left' => 'clas_two_column_image_left',
           'clas_two_column_image_right' => 'clas_two_column_image_right',
           'clas_two_column_image_right_2' => 'clas_two_column_image_right_2',
-          'clas_full_bg_image_co' => 'clas_full_bg_image_co',
+          'clas_two_column_photos' => 'clas_two_column_photos',
           'clas_two_column_video_left' => 'clas_two_column_video_left',
         ),
         'bundle_weights' => array(
@@ -94,7 +94,7 @@ function asu_clas_paragraphs_defaultconfig_field_default_fields() {
           'clas_two_column_image_left' => -22,
           'clas_two_column_image_right' => -21,
           'clas_two_column_image_right_2' => -23,
-          'clas_full_bg_image_co' => -20,
+          'clas_two_column_photos' => -20,
           'clas_two_column_video_left' => -19,
         ),
         'default_edit_mode' => 'open',
@@ -114,7 +114,7 @@ function asu_clas_paragraphs_defaultconfig_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('<strong>Bundle examples:</strong> <a href="#clas-01">CTA Footer</a>, <a href="#clas-02">Two Column Image Right</a>, <a href="#clas-03">Two Column Image Left</a>, <a href="#clas-04">Two Column Gold Starburst Right</a>, <a href="#clas-05">Starburst Gray Carousel</a>, <a href="#clas-06">Starburst Gold Carousel</a>, <a href="#clas-07">Quotes Carousel</a>, <a href="#clas-08">Number Highlighter</a>, <a href="#clas-09">Two Column Image Right Two</a>, <a href="#clas-10">Two Column Video Left</a>, <a href="#clas-11">Two Column Edgy Gold Icons</a>, <a href="#clas-12">Two Column Edgy Background Cover</a>, <a href="#clas-13">Discipline Icon Grid</a>, <a href="#clas-14">Carousel Background Cover</a>, <a href="#clas-15">Media Object</a>, <a href="#clas-16">Discipline Icon Grid with Text</a>.');
+  t('<p><strong>Bundle Examples:</strong></p> <p><a href="#clas-01">CTA Footer</a>, <a href="#clas-02">Two Column Image Right</a>, <a href="#clas-03">Two Column Image Left</a>, <a href="#clas-04">Two Column Gold Starburst Right</a>, <a href="#clas-05">Starburst Gray Carousel</a>, <a href="#clas-06">Starburst Gold Carousel</a>, <a href="#clas-07">Quotes Carousel</a>, <a href="#clas-08">Number Highlighter</a>, <a href="#clas-09">Two Column Image Right Two</a>, <a href="#clas-10">Two Column Video Left</a>, <a href="#clas-11">Two Column Edgy Gold Icons</a>, <a href="#clas-12">Two Column Edgy Background Cover</a>, <a href="#clas-13">Discipline Icon Grid</a>, <a href="#clas-14">Carousel Background Cover</a>, <a href="#clas-15">Media Object</a>, <a href="#clas-16">Discipline Icon Grid with Text</a>.</p>');
   t('Paragraph Bundle');
 
   return $fields;

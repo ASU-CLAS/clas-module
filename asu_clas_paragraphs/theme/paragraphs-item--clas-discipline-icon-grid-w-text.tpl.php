@@ -31,6 +31,10 @@
 $field_paragraph_title = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_title_dwt_grid');
 $field_paragraph_title = $field_paragraph_title[0]['value'];
 
+//-- Text
+$field_paragraph_text = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_text_dwt_grid');
+$field_paragraph_text = $field_paragraph_text[0]['value'];
+
 //-- Icons
 
 //$field_paragraph_icon_1_icon = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_icon_1_icon');
@@ -42,10 +46,19 @@ $field_paragraph_btn_callouts = field_get_items('paragraphs_item', $variables['p
 
 ?>
 
-<div class="clas-discipline-icon-grid-t-text">
-  <h2><?php print $field_paragraph_title; ?></h2>
+<div class="container clas-discipline-icon-grid-t-text">
 
-    <div class="row">
+  <div class="row">
+    <h2><?php print $field_paragraph_title; ?></h2>
+    <?php print $field_paragraph_text; ?>
+
+    <?php
+      if ($research_areas_view = views_embed_view('research_areas', 'research_area_grid_horizontal_descriptions_pane')) {
+        $hide = TRUE;
+
+        printf('<section class="research-areas-view">%s</section>', $research_areas_view);
+      }
+    ?>
 
     <?php foreach ($content['field_paragraph_icon_dw_callouts'] as $key => $field_collection): ?>
     <?php if (is_numeric($key) && !empty($field_collection['entity']['field_collection_item'])): ?>
@@ -56,7 +69,7 @@ $field_paragraph_btn_callouts = field_get_items('paragraphs_item', $variables['p
     <div class="row">
     <?php endif; ?>
 
-    	<div class="col-xs-12 col-sm-6 col-md-6 disc-icon-wrapper">
+    	<div class="<?php echo $hide === TRUE ? 'hide ' : NULL; ?>col-xs-12 col-sm-6 col-md-6 disc-icon-wrapper">
         <div class="row">
           <div class="col-xs-3 col-sm-3 col-md-2 disc-icon-icon disc-icon-<?php print $field_icon['field_paragraph_dwt_icon']['#items'][0]['value']; ?>"></div>
           <div class="col-xs-9 col-sm-9 col-md-10 dwt-icon-link">
@@ -75,10 +88,6 @@ $field_paragraph_btn_callouts = field_get_items('paragraphs_item', $variables['p
     <?php endif; ?>
     <?php endforeach; ?>
 
-    </div>
-
   </div>
 
 </div>
-
-
