@@ -27,9 +27,9 @@ function asu_clas_research_areas_disable() {
  * Implements hook_uninstall().
  */
 function asu_clas_research_areas_uninstall() {
-  $vocab = taxonomy_vocabulary_machine_name_load('research_area');
-
-  taxonomy_vocabulary_delete($vocab->vid);
+  if ($vocab = taxonomy_vocabulary_machine_name_load('research_area')) {
+    taxonomy_vocabulary_delete($vocab->vid);
+  }
 
   field_delete_field('research_area_icon');
   field_delete_field('research_area_image');
