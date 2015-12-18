@@ -73,6 +73,17 @@ $handler->display->display_options['filters']['parent']['field'] = 'parent';
 /* Display: Vertical List */
 $handler = $view->new_display('panel_pane', 'Vertical List', 'research_area_list_vertical_pane');
 $handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Taxonomy term: Research Area Icon */
+$handler->display->display_options['fields']['research_area_icon']['id'] = 'research_area_icon';
+$handler->display->display_options['fields']['research_area_icon']['table'] = 'field_data_research_area_icon';
+$handler->display->display_options['fields']['research_area_icon']['field'] = 'research_area_icon';
+$handler->display->display_options['fields']['research_area_icon']['label'] = '';
+$handler->display->display_options['fields']['research_area_icon']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['research_area_icon']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['research_area_icon']['settings'] = array(
+  'image_style' => 'asu_clas_research_area_icon',
+  'image_link' => '',
+);
 /* Field: Taxonomy term: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
