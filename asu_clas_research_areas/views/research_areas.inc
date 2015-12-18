@@ -25,7 +25,7 @@ $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['style_options']['row_class'] = 'clearfix';
 $handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
-/* Field: Broken/missing handler */
+/* Field: Taxonomy term: Research Area Icon */
 $handler->display->display_options['fields']['research_area_icon']['id'] = 'research_area_icon';
 $handler->display->display_options['fields']['research_area_icon']['table'] = 'field_data_research_area_icon';
 $handler->display->display_options['fields']['research_area_icon']['field'] = 'research_area_icon';
@@ -122,6 +122,17 @@ $handler->display->display_options['fields']['name']['element_class'] = 'researc
 $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+/* Field: Taxonomy term: Research Area Image */
+$handler->display->display_options['fields']['research_area_image']['id'] = 'research_area_image';
+$handler->display->display_options['fields']['research_area_image']['table'] = 'field_data_research_area_image';
+$handler->display->display_options['fields']['research_area_image']['field'] = 'research_area_image';
+$handler->display->display_options['fields']['research_area_image']['label'] = '';
+$handler->display->display_options['fields']['research_area_image']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['research_area_image']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['research_area_image']['settings'] = array(
+  'image_style' => 'asu_clas_research_area_image',
+  'image_link' => '',
+);
 /* Field: Taxonomy term: Term description */
 $handler->display->display_options['fields']['description']['id'] = 'description';
 $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
@@ -195,7 +206,7 @@ $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
-/* Field: Broken/missing handler */
+/* Field: Taxonomy term: Research Area Icon */
 $handler->display->display_options['fields']['research_area_icon']['id'] = 'research_area_icon';
 $handler->display->display_options['fields']['research_area_icon']['table'] = 'field_data_research_area_icon';
 $handler->display->display_options['fields']['research_area_icon']['field'] = 'research_area_icon';
@@ -249,7 +260,7 @@ $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
-/* Field: Broken/missing handler */
+/* Field: Taxonomy term: Research Area Icon */
 $handler->display->display_options['fields']['research_area_icon']['id'] = 'research_area_icon';
 $handler->display->display_options['fields']['research_area_icon']['table'] = 'field_data_research_area_icon';
 $handler->display->display_options['fields']['research_area_icon']['field'] = 'research_area_icon';
