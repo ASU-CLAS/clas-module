@@ -54,4 +54,8 @@ function asu_clas_research_areas_uninstall() {
     image_style_flush($style);
     image_style_delete($style);
   }
+
+  db_delete('variable')
+    ->condition('name', 'panelizer_defaults_taxonomy_term_research_area')
+    ->execute();
 }
