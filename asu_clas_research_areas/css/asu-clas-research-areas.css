@@ -149,3 +149,13 @@
 .research-area-grid-horizontal .research-area-description {
   font-size: 14px;
 }
+
+/**
+ * Research Area Faculty Expertise Pane
+ */
+
+.research-area-faculty-list .row {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1em !important;
+  padding-bottom: 1em;
+}
