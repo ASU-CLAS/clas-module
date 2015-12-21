@@ -31,9 +31,16 @@ function asu_clas_research_areas_uninstall() {
     taxonomy_vocabulary_delete($vocab->vid);
   }
 
-  field_delete_field('research_area_icon');
-  field_delete_field('research_area_image');
-  field_delete_field('research_area_isearch_relation');
+  $fields = array(
+    'research_area_icon',
+    'research_area_image',
+    'research_area_isearch_relation',
+  );
+
+  foreach ($fields as $field) {
+    field_delete_field($field);
+    field_purge_batch(1);
+  }
 
   if ($view = views_get_view('research_areas')) {
     views_delete_view($view);
@@ -55,7 +62,19 @@ function asu_clas_research_areas_uninstall() {
     image_style_delete($style);
   }
 
-  db_delete('variable')
-    ->condition('name', 'panelizer_defaults_taxonomy_term_research_area')
+  db_delete('panelizer_defaults')
+    ->condition('name', 'taxonomy_term:research_area:default')
     ->execute();
+
+  $variables = array(
+    'panelizer_defaults_taxonomy_term_research_area',
+    'panelizer_taxonomy_term:research_area_allowed_layouts',
+    'panelizer_taxonomy_term:research_area_allowed_layouts_default',
+    'panelizer_taxonomy_term:research_area_allowed_types_default',
+    'panelizer_taxonomy_term:research_area_default',
+  );
+
+  foreach ($variables as $variable) {
+    variable_del($variable);
+  }
 }
