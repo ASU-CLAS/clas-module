@@ -127,7 +127,10 @@ function asu_clas_research_areas_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'research-area-taxonomy-term-name',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -184,8 +187,8 @@ function asu_clas_research_areas_panelizer_defaults() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
+      'label' => 'title',
+      'formatter' => 'file_rendered',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
