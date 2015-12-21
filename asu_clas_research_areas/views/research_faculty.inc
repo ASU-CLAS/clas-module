@@ -340,11 +340,6 @@ $handler->display->display_options['fields']['field_isearch_displayname']['eleme
 $handler->display->display_options['fields']['field_isearch_displayname']['element_class'] = 'research-faculty-name';
 $handler->display->display_options['fields']['field_isearch_displayname']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_isearch_displayname']['element_default_classes'] = FALSE;
-/* Field: Field collection item: Employee Type */
-$handler->display->display_options['fields']['field_isearch_affil_empl_type']['id'] = 'field_isearch_affil_empl_type';
-$handler->display->display_options['fields']['field_isearch_affil_empl_type']['table'] = 'field_data_field_isearch_affil_empl_type';
-$handler->display->display_options['fields']['field_isearch_affil_empl_type']['field'] = 'field_isearch_affil_empl_type';
-$handler->display->display_options['fields']['field_isearch_affil_empl_type']['relationship'] = 'field_isearch_affiliations_value';
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Field collection item: Rank Tenure (field_isearch_affil_rank_tenure) */
 $handler->display->display_options['sorts']['field_isearch_affil_rank_tenure_value']['id'] = 'field_isearch_affil_rank_tenure_value';
@@ -397,7 +392,6 @@ $handler->display->display_options['filters']['field_isearch_affil_empl_type_val
 $handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['field'] = 'field_isearch_affil_empl_type_value';
 $handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['relationship'] = 'field_isearch_affiliations_value';
 $handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['value'] = 'Faculty';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['exposed'] = TRUE;
 $handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['operator_id'] = 'field_isearch_affil_empl_type_value_op';
 $handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['label'] = 'Employee Type (field_isearch_affil_empl_type)';
 $handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['operator'] = 'field_isearch_affil_empl_type_value_op';
@@ -423,6 +417,32 @@ $handler->display->display_options['allow']['path_override'] = 0;
 $handler->display->display_options['allow']['title_override'] = 'title_override';
 $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
 $handler->display->display_options['allow']['fields_override'] = 0;
+$handler->display->display_options['argument_input'] = array(
+  'field_isearch_affil_empl_key_value' => array(
+    'type' => 'none',
+    'context' => 'entity:field_collection_item.uuid',
+    'context_optional' => 0,
+    'panel' => '0',
+    'fixed' => '',
+    'label' => 'Employee Type',
+  ),
+  'field_isearch_affil_dept_id_value_1' => array(
+    'type' => 'none',
+    'context' => 'entity:field_collection_item.uuid',
+    'context_optional' => 0,
+    'panel' => '0',
+    'fixed' => '',
+    'label' => 'Department ID',
+  ),
+  'field_isearch_affil_rank_tenure_value' => array(
+    'type' => 'none',
+    'context' => 'entity:field_collection_item.uuid',
+    'context_optional' => 0,
+    'panel' => '0',
+    'fixed' => '',
+    'label' => 'Field collection item: Rank Tenure (field_isearch_affil_rank_tenure)',
+  ),
+);
 
 /* Display: Faculty List Expertise */
 $handler = $view->new_display('panel_pane', 'Faculty List Expertise', 'panel_pane_1');
