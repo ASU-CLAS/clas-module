@@ -259,6 +259,29 @@ $handler->display->display_options['filters']['type']['value'] = array(
   'asu_isearch_profile' => 'asu_isearch_profile',
 );
 $handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Field collection item: Employee Type (field_isearch_affil_empl_type) */
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['id'] = 'field_isearch_affil_empl_type_value';
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['table'] = 'field_data_field_isearch_affil_empl_type';
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['field'] = 'field_isearch_affil_empl_type_value';
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['relationship'] = 'field_isearch_affiliations_value';
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['value'] = 'Faculty';
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['group'] = 1;
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['operator_id'] = 'field_isearch_affil_empl_type_value_op';
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['label'] = 'Employee Type';
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['operator'] = 'field_isearch_affil_empl_type_value_op';
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['identifier'] = 'field_isearch_affil_empl_type_value';
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+  4 => 0,
+  5 => 0,
+);
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['autocomplete_items'] = '10';
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['autocomplete_min_chars'] = '0';
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['autocomplete_raw_suggestion'] = 1;
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['autocomplete_raw_dropdown'] = 1;
+$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['autocomplete_dependent'] = 0;
 /* Filter criterion: Content: Expertise Areas (field_isearch_expertise_areas) */
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['id'] = 'field_isearch_expertise_areas_tid';
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['table'] = 'field_data_field_isearch_expertise_areas';
@@ -279,32 +302,10 @@ $handler->display->display_options['filters']['field_isearch_expertise_areas_tid
 );
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['vocabulary'] = 'isearch_expertise';
-/* Filter criterion: Field collection item: Employee Type (field_isearch_affil_empl_type) */
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['id'] = 'field_isearch_affil_empl_type_value';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['table'] = 'field_data_field_isearch_affil_empl_type';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['field'] = 'field_isearch_affil_empl_type_value';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['relationship'] = 'field_isearch_affiliations_value';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['value'] = 'Faculty';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['exposed'] = TRUE;
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['operator_id'] = 'field_isearch_affil_empl_type_value_op';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['label'] = 'Employee Type';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['operator'] = 'field_isearch_affil_empl_type_value_op';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['identifier'] = 'field_isearch_affil_empl_type_value';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['remember_roles'] = array(
-  2 => '2',
-  1 => 0,
-  3 => 0,
-  4 => 0,
-  5 => 0,
-);
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['autocomplete_items'] = '10';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['autocomplete_min_chars'] = '0';
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['autocomplete_raw_suggestion'] = 1;
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['autocomplete_raw_dropdown'] = 1;
-$handler->display->display_options['filters']['field_isearch_affil_empl_type_value']['expose']['autocomplete_dependent'] = 0;
+$handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['hierarchy'] = 1;
 
 /* Display: Faculty Grid */
-$handler = $view->new_display('panel_pane', 'Faculty Grid', 'research_area_faculty_grid');
+$handler = $view->new_display('panel_pane', 'Faculty Grid', 'grid');
 $handler->display->display_options['defaults']['css_class'] = FALSE;
 $handler->display->display_options['css_class'] = 'research-area-faculty-grid';
 $handler->display->display_options['defaults']['exposed_form'] = FALSE;
@@ -445,7 +446,7 @@ $handler->display->display_options['argument_input'] = array(
 );
 
 /* Display: Faculty List Expertise */
-$handler = $view->new_display('panel_pane', 'Faculty List Expertise', 'panel_pane_1');
+$handler = $view->new_display('panel_pane', 'Faculty List Expertise', 'expertise_list');
 $handler->display->display_options['defaults']['exposed_form'] = FALSE;
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -506,6 +507,8 @@ $handler->display->display_options['fields']['field_isearch_phone']['table'] = '
 $handler->display->display_options['fields']['field_isearch_phone']['field'] = 'field_isearch_phone';
 $handler->display->display_options['fields']['field_isearch_phone']['label'] = '';
 $handler->display->display_options['fields']['field_isearch_phone']['element_label_colon'] = FALSE;
+$handler->display->display_options['pane_category']['name'] = 'ASU CLAS Research Areas';
+$handler->display->display_options['pane_category']['weight'] = '0';
 $handler->display->display_options['allow']['use_pager'] = 0;
 $handler->display->display_options['allow']['items_per_page'] = 0;
 $handler->display->display_options['allow']['offset'] = 0;
