@@ -159,14 +159,22 @@ function asu_clas_research_areas_panelizer_defaults() {
     $display->content['new-d5defe83-c59a-44ea-a463-c51c3550fd57'] = $pane;
     $display->panels['rowthree'][0] = 'new-d5defe83-c59a-44ea-a463-c51c3550fd57';
     $pane = new stdClass();
-    $pane->pid = 'new-d4c49793-189e-430a-aaea-370647d7db5a';
+    $pane->pid = 'new-503b0d21-9c40-4e54-970f-2b215da6abea';
     $pane->panel = 'rowthree';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:48d62963-a3d7-4e0d-bfad-3dc433ec861d';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'research_faculty-expertise_list';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'Full',
+      'exposed' => array(
+        'field_isearch_expertise_areas_tid' => 'All',
+      ),
+      'override_title' => '',
+      'override_title_text' => '',
+      'view_settings' => 'fields',
+      'header_type' => 'none',
+      'view_mode' => 'teaser',
+      'widget_title' => 'Team',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -176,9 +184,9 @@ function asu_clas_research_areas_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'd4c49793-189e-430a-aaea-370647d7db5a';
-    $display->content['new-d4c49793-189e-430a-aaea-370647d7db5a'] = $pane;
-    $display->panels['rowthree'][1] = 'new-d4c49793-189e-430a-aaea-370647d7db5a';
+    $pane->uuid = '503b0d21-9c40-4e54-970f-2b215da6abea';
+    $display->content['new-503b0d21-9c40-4e54-970f-2b215da6abea'] = $pane;
+    $display->panels['rowthree'][1] = 'new-503b0d21-9c40-4e54-970f-2b215da6abea';
     $pane = new stdClass();
     $pane->pid = 'new-2193cbae-b933-4b96-ae62-93efbdd17f75';
     $pane->panel = 'rowtwo';

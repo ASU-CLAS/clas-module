@@ -12,6 +12,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Team';
 $handler->display->display_options['css_class'] = 'research-area-faculty-list';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
@@ -507,7 +508,6 @@ $handler->display->display_options['fields']['field_isearch_phone']['table'] = '
 $handler->display->display_options['fields']['field_isearch_phone']['field'] = 'field_isearch_phone';
 $handler->display->display_options['fields']['field_isearch_phone']['label'] = '';
 $handler->display->display_options['fields']['field_isearch_phone']['element_label_colon'] = FALSE;
-$handler->display->display_options['pane_category']['name'] = 'View panes';
 $handler->display->display_options['pane_category']['weight'] = '0';
 $handler->display->display_options['allow']['use_pager'] = 0;
 $handler->display->display_options['allow']['items_per_page'] = 0;
