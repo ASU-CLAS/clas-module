@@ -156,3 +156,26 @@
   margin-bottom: 1em !important;
   padding-bottom: 1em;
 }
+
+/**
+ * Research Area Faculty Embed
+ */
+
+.research-area-faculty-embed ul {
+  list-style: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 0;
+}
+
+.research-area-faculty-embed li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 0;
+  margin-right: 5px;
+  padding-left: 0;
+}
+
+.research-area-faculty-embed li:last-child .delimiter {
+  display: none;
+}

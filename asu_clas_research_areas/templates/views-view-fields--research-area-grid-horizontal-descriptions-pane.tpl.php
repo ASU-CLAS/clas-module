@@ -45,5 +45,9 @@
   <?php
     $isearch_relation = isset($fields['research_area_isearch_relation']) ? $fields['research_area_isearch_relation']->content : NULL;
     $isearch_expertise_areas = explode(',', $isearch_relation);
+
+    if ($research_faculty = views_embed_view('research_faculty', 'list_embed', 86)) {
+      printf('<section class="research-area-faculty-embed">%s</section>', $research_faculty);
+    }
   ?>
 </div>

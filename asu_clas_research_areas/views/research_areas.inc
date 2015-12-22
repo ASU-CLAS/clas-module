@@ -300,6 +300,18 @@ $handler->display->display_options['fields']['description']['label'] = '';
 $handler->display->display_options['fields']['description']['element_class'] = 'research-area-description';
 $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
+/* Field: Taxonomy term: Research Area iSearch Relationship */
+$handler->display->display_options['fields']['research_area_isearch_relation']['id'] = 'research_area_isearch_relation';
+$handler->display->display_options['fields']['research_area_isearch_relation']['table'] = 'field_data_research_area_isearch_relation';
+$handler->display->display_options['fields']['research_area_isearch_relation']['field'] = 'research_area_isearch_relation';
+$handler->display->display_options['fields']['research_area_isearch_relation']['label'] = '';
+$handler->display->display_options['fields']['research_area_isearch_relation']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['research_area_isearch_relation']['type'] = 'entityreference_entity_id';
+$handler->display->display_options['fields']['research_area_isearch_relation']['settings'] = array(
+  'view_mode' => 'default',
+  'links' => 1,
+);
+$handler->display->display_options['fields']['research_area_isearch_relation']['delta_offset'] = '0';
 $handler->display->display_options['allow']['use_pager'] = 0;
 $handler->display->display_options['allow']['items_per_page'] = 0;
 $handler->display->display_options['allow']['offset'] = 0;
