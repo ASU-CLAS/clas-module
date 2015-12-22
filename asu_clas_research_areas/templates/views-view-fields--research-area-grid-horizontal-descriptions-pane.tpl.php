@@ -41,4 +41,9 @@
   <?php if (isset($fields['description'])): ?>
     <?php print $fields['description']->content; ?>
   <?php endif; ?>
+
+  <?php
+    $isearch_relation = isset($fields['research_area_isearch_relation']) ? $fields['research_area_isearch_relation']->content : NULL;
+    $isearch_expertise_areas = explode(',', $isearch_relation);
+  ?>
 </div>
