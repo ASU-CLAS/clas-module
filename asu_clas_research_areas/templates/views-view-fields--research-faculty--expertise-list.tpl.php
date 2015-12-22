@@ -29,7 +29,7 @@
   <?php if (isset($fields['field_isearch_photo_url'])): ?>
     <?php print $fields['field_isearch_photo_url']->content; ?>
   <?php else: ?>
-    <?php print theme_image(array('path' => drupal_get_path('module', 'asu_clas_research_areas') . '/images/placeholder-200x200.png', 'width' => 116, 'height' => 116)); ?>
+    <?php print theme_image(array('path' => drupal_get_path('module', 'asu_clas_research_areas') . '/images/placeholder-200x200.png', 'width' => 116, 'height' => 116, 'attributes' => array())); ?>
   <?php endif; ?>
 </div>
 

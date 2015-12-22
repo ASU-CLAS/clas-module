@@ -29,7 +29,7 @@
   <?php if (!empty($fields['research_area_icon']->content)): ?>
     <?php print $fields['research_area_icon']->content; ?>
   <?php else: ?>
-    <?php print theme_image(array('path' => drupal_get_path('module', 'asu_clas_research_areas') . '/images/placeholder-50x50.png', 'width' => 50, 'height' => 50)); ?>
+    <?php print theme_image(array('path' => drupal_get_path('module', 'asu_clas_research_areas') . '/images/placeholder-50x50.png', 'width' => 50, 'height' => 50, 'attributes' => array())); ?>
   <?php endif; ?>
 </div>
 
