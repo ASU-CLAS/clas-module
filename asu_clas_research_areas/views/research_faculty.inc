@@ -12,6 +12,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Research Faculty';
 $handler->display->display_options['css_class'] = 'research-area-faculty-list';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
@@ -322,9 +323,13 @@ $handler->display->display_options['style_options']['columns'] = '3';
 $handler->display->display_options['defaults']['style_options'] = FALSE;
 $handler->display->display_options['defaults']['row_plugin'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
-$handler->display->display_options['row_options']['default_field_elements'] = FALSE;
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: Unfiltered text */
+$handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+$handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+$handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+$handler->display->display_options['header']['area_text_custom']['content'] = '<h2>Research Faculty</h2>';
 $handler->display->display_options['defaults']['fields'] = FALSE;
 /* Field: Content: Path */
 $handler->display->display_options['fields']['path']['id'] = 'path';
@@ -340,7 +345,6 @@ $handler->display->display_options['fields']['field_isearch_displayname']['field
 $handler->display->display_options['fields']['field_isearch_displayname']['label'] = '';
 $handler->display->display_options['fields']['field_isearch_displayname']['alter']['make_link'] = TRUE;
 $handler->display->display_options['fields']['field_isearch_displayname']['alter']['path'] = '[path]';
-$handler->display->display_options['fields']['field_isearch_displayname']['element_type'] = 'h3';
 $handler->display->display_options['fields']['field_isearch_displayname']['element_class'] = 'research-faculty-name';
 $handler->display->display_options['fields']['field_isearch_displayname']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_isearch_displayname']['element_default_classes'] = FALSE;

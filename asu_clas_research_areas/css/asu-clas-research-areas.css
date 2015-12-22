@@ -158,6 +158,25 @@
 }
 
 /**
+ * Research Area Faculty Grid
+ */
+
+.research-area-faculty-grid {
+  padding: 60px 50px;
+}
+
+.research-area-faculty-grid .view-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.research-area-faculty-grid .research-faculty-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+/**
  * Research Area Faculty Embed
  */
 
