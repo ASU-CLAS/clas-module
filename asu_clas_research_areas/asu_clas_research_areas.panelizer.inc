@@ -167,7 +167,7 @@ function asu_clas_research_areas_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'exposed' => array(
-        'field_isearch_expertise_areas_tid' => 'All',
+        'field_isearch_expertise_areas_tid' => array(),
       ),
       'override_title' => '',
       'override_title_text' => '',
@@ -187,42 +187,6 @@ function asu_clas_research_areas_panelizer_defaults() {
     $pane->uuid = '503b0d21-9c40-4e54-970f-2b215da6abea';
     $display->content['new-503b0d21-9c40-4e54-970f-2b215da6abea'] = $pane;
     $display->panels['rowthree'][1] = 'new-503b0d21-9c40-4e54-970f-2b215da6abea';
-    $pane = new stdClass();
-    $pane->pid = 'new-2193cbae-b933-4b96-ae62-93efbdd17f75';
-    $pane->panel = 'rowtwo';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'taxonomy_term:research_area_image';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'file_rendered',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'file_view_mode' => 'default',
-        'image_style' => 'asu_clas_research_area_image',
-        'image_link' => '',
-      ),
-      'context' => array(),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'research-area-taxonomy-term-image',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '2193cbae-b933-4b96-ae62-93efbdd17f75';
-    $display->content['new-2193cbae-b933-4b96-ae62-93efbdd17f75'] = $pane;
-    $display->panels['rowtwo'][0] = 'new-2193cbae-b933-4b96-ae62-93efbdd17f75';
     $pane = new stdClass();
     $pane->pid = 'new-567e7b77-4011-43ff-9a30-c142c52f36b9';
     $pane->panel = 'rowtwo';
@@ -244,11 +208,11 @@ function asu_clas_research_areas_panelizer_defaults() {
       'css_class' => 'research-area-taxonomy-term-description',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '567e7b77-4011-43ff-9a30-c142c52f36b9';
     $display->content['new-567e7b77-4011-43ff-9a30-c142c52f36b9'] = $pane;
-    $display->panels['rowtwo'][1] = 'new-567e7b77-4011-43ff-9a30-c142c52f36b9';
+    $display->panels['rowtwo'][0] = 'new-567e7b77-4011-43ff-9a30-c142c52f36b9';
     $pane = new stdClass();
     $pane->pid = 'new-062f5631-2826-4712-9562-9a3c92b07bd6';
     $pane->panel = 'sidebar';
@@ -258,8 +222,8 @@ function asu_clas_research_areas_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'main-menu',
-      'parent_mlid' => (int) ASU_CLAS_RESEARCH_AREAS_MENU_PANE_PARENT_MLID,
-      'parent' => (string) ASU_CLAS_RESEARCH_AREAS_MENU_PANE_PARENT,
+      'parent_mlid' => 1129,
+      'parent' => 'menu:1129',
       'title_link' => 0,
       'admin_title' => '',
       'level' => '1',

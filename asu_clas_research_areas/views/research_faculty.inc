@@ -291,12 +291,13 @@ $handler->display->display_options['filters']['field_isearch_affil_empl_type_val
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['id'] = 'field_isearch_expertise_areas_tid';
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['table'] = 'field_data_field_isearch_expertise_areas';
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['field'] = 'field_isearch_expertise_areas_tid';
-$handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['value'] = '';
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['exposed'] = TRUE;
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['expose']['operator_id'] = 'field_isearch_expertise_areas_tid_op';
-$handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['expose']['label'] = 'Expertise Area';
+$handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['expose']['label'] = 'Expertise Areas';
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['expose']['operator'] = 'field_isearch_expertise_areas_tid_op';
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['expose']['identifier'] = 'field_isearch_expertise_areas_tid';
+$handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['expose']['multiple'] = TRUE;
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['expose']['remember_roles'] = array(
   2 => '2',
   1 => 0,
@@ -304,6 +305,7 @@ $handler->display->display_options['filters']['field_isearch_expertise_areas_tid
   4 => 0,
   5 => 0,
 );
+$handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['reduce_duplicates'] = TRUE;
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['type'] = 'select';
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['vocabulary'] = 'isearch_expertise';
 $handler->display->display_options['filters']['field_isearch_expertise_areas_tid']['hierarchy'] = 1;
