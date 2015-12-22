@@ -43,11 +43,10 @@
   <?php endif; ?>
 
   <?php
-    $isearch_relation = isset($fields['research_area_isearch_relation']) ? $fields['research_area_isearch_relation']->content : NULL;
-    $isearch_expertise_areas = explode(',', $isearch_relation);
+    $isearch_relation = isset($fields['research_area_isearch_relation']) ? strip_tags($fields['research_area_isearch_relation']->content) : NULL;
 
-    if ($research_faculty = views_embed_view('research_faculty', 'list_embed', 86)) {
-      printf('<section class="research-area-faculty-embed">%s</section>', $research_faculty);
+    if ($research_area_faculty_embed = views_embed_view('research_faculty', 'list_embed', $isearch_relation)) {
+      printf('<section class="research-area-faculty-embed">%s</section>', $research_area_faculty_embed);
     }
   ?>
 </div>

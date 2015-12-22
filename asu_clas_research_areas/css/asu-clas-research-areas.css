@@ -144,7 +144,7 @@
 }
 
 .research-area-grid-horizontal .research-area-description {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /**
@@ -161,21 +161,29 @@
  * Research Area Faculty Embed
  */
 
+.research-area-faculty-embed {
+  margin-top: 1em;
+}
+
 .research-area-faculty-embed ul {
+  color: #a30046;
   list-style: none;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 400;
   padding-left: 0;
 }
 
 .research-area-faculty-embed li {
   display: inline-block;
   list-style: none;
-  margin-left: 0;
-  margin-right: 5px;
+  margin-right: 2px;
   padding-left: 0;
 }
 
 .research-area-faculty-embed li:last-child .delimiter {
   display: none;
+}
+
+.research-area-faculty-embed a {
+  border-bottom: none;
 }
