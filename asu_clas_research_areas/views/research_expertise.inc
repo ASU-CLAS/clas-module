@@ -71,7 +71,7 @@ $handler->display->display_options['fields']['field_isearch_displayname']['alter
 $handler->display->display_options['fields']['field_isearch_displayname']['alter']['path'] = '[path]';
 $handler->display->display_options['fields']['field_isearch_displayname']['element_class'] = 'faculty-name';
 $handler->display->display_options['fields']['field_isearch_displayname']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_isearch_displayname']['element_wrapper_class'] = 'faculty-name-wrapper';
+$handler->display->display_options['fields']['field_isearch_displayname']['element_wrapper_class'] = 'faculty-name-wrapper collapse';
 $handler->display->display_options['fields']['field_isearch_displayname']['element_default_classes'] = FALSE;
 /* Sort criterion: Taxonomy term: Weight */
 $handler->display->display_options['sorts']['weight']['id'] = 'weight';

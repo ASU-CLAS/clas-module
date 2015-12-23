@@ -44,6 +44,23 @@
 <script>
   (function($) {
     $(document).ready(function() {
+      // Bootstrap Collapse
+      // http://bootstrapdocs.com/v3.1.1/docs/javascript/#collapse
+      $('.faculty-name-wrapper').collapse({
+        toggle: false
+      });
+
+      $('.expertise-area-wrapper').on('click', function(event) {
+        $(this).next('.faculty-name-wrapper').collapse('toggle');
+      });
+
+      $('.faculty-name-wrapper').on('show.bs.collapse', function() {
+        $(this).prev().children('.expertise-area').addClass('open');
+      });
+
+      $('.faculty-name-wrapper').on('hide.bs.collapse', function() {
+        $(this).prev().children('.expertise-area').removeClass('open');
+      });
     });
   })(jQuery);
 </script>
