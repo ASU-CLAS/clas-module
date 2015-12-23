@@ -278,23 +278,24 @@ function classocial_buttons($layout = 'vertical', $msg_parts = array()) {
     //echo $our_node_type;
 
     if ($our_node_type == "ASU Event"){    
+		if(isset($node->field_asuevent_nid['und'][0]['value'])) {
+		  $asu_event_id = $node->field_asuevent_nid['und'][0]['value'];
 
-      $asu_event_id = $node->field_asuevent_nid['und'][0]['value'];
-
-      // Calendar Add:
-      $link = "https://asuevents.asu.edu/calendar/ical/".$asu_event_id;
-      $text = '<i class="fa fa-calendar fa-lg"></i>';  
-      $output['addtocalendar'] = array(
-        '#prefix' => "<li>",
-        '#suffix' => "</li>",
-        '#markup' => l($text, $link, array(
-          'html' => TRUE,
-          'attributes' => array(
-            'target' => '_blank',
-            'class' => $btn_classes,
-          )
-        )),
-      );
+		  // Calendar Add:
+		  $link = "https://asuevents.asu.edu/calendar/ical/".$asu_event_id;
+		  $text = '<i class="fa fa-calendar fa-lg"></i>';  
+		  $output['addtocalendar'] = array(
+			'#prefix' => "<li>",
+			'#suffix' => "</li>",
+			'#markup' => l($text, $link, array(
+			  'html' => TRUE,
+			  'attributes' => array(
+				'target' => '_blank',
+				'class' => $btn_classes,
+			  )
+			)),
+		  );
+		}	
 
     };
 
