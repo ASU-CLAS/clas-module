@@ -206,3 +206,68 @@
 .research-area-faculty-embed a {
   border-bottom: none;
 }
+
+/**
+ * Faculty by Expertise
+ */
+
+.faculty-expertise {
+  padding: 60px 50px;
+}
+
+.faculty-expertise .view-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.faculty-expertise .col {
+  margin-bottom: 1em;
+}
+
+.faculty-expertise ul {
+  -webkit-column-count: 0;
+  -moz-column-count: 0;
+  column-count: 0;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.faculty-expertise li {
+  margin-bottom: 1em;
+}
+
+.faculty-expertise .expertise-area {
+  color: #a30046;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.faculty-expertise .expertise-area:before {
+  content: "+";
+  display: inline-block;
+  margin-right: 5px;
+  visibility: hidden;
+}
+
+.faculty-expertise .expertise-area.collapsed:before {
+  content: "-";
+}
+
+.faculty-expertise .faculty-name-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.faculty-expertise .faculty-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.faculty-expertise .faculty-name a {
+  border-bottom: none;
+}
