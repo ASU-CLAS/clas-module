@@ -1,0 +1,38 @@
+/**
+ * Research by Lab Pane
+ */
+
+.research-by-lab .views-exposed-form {
+  margin-bottom: 3em;
+  margin-left: 12px;
+}
+
+.research-by-lab .views-exposed-widget {
+  padding: 0;
+}
+
+.research-by-lab .views-exposed-widget .form-submit {
+  margin-top: 0;
+}
+
+.research-by-lab .view-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.research-by-lab .row {
+  margin-bottom: 1em;
+}
+
+.research-by-lab .research-lab-title {
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+.research-by-lab .research-lab-title a {
+  font-weight: bold;
+}
+
+.research-by-lab .research-lab-synopsis {
+  font-size: 16px;
+}

@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function asu_clas_psychology_labs_install() {
+  return TRUE;
+}
+
+/**
+ * Implements hook_disable().
+ */
+function asu_clas_psychology_labs_disable() {
+  return TRUE;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function asu_clas_psychology_labs_uninstall() {
+  $views = array(
+    'research_labs',
+  );
+
+  foreach ($views as $view) {
+    if ($view = views_get_view($view)) {
+      views_delete_view($view);
+    }
+  }
+}
