@@ -257,8 +257,8 @@ function asu_clas_research_areas_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'main-menu',
-      'parent_mlid' => 1129,
-      'parent' => 'menu:1129',
+      'parent_mlid' => (int) ASU_CLAS_RESEARCH_AREAS_MENU_PANE_PARENT_MLID,
+      'parent' => (string) ASU_CLAS_RESEARCH_AREAS_MENU_PANE_PARENT,
       'title_link' => 0,
       'admin_title' => '',
       'level' => '1',
