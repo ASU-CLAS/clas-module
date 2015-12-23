@@ -10,6 +10,7 @@ dependencies[] = asu_clas_panels_layouts
 dependencies[] = panelizer
 dependencies[] = taxonomy
 dependencies[] = views
+dependencies[] = views_bootstrap
 
 ; Features
 __drupal_alter_by_ref[][fieldable_panels_pane][text] = text
