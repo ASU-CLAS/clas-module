@@ -214,6 +214,41 @@ function asu_clas_research_areas_panelizer_defaults() {
     $display->content['new-567e7b77-4011-43ff-9a30-c142c52f36b9'] = $pane;
     $display->panels['rowtwo'][0] = 'new-567e7b77-4011-43ff-9a30-c142c52f36b9';
     $pane = new stdClass();
+    $pane->pid = 'new-a7ba95af-3b87-42e3-8252-2bd8372b19f5';
+    $pane->panel = 'rowtwo';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'taxonomy_term:research_area_image';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'image',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'image_style' => 'asu_clas_research_area_image',
+        'image_link' => '',
+      ),
+      'context' => array(),
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'research-area-taxonomy-term-image',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'a7ba95af-3b87-42e3-8252-2bd8372b19f5';
+    $display->content['new-a7ba95af-3b87-42e3-8252-2bd8372b19f5'] = $pane;
+    $display->panels['rowtwo'][1] = 'new-a7ba95af-3b87-42e3-8252-2bd8372b19f5';
+    $pane = new stdClass();
     $pane->pid = 'new-062f5631-2826-4712-9562-9a3c92b07bd6';
     $pane->panel = 'sidebar';
     $pane->type = 'menu_tree';
