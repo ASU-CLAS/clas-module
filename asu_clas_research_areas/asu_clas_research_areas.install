@@ -42,12 +42,16 @@ function asu_clas_research_areas_uninstall() {
     field_purge_batch(1);
   }
 
-  if ($view = views_get_view('research_areas')) {
-    views_delete_view($view);
-  }
+  $views = array(
+    'research_areas',
+    'research_expertise',
+    'research_faculty',
+  );
 
-  if ($view = views_get_view('research_areas_faculty')) {
-    views_delete_view($view);
+  foreach ($views as $view) {
+    if ($view = views_get_view($view)) {
+      views_delete_view($view);
+    }
   }
 
   $image_styles = array(

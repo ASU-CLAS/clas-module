@@ -1,7 +1,7 @@
 <?php
 
 $view = new view();
-$view->name = 'asu_clas_research_area_expertise';
+$view->name = 'research_expertise';
 $view->description = '';
 $view->tag = 'asu_clas';
 $view->base_table = 'taxonomy_term_data';
