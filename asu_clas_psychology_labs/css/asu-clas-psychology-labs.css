@@ -1,0 +1,110 @@
+/**
+ * Research by Lab Pane
+ */
+
+.research-by-lab .views-exposed-form {
+  margin-bottom: 3em;
+  margin-left: 12px;
+}
+
+.research-by-lab .views-exposed-widget {
+  padding: 0;
+}
+
+.research-by-lab .views-exposed-widget .form-submit {
+  margin-top: 0;
+}
+
+.research-by-lab .view-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.research-by-lab .row {
+  margin-bottom: 1em;
+}
+
+.research-by-lab .research-lab-title {
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+.research-by-lab .research-lab-title a {
+  font-weight: bold;
+}
+
+.research-by-lab .research-lab-synopsis {
+  font-size: 16px;
+}
+
+/**
+ * Lab Node
+ */
+
+#panels-ipe-regionid-rowtwo .panels-ipe-sort-container:before,
+#panels-ipe-regionid-rowtwo .panels-ipe-sort-container:after {
+  content: " ";
+  display: table;
+}
+
+#panels-ipe-regionid-rowtwo .panels-ipe-sort-container:after {
+  clear: both;
+}
+
+.lab-title h2 {
+  font-size: 36px;
+  margin-top: 1em;
+}
+
+.lab-image {
+  margin-bottom: 1em;
+  max-height: 200px;
+  max-width: 250px;
+}
+
+@media (min-width: 700px) {
+  .lab-image {
+    float: right;
+    margin-left: 1em;
+  }
+}
+
+.lab-image .pane-title {
+  display: none;
+}
+
+.lab-description .pane-title {
+  display: none;
+}
+
+.lab-research-area {
+  margin-bottom: 2em;
+}
+
+.lab-research-area .field-label {
+  font-size: 16px;
+  display: inline-block;
+  float: left;
+  margin-bottom: 0;
+  margin-right: 6px;
+  margin-top: 0;
+}
+
+.lab-research-area .links {
+  display: inline-block;
+  float: left;
+}
+
+.lab-research-area .links > li {
+  padding: 0;
+}
+
+.lab-research-area .links > li:after {
+  content: ", ";
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.lab-research-area .links > li:last-child:after {
+  display: none;
+}
