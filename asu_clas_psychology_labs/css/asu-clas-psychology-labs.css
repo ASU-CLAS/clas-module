@@ -2,6 +2,10 @@
  * Research by Lab Pane
  */
 
+.research-by-lab {
+  padding: 60px 50px;
+}
+
 .research-by-lab .views-exposed-form {
   margin-bottom: 3em;
   margin-left: 12px;
