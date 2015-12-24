@@ -12,6 +12,6 @@ It enables Panelizer on the Lab node type and sets up the default configuration 
 
 * Added additional View display to show a paged list of Labs
 
-**1.0** (23 December 2015)
+**1.0.0** (23 December 2015)
 
 * Initial release
