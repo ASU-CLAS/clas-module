@@ -22,6 +22,15 @@ function asu_clas_psychology_labs_views_api() {
 }
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function asu_clas_psychology_labs_ctools_plugin_api($module, $api) {
+  if ($module == 'panelizer' && $api == 'panelizer') {
+    return array('version' => 1);
+  }
+}
+
+/**
  * Include Views exports.
  */
 function asu_clas_psychology_labs_views_default_views() {

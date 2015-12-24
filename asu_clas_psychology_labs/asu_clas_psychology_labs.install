@@ -7,7 +7,22 @@
  * Implements hook_install().
  */
 function asu_clas_psychology_labs_install() {
-  return TRUE;
+  // Enable Panelizer for 'Lab' content type.
+  variable_set('page_manager_node_view_disabled', FALSE);
+
+  // Setup Panelizer defaults.
+  $panelizer_defaults = array(
+    'status' => TRUE,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => TRUE,
+        'default' => TRUE,
+        'choice' => FALSE,
+      ),
+    ),
+  );
+
+  variable_set('panelizer_defaults_node_lab', $panelizer_defaults);
 }
 
 /**
@@ -29,5 +44,22 @@ function asu_clas_psychology_labs_uninstall() {
     if ($view = views_get_view($view)) {
       views_delete_view($view);
     }
+  }
+
+  db_delete('panelizer_defaults')
+    ->condition('name', 'node:lab:default')
+    ->execute();
+
+  db_delete('panelizer_defaults')
+    ->condition('name', 'node:lab:default:default')
+    ->execute();
+
+  $variables = array(
+    'panelizer_defaults_node_lab',
+    'panelizer_node:lab_default',
+  );
+
+  foreach ($variables as $variable) {
+    variable_del($variable);
   }
 }
