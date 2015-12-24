@@ -51,7 +51,7 @@ function asu_clas_psychology_labs_views_default_views() {
  * Implements hook_form_alter().
  */
 function asu_clas_psychology_labs_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'views_exposed_form' && $form_state['view']->name == 'research_labs' && $form_state['view']->current_display == 'pane') {
+  if ($form_id == 'views_exposed_form' && $form_state['view']->name == 'research_labs' && $form_state['view']->current_display == 'filter') {
     // Change value of submit button from 'Apply' to 'Filter'.
     $form['submit']['#value'] = 'Filter';
   }
