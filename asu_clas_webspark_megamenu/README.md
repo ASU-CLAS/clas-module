@@ -10,7 +10,7 @@ Once this behavior is fixed in Webspark, this module will become obselete.
 
 **Changelog**
 
-**1.0** (15 December 2015)
+**1.0.0** (15 December 2015)
 
 * Initial release
 
