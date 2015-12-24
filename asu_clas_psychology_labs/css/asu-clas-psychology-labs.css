@@ -65,14 +65,14 @@
   margin-top: 1em;
 }
 
-.node-type-lab.lab-image {
+.node-type-lab .lab-image {
   margin-bottom: 1em;
   max-height: 200px;
   max-width: 250px;
 }
 
 @media (min-width: 700px) {
-  .node-type-lab.lab-image {
+  .node-type-lab .lab-image {
     float: right;
     margin-left: 1em;
   }
