@@ -118,6 +118,13 @@ $handler->display->display_options['filters']['field_lab_research_area_tid']['hi
 
 /* Display: Research by Lab */
 $handler = $view->new_display('panel_pane', 'Research by Lab', 'filter');
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'mini';
+$handler->display->display_options['pager']['options']['items_per_page'] = '0';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['tags']['previous'] = '‹ Previous';
+$handler->display->display_options['pager']['options']['tags']['next'] = 'Next ›';
 $handler->display->display_options['allow']['use_pager'] = 0;
 $handler->display->display_options['allow']['items_per_page'] = 0;
 $handler->display->display_options['allow']['offset'] = 0;
