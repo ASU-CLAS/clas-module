@@ -8,6 +8,10 @@ It enables Panelizer on the Lab node type and sets up the default configuration 
 
 **Changelog**
 
+**1.0.2** (05 January 2016)
+
+* Added View display to show a grid of Research Labs by Faculty
+
 **1.0.1** (24 December 2015)
 
 * Added additional View display to show a paged list of Labs
