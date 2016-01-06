@@ -1,5 +1,3 @@
-<?php
-
 $view = new view();
 $view->name = 'research_expertise';
 $view->description = '';
