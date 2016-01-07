@@ -273,3 +273,17 @@
 .faculty-expertise .faculty-name a {
   border-bottom: none;
 }
+
+/**
+ * Research Area Subcategories
+ */
+
+.research-area-subcategories-embed .research-area-name a {
+  border-bottom: 1px dotted #a30046;
+  display: inline-block;
+}
+
+.research-area-subcategories-embed .research-area-faculty-list {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}

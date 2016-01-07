@@ -43,10 +43,21 @@
   <?php endif; ?>
 
   <?php
-    $isearch_relation = isset($fields['research_area_isearch_relation']) ? strip_tags($fields['research_area_isearch_relation']->content) : NULL;
+    $research_area_parent_category_tid = isset($fields['tid']) ? strip_tags($fields['tid']->content) : NULL;
+    $research_area_isearch_relation = isset($fields['research_area_isearch_relation']) ? strip_tags($fields['research_area_isearch_relation']->content) : NULL;
+    $research_area_parent_children = taxonomy_get_children($research_area_parent_category_tid);
 
-    if ($research_area_faculty_embed = views_embed_view('research_faculty', 'list_embed', $isearch_relation)) {
-      printf('<section class="research-area-faculty-embed">%s</section>', $research_area_faculty_embed);
+    if (!empty($research_area_parent_children)) {
+      if (!empty($research_area_parent_category_tid)) {
+        if ($child_category_embed = views_embed_view('research_areas', 'subcategories_embed', $research_area_parent_category_tid)) {
+          printf('<section class="research-area-faculty-embed">%s</section>', $child_category_embed);
+        }
+      }
+    }
+    else {
+      if ($parent_category_embed = views_embed_view('research_faculty', 'list_embed', $research_area_isearch_relation)) {
+        printf('<section class="research-area-faculty-embed">%s</section>', $parent_category_embed);
+      }
     }
   ?>
 </div>
