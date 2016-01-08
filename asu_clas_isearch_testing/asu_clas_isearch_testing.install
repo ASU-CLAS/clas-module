@@ -1,0 +1,37 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function asu_clas_isearch_testing_install() {
+  variable_set('asu_isearch_devmode', TRUE);
+
+  if (!isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+    module_load_include('inc', 'asu_clas_isearch_testing', 'includes/actions');
+
+    _asu_clas_isearch_testing_delete_terms();
+    _asu_clas_isearch_testing_add_terms();
+    _asu_clas_isearch_testing_create_profiles();
+  }
+}
+
+/**
+ * Implements hook_disable().
+ */
+function asu_clas_isearch_testing_disable() {
+  variable_set('asu_isearch_devmode', FALSE);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function asu_clas_isearch_testing_uninstall() {
+  if (!isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+    module_load_include('inc', 'asu_clas_isearch_testing', 'includes/actions');
+
+    _asu_clas_isearch_testing_delete_profiles();
+  }
+}
