@@ -1,6 +1,9 @@
 README.txt
 clas_module-7.x-1.7
 
+1.7.1
+	* Added new layouts: Cherokee Flipped, Super Selby
+
 1.7
 	* Added CLAS Paragraphs
 	* Added CLAS pane styles
