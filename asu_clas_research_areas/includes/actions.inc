@@ -240,11 +240,19 @@ function _asu_clas_research_areas_add_taxonomy_terms() {
   $clas_unit = variable_get('clas_unit');
 
   if ($clas_unit === NULL) {
+    if (function_exists('drush_log')) {
+      drush_log('--System variable `clas_unit` not defined.', 'ok');
+    }
+
     watchdog('asu_clas_research_areas', 'System variable `clas_unit` not defined.');
 
     return;
   }
   else {
+    if (function_exists('drush_log')) {
+      drush_log(sprintf('--System variable `clas_unit` defined as "%s".', $clas_unit), 'ok');
+    }
+
     watchdog('asu_clas_research_areas', 'System variable `clas_unit` defined as "%unit".', array('%unit' => $clas_unit), WATCHDOG_DEBUG);
   }
 
