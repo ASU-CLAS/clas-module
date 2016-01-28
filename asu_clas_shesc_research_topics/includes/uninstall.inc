@@ -4,7 +4,7 @@
  */
 
 /**
- * Delete content type.
+ * Helper function to delete content type created by module on uninstall.
  */
 function _asu_clas_shesc_research_topics_delete_content_type() {
   $types = array(
@@ -21,7 +21,7 @@ function _asu_clas_shesc_research_topics_delete_content_type() {
 }
 
 /**
- * Delete custom fields.
+ * Helper function to delete custom fields created by module on uninstall.
  */
 function _asu_clas_shesc_research_topics_delete_custom_fields() {
   $fields = array(
@@ -37,7 +37,7 @@ function _asu_clas_shesc_research_topics_delete_custom_fields() {
 }
 
 /**
- * Delete Views.
+ * Helper function to delete Views created by module on uninstall.
  */
 function _asu_clas_shesc_research_topics_delete_views() {
   $views = array(
@@ -48,5 +48,16 @@ function _asu_clas_shesc_research_topics_delete_views() {
     if ($view = views_get_view($view)) {
       views_delete_view($view);
     }
+  }
+}
+
+/**
+ * Helper function to delete nodes created by module on uninstall.
+ */
+function _asu_clas_shesc_research_topics_delete_placeholder_nodes() {
+  $result= db_query("SELECT * FROM node AS n WHERE n.type = 'research_topic' AND n.uid = 0");
+
+  foreach ($result as $record) {
+    node_delete($record->nid);
   }
 }

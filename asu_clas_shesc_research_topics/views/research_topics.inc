@@ -22,6 +22,22 @@ $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'full';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['row_plugin'] = 'fields';
+/* Relationship: Content: Taxonomy terms on node */
+$handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+$handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+$handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+$handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+  'research_area' => 'research_area',
+  'asu_events_audience' => 0,
+  'asu_events_category' => 0,
+  'asu_events_type' => 0,
+  'asu_news' => 0,
+  'panopoly_categories' => 0,
+  'isearch_departments' => 0,
+  'isearch_expertise' => 0,
+  'isearch_local_tags' => 0,
+  'isearch_ranks' => 0,
+);
 /* Field: Content: Research Topic Image */
 $handler->display->display_options['fields']['research_topic_image']['id'] = 'research_topic_image';
 $handler->display->display_options['fields']['research_topic_image']['table'] = 'field_data_research_topic_image';
@@ -65,6 +81,25 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'research_topic' => 'research_topic',
 );
+/* Filter criterion: Content: Has taxonomy term */
+$handler->display->display_options['filters']['tid']['id'] = 'tid';
+$handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+$handler->display->display_options['filters']['tid']['field'] = 'tid';
+$handler->display->display_options['filters']['tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
+$handler->display->display_options['filters']['tid']['expose']['label'] = 'Has taxonomy term';
+$handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
+$handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
+$handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+  4 => 0,
+  5 => 0,
+);
+$handler->display->display_options['filters']['tid']['type'] = 'select';
+$handler->display->display_options['filters']['tid']['vocabulary'] = 'research_area';
+$handler->display->display_options['filters']['tid']['hierarchy'] = 1;
 
 /* Display: Content pane */
 $handler = $view->new_display('panel_pane', 'Content pane', 'research_topics_list');
@@ -75,5 +110,5 @@ $handler->display->display_options['allow']['link_to_view'] = 0;
 $handler->display->display_options['allow']['more_link'] = 0;
 $handler->display->display_options['allow']['path_override'] = 0;
 $handler->display->display_options['allow']['title_override'] = 'title_override';
-$handler->display->display_options['allow']['exposed_form'] = 0;
+$handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
 $handler->display->display_options['allow']['fields_override'] = 0;

@@ -4,7 +4,7 @@
  */
 
 /**
- * Create content type.
+ * Helper function to create Content Type on module installation.
  */
 function _asu_clas_shesc_research_topics_create_content_type() {
   node_types_rebuild();
@@ -40,7 +40,7 @@ function _asu_clas_shesc_research_topics_create_content_type() {
 }
 
 /**
- * Create content type fields.
+ * Helper function to create Content Type Fields on module installation.
  */
 function _asu_clas_shesc_research_topics_create_content_type_fields() {
   $field_bases = array();
@@ -281,7 +281,7 @@ function _asu_clas_shesc_research_topics_create_content_type_fields() {
 }
 
 /**
- * Set Pathauto Node Path pattern.
+ * Helper function to set Pathauto Node Path pattern.
  */
 function _asu_clas_shesc_research_topics_set_pathauto_node_pattern() {
   variable_set('pathauto_node_research_topic_pattern', 'research/research-topic/[node:title]');
