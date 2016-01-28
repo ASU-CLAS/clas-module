@@ -1,0 +1,13 @@
+name = ASU CLAS SHESC Research Topics
+description = ""
+core = 7.x
+package = ASU CLAS
+version = 7.x-1.x
+project = asu_clas_shesc_research_topics
+
+; Dependencies
+dependencies[] = asu_clas_research_areas
+dependencies[] = bulk_export
+dependencies[] = devel
+dependencies[] = views
+dependencies[] = views_bootstrap
