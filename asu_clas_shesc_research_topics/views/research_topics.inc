@@ -12,6 +12,7 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['css_class'] = 'research-topic-list';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
@@ -21,6 +22,8 @@ $handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'full';
 $handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class'] = 'clearfix';
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
 $handler->display->display_options['row_plugin'] = 'fields';
 /* Relationship: Content: Taxonomy terms on node */
 $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
@@ -43,6 +46,7 @@ $handler->display->display_options['fields']['research_topic_image']['id'] = 're
 $handler->display->display_options['fields']['research_topic_image']['table'] = 'field_data_research_topic_image';
 $handler->display->display_options['fields']['research_topic_image']['field'] = 'research_topic_image';
 $handler->display->display_options['fields']['research_topic_image']['label'] = '';
+$handler->display->display_options['fields']['research_topic_image']['element_class'] = 'research-topic-image';
 $handler->display->display_options['fields']['research_topic_image']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['research_topic_image']['click_sort_column'] = 'fid';
 $handler->display->display_options['fields']['research_topic_image']['settings'] = array(
@@ -56,11 +60,15 @@ $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_type'] = 'h3';
+$handler->display->display_options['fields']['title']['element_class'] = 'research-topic-name';
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
 /* Field: Content: Research Topic Description */
 $handler->display->display_options['fields']['research_topic_description']['id'] = 'research_topic_description';
 $handler->display->display_options['fields']['research_topic_description']['table'] = 'field_data_research_topic_description';
 $handler->display->display_options['fields']['research_topic_description']['field'] = 'research_topic_description';
 $handler->display->display_options['fields']['research_topic_description']['label'] = '';
+$handler->display->display_options['fields']['research_topic_description']['element_class'] = 'research-topic-description';
 $handler->display->display_options['fields']['research_topic_description']['element_label_colon'] = FALSE;
 /* Sort criterion: Content: Post date */
 $handler->display->display_options['sorts']['created']['id'] = 'created';
@@ -87,7 +95,7 @@ $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index'
 $handler->display->display_options['filters']['tid']['field'] = 'tid';
 $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
 $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
-$handler->display->display_options['filters']['tid']['expose']['label'] = 'Has taxonomy term';
+$handler->display->display_options['filters']['tid']['expose']['label'] = 'Research Area';
 $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
 $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
 $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(

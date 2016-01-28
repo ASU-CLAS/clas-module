@@ -1,0 +1,24 @@
+/**
+ * Research Topic List
+ */
+
+.research-topic-list {
+}
+
+.research-topic-list .views-row {
+  margin-bottom: 1em !important;
+}
+
+.research-topic-list .research-topic-image {
+  max-width: 100%;
+}
+
+.research-topic-list .research-topic-name {
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.research-topic-list .research-topic-description {
+  font-size: 16px;
+}
