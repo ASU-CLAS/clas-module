@@ -281,6 +281,36 @@ function _asu_clas_shesc_research_topics_create_content_type_fields() {
 }
 
 /**
+ * Helper function to add Menu Links to Main Menu for each Research Area.
+ */
+function _asu_clas_shesc_research_topics_create_menu_links() {
+  $vocab = taxonomy_vocabulary_machine_name_load('research_area');
+  $terms = taxonomy_get_tree($vocab->vid);
+
+  if (!empty($terms)) {
+    foreach ($terms as $term) {
+      $term_uri = taxonomy_term_uri($term);
+
+      $item = array(
+        'link_path' => drupal_get_normal_path($term_uri['path']),
+        'link_title' => $term->name,
+        'menu_name' => 'main-menu',
+        'weight' => '0',
+        'plid' => 1522,
+      );
+
+      $mlid = menu_link_save($item);
+
+      if (function_exists('drush_log')) {
+        drush_log(sprintf('-- Created Menu Link %s', $mlid), 'ok');
+      }
+    }
+  }
+
+  menu_cache_clear_all();
+}
+
+/**
  * Helper function to set Pathauto Node Path pattern.
  */
 function _asu_clas_shesc_research_topics_set_pathauto_node_pattern() {
