@@ -302,7 +302,7 @@ function _asu_clas_shesc_research_topics_create_menu_links() {
       $mlid = menu_link_save($item);
 
       if (function_exists('drush_log')) {
-        drush_log(sprintf('-- Created Menu Link %s', $mlid), 'ok');
+        drush_log(sprintf('-- Menu Link %s created', $mlid), 'ok');
       }
     }
   }
