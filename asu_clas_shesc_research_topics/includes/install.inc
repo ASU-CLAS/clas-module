@@ -9,11 +9,13 @@
 function _asu_clas_shesc_research_topics_create_content_type() {
   node_types_rebuild();
 
-  $type = node_type_load('research_topic');
+  $content_type = 'research_topic';
+
+  $type = node_type_load($content_type);
 
   if (!$type) {
     $type = array(
-      'type' => 'research_topic',
+      'type' => $content_type,
       'name' => t('Research Topic'),
       'base' => 'node_content',
       'description' => t(''),
@@ -32,10 +34,43 @@ function _asu_clas_shesc_research_topics_create_content_type() {
 
     $status = node_type_save($type);
 
-    variable_set('additional_settings__active_tab_research_topic', 'edit-panelizer');
-    variable_set('menu_options_research_topic', array());
-    variable_set('node_options_research_topic', array('status'));
-    variable_set('node_preview_research_topic', FALSE);
+    variable_set("comment_{$content_type}", COMMENT_NODE_CLOSED);
+    variable_set("menu_options_{$content_type}", array());
+    variable_set("menu_parent_{$content_type}", '');
+    variable_set("node_options_{$content_type}", array('status'));
+    variable_set("node_preview_{$content_type}", 0);
+    variable_set("node_submitted_{$content_type}", 0);
+  }
+}
+
+/**
+ * Helper function to setup Panelizer options.
+ */
+function _asu_clas_shesc_research_topics_panelizer_setup() {
+  $panelizer_defaults = array(
+    'status' => TRUE,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => TRUE,
+        'default' => TRUE,
+        'choice' => FALSE,
+      ),
+    ),
+  );
+
+  variable_set('panelizer_defaults_node_research_topic', $panelizer_defaults);
+}
+
+/**
+ * Helper function to expand Main Menu link(s) on module installation.
+ */
+function _asu_clas_shesc_research_topics_expand_menu_links() {
+  $research_areas = menu_link_load(1522);
+
+  if ($research_areas) {
+    $research_areas['expanded'] = 1;
+
+    $mlid = menu_link_save($research_areas);
   }
 }
 
@@ -148,7 +183,7 @@ function _asu_clas_shesc_research_topics_create_content_type_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
@@ -156,18 +191,6 @@ function _asu_clas_shesc_research_topics_create_content_type_fields() {
           ),
           'type' => 'image',
           'weight' => 1,
-        ),
-        'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
         ),
       ),
       'entity_type' => 'node',
@@ -232,24 +255,12 @@ function _asu_clas_shesc_research_topics_create_content_type_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'entityreference',
           'settings' => array(
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 0,
-        ),
-        'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
           'weight' => 0,
         ),
       ),

@@ -28,6 +28,9 @@ function asu_clas_shesc_research_topics_ctools_plugin_api($module, $api) {
   if ($module == 'panelizer' && $api == 'panelizer') {
     return array('version' => 1);
   }
+  if ($module == 'page_manager' && $api == 'pages_default') {
+    return array('version' => 1);
+  }
 }
 
 /**
