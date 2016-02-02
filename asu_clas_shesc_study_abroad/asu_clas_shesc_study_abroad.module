@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ * Code for the ASU CLAS SHESC Study Abroad feature.
+ */
+
+include_once 'asu_clas_shesc_study_abroad.features.inc';
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function asu_clas_shesc_research_topics_preprocess_html(&$variables) {
+  drupal_add_css(drupal_get_path('module', 'asu_clas_shesc_study_abroad') . '/css/asu-clas-shesc-study-abroad.css', array('group' => CSS_THEME, 'weight' => '99'));
+}
+
+/**
+ * Implements hook_features_export_alter().
+ *
+ * @see http://deeson.co.uk/labs/views-templates-features-module
+ */
+function asu_clas_shesc_study_abroad_features_export_alter(&$export, $module_name) {
+  if ($module_name == 'asu_clas_shesc_study_abroad') {
+    if (!empty($export['features']['ctools']['views:views_default:3.0'])) {
+      unset($export['features']['ctools']['views:views_default:3.0']);
+    }
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function asu_clas_shesc_study_abroad_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'asu_clas_shesc_study_abroad'),
+    'template path' => drupal_get_path('module', 'asu_clas_shesc_study_abroad') . '/templates',
+  );
+}
