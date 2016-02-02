@@ -36,3 +36,12 @@ function asu_clas_shesc_study_abroad_views_api() {
     'template path' => drupal_get_path('module', 'asu_clas_shesc_study_abroad') . '/templates',
   );
 }
+
+/**
+ * Implements hook_init().
+ */
+function asu_clas_shesc_study_abroad_init() {
+  module_load_include('inc', 'asu_clas_shesc_study_abroad', 'includes/content');
+
+  _asu_clas_shesc_study_abroad_create_placeholder_nodes();
+}

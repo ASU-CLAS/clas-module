@@ -54,7 +54,6 @@ function asu_clas_shesc_study_abroad_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_class'] = 'study-abroad-program-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Study Abroad Description */
   $handler->display->display_options['fields']['field_study_abroad_description']['id'] = 'field_study_abroad_description';
   $handler->display->display_options['fields']['field_study_abroad_description']['table'] = 'field_data_field_study_abroad_description';
@@ -62,6 +61,10 @@ function asu_clas_shesc_study_abroad_views_default_views() {
   $handler->display->display_options['fields']['field_study_abroad_description']['label'] = '';
   $handler->display->display_options['fields']['field_study_abroad_description']['element_class'] = 'study-abroad-program-description';
   $handler->display->display_options['fields']['field_study_abroad_description']['element_label_colon'] = FALSE;
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

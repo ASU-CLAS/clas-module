@@ -12,29 +12,29 @@
   clear: both;
 }
 
-.research-topic-name .pane-title {
+.study-abroad-program-name .pane-title {
   font-size: 36px;
   margin-top: 0;
 }
 
-.research-topic-image {
+.study-abroad-program-image {
   margin-bottom: 1em;
   max-height: 200px;
   max-width: 250px;
 }
 
 @media (min-width: 700px) {
-  .research-topic-image {
+  .study-abroad-program-image {
     float: right;
     margin-left: 1em;
   }
 }
 
-.research-topic-image .pane-title {
+.study-abroad-program-image .pane-title {
   display: none;
 }
 
-.research-topic-description .pane-title {
+.study-abroad-program-description .pane-title {
   display: none;
 }
 
@@ -42,23 +42,24 @@
  * Research Topic List
  */
 
-.research-topic-list {
+.study-abroad-program-list {
 }
 
-.research-topic-list .views-row {
+.study-abroad-program-list .views-row {
   margin-bottom: 1em !important;
 }
 
-.research-topic-list .research-topic-image {
+.study-abroad-program-list .study-abroad-program-image {
+  float: none;
   max-width: 100%;
 }
 
-.research-topic-list .research-topic-name {
+.study-abroad-program-list .study-abroad-program-title {
   font-weight: bold;
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.research-topic-list .research-topic-description {
+.study-abroad-program-list .study-abroad-program-description {
   font-size: 16px;
 }

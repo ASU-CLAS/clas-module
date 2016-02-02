@@ -1,4 +1,5 @@
 name = ASU CLAS SHESC Study Abroad
+description = Creates initial structure and layouts for Study Abroad Programs.
 core = 7.x
 package = ASU CLAS
 version = 7.x-1.0
@@ -34,4 +35,4 @@ features[variable][] = node_options_study_abroad_program
 features[variable][] = node_preview_study_abroad_program
 features[variable][] = node_submitted_study_abroad_program
 features[views_view][] = asu_clas_shesc_study_abroad
-mtime = 1454369388
+mtime = 1454454696

@@ -34,11 +34,11 @@ function asu_clas_shesc_study_abroad_panelizer_defaults() {
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
-      'default' => NULL,
-      'header' => NULL,
-      'sidebar' => NULL,
+      'default' => array(),
+      'header' => array(),
+      'sidebar' => array(),
       'contentmain' => NULL,
-      'footer' => NULL,
+      'footer' => array(),
       'rowthree' => array(
         'region_title' => '',
         'region_title_tag' => 'none',
@@ -60,6 +60,19 @@ function asu_clas_shesc_study_abroad_panelizer_defaults() {
     'rowone' => array(
       'style' => 'customstyles',
     ),
+    'style' => 'customstyles',
+    'header' => array(
+      'style' => 'customstyles',
+    ),
+    'sidebar' => array(
+      'style' => 'customstyles',
+    ),
+    'rowtwo' => array(
+      'style' => '0',
+    ),
+    'footer' => array(
+      'style' => 'customstyles',
+    ),
   );
   $display->cache = array();
   $display->title = '%node:title';
@@ -79,7 +92,8 @@ function asu_clas_shesc_study_abroad_panelizer_defaults() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(),
+      'style' => 'customstyles',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -106,6 +120,7 @@ function asu_clas_shesc_study_abroad_panelizer_defaults() {
     );
     $pane->cache = array();
     $pane->style = array(
+      'style' => 'default',
       'settings' => NULL,
     );
     $pane->css = array();
@@ -135,7 +150,8 @@ function asu_clas_shesc_study_abroad_panelizer_defaults() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(),
+      'style' => 'customstyles',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -164,7 +180,8 @@ function asu_clas_shesc_study_abroad_panelizer_defaults() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(),
+      'style' => 'customstyles',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -188,9 +205,12 @@ function asu_clas_shesc_study_abroad_panelizer_defaults() {
       'delta_reversed' => FALSE,
       'formatter_settings' => array(),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
+      'style' => 'default',
       'settings' => NULL,
     );
     $pane->css = array();
@@ -209,8 +229,8 @@ function asu_clas_shesc_study_abroad_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'main-menu',
-      'parent_mlid' => 1551,
-      'parent' => 'main-menu:1551',
+      'parent_mlid' => 1519,
+      'parent' => 'main-menu:1519',
       'title_link' => 0,
       'admin_title' => '',
       'level' => '1',
@@ -223,7 +243,8 @@ function asu_clas_shesc_study_abroad_panelizer_defaults() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(),
+      'style' => 'customstyles',
     );
     $pane->css = array();
     $pane->extras = array();
