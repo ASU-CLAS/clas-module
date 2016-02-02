@@ -50,6 +50,7 @@
 }
 
 .research-topic-list .research-topic-image {
+  float: none;
   max-width: 100%;
 }
 
