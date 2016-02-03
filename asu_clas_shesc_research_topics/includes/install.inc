@@ -34,7 +34,7 @@ function _asu_clas_shesc_research_topics_create_content_type() {
 
     $status = node_type_save($type);
 
-    variable_set("comment_{$content_type}", COMMENT_NODE_CLOSED);
+    variable_set("comment_{$content_type}", 1);
     variable_set("menu_options_{$content_type}", array());
     variable_set("menu_parent_{$content_type}", '');
     variable_set("node_options_{$content_type}", array('status'));
