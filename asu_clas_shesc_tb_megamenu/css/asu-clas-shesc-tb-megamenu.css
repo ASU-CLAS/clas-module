@@ -1,0 +1,35 @@
+.tb-megamenu-asu-clas-shesc .nav-collapse {
+  display: block !important;
+}
+
+.tb-megamenu-asu-clas-shesc .nav {
+  background-color: #f1f1f1;
+}
+
+.tb-megamenu-asu-clas-shesc .nav > li > a {
+  color: #2a2a2a !important;
+}
+
+.tb-megamenu-asu-clas-shesc .nav > li > a:hover {
+  background-color: #e4e4e4;
+  color: #2a2a2a;
+}
+
+.tb-megamenu-asu-clas-shesc .nav > li.tb-megamenu-item.mega.active a {
+  background-color: #fff;
+  color: #2a2a2a;
+}
+
+.tb-megamenu-asu-clas-shesc .nav > .active > a:hover {
+  background-color: #fff;
+  color: #2a2a2a;
+}
+
+.tb-megamenu .nav li.dropdown.open > .dropdown-toggle,
+.tb-megamenu .nav > li > a:focus,
+.tb-megamenu .nav > .active > a:focus,
+.tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle,
+.tb-megamenu .nav > li.dropdown.open.active > a:hover,
+.tb-megamenu .nav > li > a:hover {
+  background-color: #e4e4e4;
+}
