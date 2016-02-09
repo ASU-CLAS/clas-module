@@ -1,3 +1,7 @@
+/**
+ * Menu
+ */
+
 .tb-megamenu-asu-clas-shesc .nav-collapse {
   display: block !important;
 }
@@ -8,11 +12,7 @@
 
 .tb-megamenu-asu-clas-shesc .nav > li > a {
   color: #2a2a2a !important;
-}
-
-.tb-megamenu-asu-clas-shesc .nav > li > a:hover {
-  background-color: #e4e4e4;
-  color: #2a2a2a;
+  font-weight: bold;
 }
 
 .tb-megamenu-asu-clas-shesc .nav > li.tb-megamenu-item.mega.active a {
@@ -20,7 +20,61 @@
   color: #2a2a2a;
 }
 
-.tb-megamenu-asu-clas-shesc .nav > .active > a:hover {
+/**
+ * Caret
+ */
+
+.tb-megamenu-asu-clas-shesc .nav li.dropdown .caret {
+  border-top-color: #2a2a2a !important;
+}
+
+/**
+ * Dropdown Submenu
+ */
+
+.tb-megamenu-asu-clas-shesc .tb-megamenu-submenu,
+.tb-megamenu-asu-clas-shesc .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
   background-color: #fff;
+  border: solid 0px #f1f1f1;
+  border-radius: 0;
+  border-top: none;
+  padding: 10px 0;
+}
+
+/**
+ * Dropdown Anchors
+ */
+
+.tb-megamenu-asu-clas-shesc .nav li.dropdown.open > .dropdown-toggle,
+.tb-megamenu-asu-clas-shesc .nav > li > a:focus,
+.tb-megamenu-asu-clas-shesc .nav > .active > a:focus,
+.tb-megamenu-asu-clas-shesc .nav li.dropdown.open.active > .dropdown-toggle,
+.tb-megamenu-asu-clas-shesc .nav > li.dropdown.open.active > a:hover,
+.tb-megamenu-asu-clas-shesc .nav > li > a:hover {
+  background-color: #fff;
+}
+
+.tb-megamenu-asu-clas-shesc .tb-megamenu-column-inner.mega-inner.clearfix a {
+  background-color: #fff;
+  color: #2a2a2a;
+  font-weight: bold;
+}
+
+.tb-megamenu-asu-clas-shesc .tb-megamenu-column-inner.mega-inner.clearfix a:hover {
+  background-color: #f1f1f1;
+  color: #2a2a2a;
+}
+
+.tb-megamenu-asu-clas-shesc li.tb-megamenu-item.mega.active .tb-megamenu-submenu li.active a {
+  background-color: #f1f1f1;
+  color: #2a2a2a;
+}
+
+.tb-megamenu-asu-clas-shesc .nav > li.dropdown.active a {
+  font-weight: bold;
+}
+
+.tb-megamenu-asu-clas-shesc .nav > li.dropdown.open.active > .dropdown-menu a:hover {
+  background-color: #f1f1f1 !important;
   color: #2a2a2a;
 }
