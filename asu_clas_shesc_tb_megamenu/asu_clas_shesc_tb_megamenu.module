@@ -28,7 +28,16 @@ function asu_clas_shesc_tb_megamenu_theme_registry_alter(&$theme_registry) {
  * Adds a CSS class to TB Mega Menu navigation HTML elements for styling purposes.
  */
 function template_preprocess_asu_clas_shesc_tb_megamenu_add_css_classes(&$variables, $hook) {
-  if ($variables['menu_name'] == 'main-menu') {
+  $system_menus = array(
+    'devel',
+    'main-menu',
+    'management',
+    'menu-mega-footer-menu',
+    'navigation',
+    'user-menu',
+  );
+
+  if (in_array($variables['menu_name'], $system_menus)) {
     return;
   }
 
