@@ -9,7 +9,7 @@
 function asu_clas_shesc_tb_megamenu_install() {
   $weight = db_select('system', 's')
     ->fields('s', array('weight'))
-    ->condition('name', 'tb_megamenu', '=')
+    ->condition('name', 'webspark_megamenu', '=')
     ->execute()
     ->fetchField();
 

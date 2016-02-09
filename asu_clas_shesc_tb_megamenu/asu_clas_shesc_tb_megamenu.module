@@ -8,6 +8,8 @@
  */
 function asu_clas_shesc_tb_megamenu_preprocess_html(&$variables) {
   drupal_add_css(drupal_get_path('module', 'asu_clas_shesc_tb_megamenu') . '/css/asu-clas-shesc-tb-megamenu.css', array('group' => CSS_THEME, 'weight' => '99'));
+
+  drupal_add_js(drupal_get_path('module', 'asu_clas_shesc_tb_megamenu') . '/js/asu-clas-shesc-tb-megamenu.js', array('type' => 'file', 'weight' => '99'));
 }
 
 /**
@@ -31,8 +33,10 @@ function template_preprocess_asu_clas_shesc_tb_megamenu_add_css_classes(&$variab
   }
 
   if ($variables['theme_hook_original'] == 'tb_megamenu_nav' && $variables['level'] == 0) {
+    $variables['classes_array'][] = 'tb-megamenu-asu-nav-clas';
     $variables['classes_array'][] = 'tb-megamenu-asu-nav-clas-shesc';
   } else {
+    $variables['classes_array'][] = 'tb-megamenu-asu-clas';
     $variables['classes_array'][] = 'tb-megamenu-asu-clas-shesc';
   }
 
@@ -43,28 +47,17 @@ function template_preprocess_asu_clas_shesc_tb_megamenu_add_css_classes(&$variab
  * Implements hook_js_alter().
  *
  * Modifies ASU Webspark TB Mega Menu JavaScript to remove inline code.
- */
-function asu_clas_shesc_tb_megamenu_js_alter(&$javascript) {
-  foreach ($javascript as $key => $value) {
-    if (is_int($key) && $value['type'] == 'inline') {
-      continue;
-    }
-
-    if (strpos($value['data'], 'Drupal.behaviors.webspark_megamenu') !== FALSE) {
-      unset($javascript[$key]);
-
-      $path = drupal_get_path('module', 'asu_clas_shesc_tb_megamenu') . '/js/asu-clas-shesc-tb-megamenu.js';
-
-      break;
-    }
-  }
-}
-
-/**
- * Implements hook_init().
  *
  * @see webspark_megamenu_init();
  */
-function asu_clas_shesc_tb_megamenu_init() {
+function asu_clas_shesc_tb_megamenu_js_alter(&$javascript) {
+  foreach ($javascript as $key => $value) {
+    if ($value['type'] == 'inline') {
+      if (strpos($value['data'], 'Drupal.behaviors.webspark_megamenu') !== FALSE) {
+        $javascript[$key]['data'] = NULL;
 
+        break;
+      }
+    }
+  }
 }
