@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_menu_alter().
+ */
+function asu_clas_hotfixes_menu_alter(&$items) {
+  $items['node/%node']['title callback'] = '_asu_clas_hotfixes_page_title';
+}
+
+/**
+ * Helper function to replace node_page_title.
+ */
+function _asu_clas_hotfixes_page_title($node) {
+  if (!$node) {
+    return '';
+  }
+
+  if (is_numeric($node)) {
+    $node = node_load($node);
+  }
+  return !empty($node->title) ? $node->title : '';
+}

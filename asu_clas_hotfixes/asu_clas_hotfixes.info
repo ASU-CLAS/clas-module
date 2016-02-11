@@ -1,0 +1,6 @@
+name = ASU CLAS Hotfixes
+description = Applies a workaround to suppress an obtrusive <a href="https://www.drupal.org/node/1709914#comment-10753712" target="_blank">PHP Notice</a> being output from <code>node_page_title()</code>.
+package = ASU CLAS
+core = 7.x
+version = 7.x-1.x
+project = asu_clas_hotfixes
