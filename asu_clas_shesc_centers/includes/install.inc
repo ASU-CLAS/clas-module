@@ -60,12 +60,19 @@ function _asu_clas_shesc_centers_create_menu() {
  * Helper function to upload Hero image for Panelizer layout(s).
  */
 function _asu_clas_shesc_centers_upload_hero_image() {
-  $image = file_get_contents(drupal_get_path('module', 'asu_clas_shesc_centers') . '/images/hero-center-cbr.jpg');
-  $file = file_save_data($image, 'public://hero-center-cbr.jpg', FILE_EXISTS_REPLACE);
+  $files = array(
+    'hero-center-cbr-01.jpg',
+    'hero-center-cbr-02.jpg',
+  );
 
-  $file->status = FILE_STATUS_PERMANENT;
+  foreach ($files as $file) {
+    $image = file_get_contents(drupal_get_path('module', 'asu_clas_shesc_centers') . '/images/' . $file);
+    $object = file_save_data($image, 'public://' . $file, FILE_EXISTS_REPLACE);
 
-  file_save($file);
+    $object->status = FILE_STATUS_PERMANENT;
+
+    file_save($object);
+  }
 }
 
 /**
@@ -95,4 +102,108 @@ function _asu_clas_shesc_centers_set_pathauto_node_pattern() {
   $content_type = 'center_page';
 
   variable_set("pathauto_node_{$content_type}_pattern", 'research/centers/[node:title]');
+}
+
+/**
+ * Helper function to create Fieldable Panels Panes on module installation.
+ */
+function _asu_clas_shesc_centers_create_fieldable_panels_panes() {
+  $fpps = array();
+
+  $fpps[] = array(
+    'timestamp' => 1455225040,
+    'title' => 'Center for Bioarchaeological Research',
+    'log' => '',
+    'bundle' => 'hero',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 1,
+    'admin_title' => 'hero-center-cbr-01',
+    'admin_description' => '',
+    'category' => 'Reusable Content',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1455225040,
+    'uuid' => 'e59da0bf-1aa6-4d55-90f5-974de1a2486e',
+    'language' => 'und',
+    'field_webspark_hero_bgimg' => array(
+      'und' => array(
+        0 => array(
+          'fid' => 151,
+          'uid' => 17,
+          'filename' => 'hero-center-cbr-01.jpg',
+          'uri' => 'public://hero-center-cbr-01.jpg',
+          'filemime' => 'image/jpeg',
+          'filesize' => 154919,
+          'status' => 1,
+          'timestamp' => 1455225040,
+          'type' => 'image',
+          'uuid' => 'd8436ea2-1a7c-4b2e-ba0e-c2ec8c19a170',
+          'field_file_image_alt_text' => array(),
+          'field_file_image_title_text' => array(),
+          'metadata' => array(
+            'height' => 380,
+            'width' => 1600,
+          ),
+          'alt' => '',
+          'title' => '',
+        ),
+      ),
+    ),
+    'field_webspark_hero_blurb' => array(),
+    'field_webspark_hero_gradbtn' => array(),
+    'field_webspark_hero_primarybtn' => array(),
+    'field_webspark_hero_ugradbtn' => array(),
+  );
+
+  $fpps[] = array(
+    'timestamp' => 1455224809,
+    'title' => 'Center for Bioarchaeological Research',
+    'log' => '',
+    'bundle' => 'banner',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 1,
+    'admin_title' => 'hero-center-cbr-02',
+    'admin_description' => '',
+    'category' => 'Reusable Content',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1455224809,
+    'uuid' => '0acc4f0d-1961-470b-8949-8d158363f2b9',
+    'language' => 'und',
+    'field_banner_image' => array(
+      'und' => array(
+        0 => array(
+          'fid' => 152,
+          'uid' => 17,
+          'filename' => 'hero-center-cbr-02.jpg',
+          'uri' => 'public://hero-center-cbr-02.jpg',
+          'filemime' => 'image/jpeg',
+          'filesize' => 86778,
+          'status' => 1,
+          'timestamp' => 1455224809,
+          'type' => 'image',
+          'uuid' => 'cb1cc303-3d97-4ec4-b299-191f3a21251b',
+          'field_file_image_alt_text' => array(),
+          'field_file_image_title_text' => array(),
+          'metadata' => array(
+            'height' => 200,
+            'width' => 1600,
+          ),
+          'alt' => '',
+          'title' => '',
+        ),
+      ),
+    ),
+  );
+
+  foreach ($fpps as $fpp) {
+    $entity = fieldable_panels_panes_create($fpp);
+    $pane = fieldable_panels_panes_save($entity);
+
+    if (function_exists('drush_log')) {
+      drush_log(sprintf('-- Fieldable Panels Pane %s created', $pane->fpid), 'ok');
+    }
+  }
 }

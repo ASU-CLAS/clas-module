@@ -11,11 +11,12 @@ function asu_clas_shesc_centers_install() {
   module_load_include('inc', 'asu_clas_shesc_centers', 'includes/content');
 
   _asu_clas_shesc_centers_create_content_type();
+  _asu_clas_shesc_centers_set_pathauto_node_pattern();
   _asu_clas_shesc_centers_create_placeholder_nodes();
   _asu_clas_shesc_centers_create_menu();
   _asu_clas_shesc_centers_upload_hero_image();
+  _asu_clas_shesc_centers_create_fieldable_panels_panes();
   _asu_clas_shesc_centers_panelizer_setup();
-  _asu_clas_shesc_centers_set_pathauto_node_pattern();
 }
 
 /**

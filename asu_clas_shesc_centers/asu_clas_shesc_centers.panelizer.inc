@@ -36,10 +36,19 @@ function asu_clas_shesc_centers_panelizer_defaults() {
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
-      'header' => NULL,
+      'header' => array(
+        'bgcolors' => '',
+        'padtop' => '',
+        'padbot' => '',
+        'martop' => '',
+        'marbot' => 'add-margin-42-below',
+      ),
       'sidebar' => NULL,
       'contentmain' => NULL,
       'footer' => NULL,
+    ),
+    'header' => array(
+      'style' => 'customstyles',
     ),
   );
   $display->cache = array();
@@ -118,22 +127,22 @@ function asu_clas_shesc_centers_panelizer_defaults() {
     $display->content['new-be8df645-9477-4683-b872-6532612dc0cc'] = $pane;
     $display->panels['header'][1] = 'new-be8df645-9477-4683-b872-6532612dc0cc';
     $pane = new stdClass();
-    $pane->pid = 'new-c8e52304-b549-4851-ad93-32f980605a9a';
+    $pane->pid = 'new-dfa5f621-7585-45c9-aac8-743192c64aed';
     $pane->panel = 'sidebar';
     $pane->type = 'menu_tree';
-    $pane->subtype = 'main-menu';
+    $pane->subtype = 'menu-center-cbr';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'menu_name' => 'main-menu',
-      'parent_mlid' => 1518,
-      'parent' => 'main-menu:1518',
+      'menu_name' => 'menu-center-cbr',
+      'parent_mlid' => 0,
+      'parent' => 'menu-center-cbr:0',
       'title_link' => 0,
       'admin_title' => '',
       'level' => '1',
       'follow' => 0,
       'depth' => 0,
-      'expanded' => 1,
+      'expanded' => 0,
       'sort' => 0,
       'override_title' => 1,
       'override_title_text' => '',
@@ -146,9 +155,9 @@ function asu_clas_shesc_centers_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'c8e52304-b549-4851-ad93-32f980605a9a';
-    $display->content['new-c8e52304-b549-4851-ad93-32f980605a9a'] = $pane;
-    $display->panels['sidebar'][0] = 'new-c8e52304-b549-4851-ad93-32f980605a9a';
+    $pane->uuid = 'dfa5f621-7585-45c9-aac8-743192c64aed';
+    $display->content['new-dfa5f621-7585-45c9-aac8-743192c64aed'] = $pane;
+    $display->panels['sidebar'][0] = 'new-dfa5f621-7585-45c9-aac8-743192c64aed';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-f9c89e35-3f8d-480e-98ac-210a963c34eb';
   $panelizer->display = $display;
