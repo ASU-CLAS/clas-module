@@ -1,0 +1,42 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function asu_clas_shesc_centers_projects_install() {
+  module_load_include('inc', 'asu_clas_shesc_centers_projects', 'includes/install');
+
+  _asu_clas_shesc_centers_projects_create_content_type();
+  _asu_clas_shesc_centers_projects_create_content_type_fields();
+  _asu_clas_shesc_centers_projects_panelizer_setup();
+  _asu_clas_shesc_centers_projects_set_pathauto_node_pattern();
+
+  module_load_include('inc', 'asu_clas_shesc_centers_projects', 'includes/content');
+  _asu_clas_shesc_centers_projects_create_placeholder_nodes();
+}
+
+/**
+ * Implements hook_enable().
+ */
+function asu_clas_shesc_centers_projects_enable() {
+  return TRUE;
+}
+
+/**
+ * Implements hook_disable().
+ */
+function asu_clas_shesc_centers_projects_disable() {
+  return TRUE;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function asu_clas_shesc_centers_projects_uninstall() {
+  module_load_include('inc', 'asu_clas_shesc_centers_projects', 'includes/uninstall');
+
+  return TRUE;
+}
