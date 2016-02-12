@@ -6,26 +6,31 @@
   display: block !important;
 }
 
-.tb-megamenu-asu-clas-shesc .nav {
+.tb-megamenu-asu-clas-shesc .nav,
+.pane-tb-megamenu-menu-center-cbr {
   background-color: #f1f1f1;
 }
 
 .tb-megamenu-asu-clas-shesc .nav > li > a {
   color: #2a2a2a !important;
+  font-size: 13px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .tb-megamenu-asu-clas-shesc .nav > li.tb-megamenu-item.mega.active a {
   background-color: #fff;
   color: #2a2a2a;
+  font-size: 13px;
 }
 
 /**
  * Caret
  */
 
-.tb-megamenu-asu-clas-shesc .nav li.dropdown .caret {
+.tb-megamenu-asu-clas-shesc .nav li.dropdown > .dropdown-toggle .caret {
   border-top-color: #2a2a2a !important;
+  margin-top: 4px;
 }
 
 /**
