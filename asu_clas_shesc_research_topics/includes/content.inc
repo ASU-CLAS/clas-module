@@ -6,7 +6,7 @@ define('ASU_CLAS_RESEARCH_AREA_TAXONOMY_NAME', 'research_area');
  * Helper function to dynamically get a Term ID from a Term Name.
  */
 function _asu_clas_shesc_research_topics_get_term_by_name($term_name, $vocabulary_name) {
-  $term = taxonomy_get_term_by_name($term_name, $vocabular_name);
+  $term = taxonomy_get_term_by_name($term_name, $vocabulary_name);
 
   if (!empty($term)) {
     $term_tid = array_pop($term)->tid;
