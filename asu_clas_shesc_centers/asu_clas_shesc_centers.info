@@ -5,11 +5,6 @@ core = 7.x
 version = 7.x-1.x
 project = asu_clas_shesc_centers
 
-; Features
-__drupal_alter_by_ref[][fieldable_panels_pane][banner] = banner
-features[features_api][] = api:2
-features[uuid_fpp][] = 035f2110-32af-443a-91d4-80f178fc0368
-
 ; Dependencies
 dependencies[] = asu_clas_shesc_tb_megamenu
 dependencies[] = asu_clas_hotfixes
