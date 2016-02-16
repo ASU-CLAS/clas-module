@@ -69,7 +69,7 @@ function _asu_clas_shesc_research_topics_create_placeholder_nodes() {
     $node->title = $placeholder_node['title'];
     $node->body[$node->language][0]['value'] = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
     $node->body[$node->language][0]['summary'] = text_summary('');
-    $node->body[$node->language][0]['format'] = 'full_html';
+    $node->body[$node->language][0]['format'] = 'panopoly_wysiwyg_text';
 
     $node->status = 1;
     $node->promote = 0;
