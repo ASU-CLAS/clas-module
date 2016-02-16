@@ -7,6 +7,3 @@ project = asu_clas_shesc_centers
 
 ; Dependencies
 dependencies[] = asu_clas_shesc_tb_megamenu
-dependencies[] = asu_clas_hotfixes
-dependencies[] = bulk_export
-dependencies[] = devel
