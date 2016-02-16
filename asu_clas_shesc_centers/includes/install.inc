@@ -198,6 +198,22 @@ function _asu_clas_shesc_centers_create_fieldable_panels_panes() {
     ),
   );
 
+  $files = array(
+    'field_webspark_hero_bgimg' => 'hero-center-cbr-01.jpg',
+    'field_banner_image' => 'hero-center-cbr-02.jpg',
+  );
+
+  for($i = 0, reset($files); $key = key($files); next($files), $i++) {
+    $image = file_get_contents(drupal_get_path('module', 'asu_clas_shesc_centers') . '/images/' . $files[$key]);
+    $object = file_save_data($image, 'public://' . $files[$key], FILE_EXISTS_REPLACE);
+
+    $object->status = FILE_STATUS_PERMANENT;
+
+    $file_object = file_save($object);
+
+    $fpps[$i][$key]['und'][0]['fid'] = $file_object->fid;
+  }
+
   foreach ($fpps as $fpp) {
     $entity = fieldable_panels_panes_create($fpp);
     $pane = fieldable_panels_panes_save($entity);
