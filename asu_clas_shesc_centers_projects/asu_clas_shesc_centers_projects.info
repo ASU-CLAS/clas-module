@@ -2,7 +2,7 @@ name = ASU CLAS SHESC Centers Projects
 description = ""
 package = ASU CLAS
 core = 7.x
-version = 7.x-1.x
+version = 7.x-1.0
 project = asu_clas_shesc_centers_projects
 
 ; Dependencies

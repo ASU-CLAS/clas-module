@@ -18,8 +18,10 @@ $handler->display->display_options['access']['type'] = 'perm';
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
-$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['type'] = 'mini';
+$handler->display->display_options['pager']['options']['items_per_page'] = '10';
 $handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['row_plugin'] = 'fields';
 /* Field: Content: Center Project Image */
@@ -74,6 +76,34 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'center_project' => 'center_project',
 );
+/* Filter criterion: Content: Has taxonomy term */
+$handler->display->display_options['filters']['tid']['id'] = 'tid';
+$handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+$handler->display->display_options['filters']['tid']['field'] = 'tid';
+$handler->display->display_options['filters']['tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
+$handler->display->display_options['filters']['tid']['expose']['label'] = 'Center';
+$handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
+$handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
+$handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+  4 => 0,
+  5 => 0,
+);
+$handler->display->display_options['filters']['tid']['type'] = 'select';
+$handler->display->display_options['filters']['tid']['vocabulary'] = 'centers';
+$handler->display->display_options['filters']['tid']['hierarchy'] = 1;
 
 /* Display: Projects List */
 $handler = $view->new_display('panel_pane', 'Projects List', 'center_projects_list');
+$handler->display->display_options['allow']['use_pager'] = 0;
+$handler->display->display_options['allow']['items_per_page'] = 0;
+$handler->display->display_options['allow']['offset'] = 0;
+$handler->display->display_options['allow']['link_to_view'] = 0;
+$handler->display->display_options['allow']['more_link'] = 0;
+$handler->display->display_options['allow']['path_override'] = 0;
+$handler->display->display_options['allow']['title_override'] = 'title_override';
+$handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+$handler->display->display_options['allow']['fields_override'] = 0;

@@ -40,3 +40,12 @@ function asu_clas_shesc_centers_projects_uninstall() {
 
   return TRUE;
 }
+
+/**
+ * Adds functionality to enable filtering of Projects by Research Center.
+ */
+function asu_clas_shesc_centers_projects_update_7101(&$sandbox) {
+  module_load_include('inc', 'asu_clas_shesc_centers_projects', 'includes/updates');
+
+  _asu_clas_shesc_centers_projects_update_7101();
+}
