@@ -61,7 +61,7 @@ function template_preprocess_asu_clas_shesc_tb_megamenu_add_css_classes(&$variab
  */
 function asu_clas_shesc_tb_megamenu_js_alter(&$javascript) {
   foreach ($javascript as $key => $value) {
-    if ($value['type'] == 'inline') {
+    if (isset($value['type']) && $value['type'] == 'inline') {
       if (strpos($value['data'], 'Drupal.behaviors.webspark_megamenu') !== FALSE) {
         $javascript[$key]['data'] = NULL;
 
