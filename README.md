@@ -8,39 +8,39 @@ clas_module-7.x-1.7
 
 # Version Updates
 
-1.7
+#### 1.7
 	* Added CLAS Paragraphs
 	* Added CLAS pane styles
 	* Reorganized module structure to seperate academic specific features
 
-1.6
+#### 1.6
 	* Added CLAS Social Icons Block
 	* Modified Event and News Content Type Layouts to include Social Icons Block
 
-1.5.1
+#### 1.5.1
 	* Fixed a bug with "Moscone Plus" layout
 
-1.5
+#### 1.5
 	* Added "Moscone Plus" layout
 
-1.4
+#### 1.4
 	* Added tabs field to asu degrees content type, only applies to grad degrees
 	* Modified CSS to make H2 tags on asu degree page slightly smaller
 	* Now requires 3 additional modules: Quick Tabs, Field Collection, Quick Tabs Field Collection
 
-1.3
+#### 1.3
 	* Added "Cherokee" panels layout
 	* Added code to remove webspark css from megamenu admin page
 	* Added CSS styles for class "nosub" that can be applied to tb-megamenu parent items to prevent children from displaying in nav bar
 
-1.2
+#### 1.2
 	* Added list style panes for clas_degrees views
 	* Added grid/list view button to view header
 
-1.1
+#### 1.1
 	* Added filtering of asu degree imports if the Unit field is set in admin/config/system/clas_module
 
-1.0
+#### 1.0
 	* Added clas degree views as panes with slightly different styles than asu degree views
 	* Added clas_degree_image style
 	* Added CSS to adjust padding on gray nav bar items as the page condenses
@@ -49,17 +49,17 @@ clas_module-7.x-1.7
 
 1. Install module
 
-	a.	Set site to SFTP connection mode in the Pantheon dashboard
+	* a. Set site to SFTP connection mode in the Pantheon dashboard
 
-	b.	Go to /admin/modules/install on your Webspark site and install the clas module from URL (URL to clas module found at: clas.asu.edu/webspark)
+	* b. Go to /admin/modules/install on your Webspark site and install the clas module from URL (URL to clas module found at: clas.asu.edu/webspark)
 
-	c.	Click install, then enable the clas module from the module list at /admin/modules
+	* c. Click install, then enable the clas module from the module list at /admin/modules
 
-	d.	Configure the clas module with your unit name (Configure link will appear next to the clas module in the module list at /admin/modules). The Unit name must match what is used in the ASU Degrees XML feed. List of units as of 6/22/2015 are listed below.
+	* d. Configure the clas module with your unit name (Configure link will appear next to the clas module in the module list at /admin/modules). The Unit name must match what is used in the ASU Degrees XML feed. List of units as of 6/22/2015 are listed below.
 
 2. Import degrees
 
-	a.	Follow the instructions at: https://webspark.asu.edu/features/asu-degrees-feed
+	* a. Follow the instructions at: https://webspark.asu.edu/features/asu-degrees-feed
 
 3. Build Degree list page
 
