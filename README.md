@@ -1,5 +1,12 @@
-README.txt
+# CLAS Module Details
+
+The CLAS Module extends [Webspark](https://drupal.asu.edu/) with features for [CLAS](https://clas.asu.edu/) units.
+
+# Current Version
+
 clas_module-7.x-1.7
+
+# Version Updates
 
 1.7
 	* Added CLAS Paragraphs
@@ -12,7 +19,7 @@ clas_module-7.x-1.7
 
 1.5.1
 	* Fixed a bug with "Moscone Plus" layout
-	
+
 1.5
 	* Added "Moscone Plus" layout
 
@@ -32,44 +39,39 @@ clas_module-7.x-1.7
 
 1.1
 	* Added filtering of asu degree imports if the Unit field is set in admin/config/system/clas_module
-	
+
 1.0
 	* Added clas degree views as panes with slightly different styles than asu degree views
 	* Added clas_degree_image style
 	* Added CSS to adjust padding on gray nav bar items as the page condenses
 
+# Instructions
 
-INSTRUCTIONS
-
-1.	Install module
+1. Install module
 
 	a.	Set site to SFTP connection mode in the Pantheon dashboard
-	
+
 	b.	Go to /admin/modules/install on your Webspark site and install the clas module from URL (URL to clas module found at: clas.asu.edu/webspark)
-	
+
 	c.	Click install, then enable the clas module from the module list at /admin/modules
-	
+
 	d.	Configure the clas module with your unit name (Configure link will appear next to the clas module in the module list at /admin/modules). The Unit name must match what is used in the ASU Degrees XML feed. List of units as of 6/22/2015 are listed below.
-	
-2.	Import degrees
 
-	a.	Follow the instructions at: https://webspark.asu.edu/features/asu-degrees-feed 
-	
+2. Import degrees
 
-3.	Build Degree list page
+	a.	Follow the instructions at: https://webspark.asu.edu/features/asu-degrees-feed
+
+3. Build Degree list page
 
 	a.	Create a new content page on your Webspark site.
-	
+
 	b.	Click Customize this page, then add a new pane to any region
-	
+
 	c.	From the content pane selection popup, choose View panes from the left menu
-	
+
 	d.	Click Add for the CLAS degree list you want to appear on the page (Undergrad, Grad, Certs/Minors) then click save for the pane, then save again for the page.
-	
-	
 
-
-Unit names as they appear in the ASU Degree feed XML:
+# Unit names as they appear in the ASU Degree feed XML
 
 American Indian Studies Program
 Department of English
