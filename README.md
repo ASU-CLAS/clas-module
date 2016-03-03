@@ -74,20 +74,37 @@ clas_module-7.x-1.7
 ## Unit names as they appear in the ASU Degree feed XML
 
 `American Indian Studies Program`
+
 `Department of English`
+
 `Department of Military Science`
+
 `Department of Physics`
+
 `Department of Psychology`
+
 `Historical, Philosophical &amp; Religious Studies, Sch`
+
 `Hugh Downs School of Human Communication`
+
 `Sanford School of Social and Family Dynamics`
+
 `School of Earth and Space Exploration`
+
 `School of Geographical Sciences and Urban Planning`
+
 `School of Human Evolution &amp; Social Change`
+
 `School of International Letters and Cultures`
+
 `School of Life Sciences`
+
 `School of Mathematical and Statistical Sciences`
+
 `School of Molecular Sciences`
+
 `School of Politics and Global Studies`
+
 `School of Social Transformation`
+
 `School of Transborder Studies`
