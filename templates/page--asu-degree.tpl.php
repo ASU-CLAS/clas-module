@@ -90,6 +90,8 @@ if (module_exists('metatag')) {
   print render($page['content']['metatags']);
 }
 
+//dpm($node_info);
+
 ?>
 
 <div id="page-wrapper">
@@ -247,17 +249,35 @@ if (module_exists('metatag')) {
                 <?php endif; ?>
 				
                   <div class="row space-bot-lg">
+
                     <div class="col-sm-6 col-md-4 space-bot-md">
-                      <a href="#asu-rfi-form-data" id="take-me-to-rfi" class="btn btn-gold btn-block btn-lg">Request information</a>
+                      <?php if (isset($node_info['field_asu_degree_cta_information']['#items'][0]['url'])): ?>
+                        <a href="<?php echo $node_info['field_asu_degree_cta_information']['#items'][0]['url'] ?>" target="<?php print render($node_info['field_asu_degree_cta_information']['#items'][0]['attributes']['target']); ?>"
+                           class="btn btn-gold btn-block btn-lg">Request information</a>
+                      <?php else: ?>
+                        <a href="#asu-rfi-form-data" id="take-me-to-rfi"
+                           class="btn btn-gold btn-block btn-lg">Request information</a>
+                      <?php endif ?>
                     </div>
                     <div class="col-sm-6 col-md-4 space-bot-md">
-                      <a href="https://visit.asu.edu/"
-                         class="btn btn-gold btn-block btn-lg">Schedule a visit</a>
+                      <?php if (isset($node_info['field_asu_degree_cta_visit']['#items'][0]['url'])): ?>
+                        <a href="<?php echo $node_info['field_asu_degree_cta_visit']['#items'][0]['url'] ?>" target="<?php print render($node_info['field_asu_degree_cta_information']['#items'][0]['attributes']['target']); ?>"
+                           class="btn btn-gold btn-block btn-lg">Schedule a visit</a>
+                      <?php else: ?>
+                        <a href="https://visit.asu.edu/"
+                           class="btn btn-gold btn-block btn-lg">Schedule a visit</a>
+                      <?php endif ?>
                     </div>
                     <div class="col-sm-6 col-md-4 space-bot-md">
-                      <a href="http://www.asu.edu/enroll/apply"
-                         class="btn btn-gold btn-block btn-lg">How and when to apply</a>
+                      <?php if (isset($node_info['field_asu_degree_cta_apply']['#items'][0]['url'])): ?>
+                        <a href="<?php echo $node_info['field_asu_degree_cta_apply']['#items'][0]['url'] ?>" target="<?php print render($node_info['field_asu_degree_cta_information']['#items'][0]['attributes']['target']); ?>"
+                           class="btn btn-gold btn-block btn-lg">How and when to apply</a>
+                      <?php else: ?>
+                        <a href="https://students.asu.edu/apply"
+                           class="btn btn-gold btn-block btn-lg">How and when to apply</a>
+                      <?php endif ?>
                     </div>
+
                   </div>
               </div>
               <div class="asu-degree-grey-section">
@@ -625,17 +645,35 @@ if (module_exists('metatag')) {
                 <!-- End optional description video display -->
 
                   <div class="row space-bot-lg">
+
                     <div class="col-sm-6 col-md-4 space-bot-md">
-                      <a href="#asu-rfi-form-data" id="take-me-to-rfi" class="btn btn-gold btn-block btn-lg">Request information</a>
+                      <?php if (isset($node_info['field_asu_degree_cta_information']['#items'][0]['url'])): ?>
+                        <a href="<?php echo $node_info['field_asu_degree_cta_information']['#items'][0]['url'] ?>" target="<?php print render($node_info['field_asu_degree_cta_information']['#items'][0]['attributes']['target']); ?>"
+                           class="btn btn-gold btn-block btn-lg">Request information</a>
+                      <?php else: ?>
+                        <a href="#asu-rfi-form-data" id="take-me-to-rfi"
+                           class="btn btn-gold btn-block btn-lg">Request information</a>
+                      <?php endif ?>
                     </div>
                     <div class="col-sm-6 col-md-4 space-bot-md">
-                      <a href="https://visit.asu.edu/"
-                         class="btn btn-gold btn-block btn-lg">Schedule a visit</a>
+                      <?php if (isset($node_info['field_asu_degree_cta_visit']['#items'][0]['url'])): ?>
+                        <a href="<?php echo $node_info['field_asu_degree_cta_visit']['#items'][0]['url'] ?>" target="<?php print render($node_info['field_asu_degree_cta_information']['#items'][0]['attributes']['target']); ?>"
+                           class="btn btn-gold btn-block btn-lg">Schedule a visit</a>
+                      <?php else: ?>
+                        <a href="https://visit.asu.edu/"
+                           class="btn btn-gold btn-block btn-lg">Schedule a visit</a>
+                      <?php endif ?>
                     </div>
                     <div class="col-sm-6 col-md-4 space-bot-md">
-                      <a href="http://www.asu.edu/enroll/apply"
-                         class="btn btn-gold btn-block btn-lg">How and when to apply</a>
+                      <?php if (isset($node_info['field_asu_degree_cta_apply']['#items'][0]['url'])): ?>
+                        <a href="<?php echo $node_info['field_asu_degree_cta_apply']['#items'][0]['url'] ?>" target="<?php print render($node_info['field_asu_degree_cta_information']['#items'][0]['attributes']['target']); ?>"
+                           class="btn btn-gold btn-block btn-lg">How and when to apply</a>
+                      <?php else: ?>
+                        <a href="https://students.asu.edu/apply"
+                           class="btn btn-gold btn-block btn-lg">How and when to apply</a>
+                      <?php endif ?>
                     </div>
+
                   </div>
               </div>
               <div class="asu-degree-grey-section">
