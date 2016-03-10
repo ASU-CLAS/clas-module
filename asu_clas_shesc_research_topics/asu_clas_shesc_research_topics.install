@@ -1,0 +1,47 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function asu_clas_shesc_research_topics_install() {
+  module_load_include('inc', 'asu_clas_shesc_research_topics', 'includes/install');
+
+  _asu_clas_shesc_research_topics_expand_menu_links();
+  _asu_clas_shesc_research_topics_create_content_type();
+  _asu_clas_shesc_research_topics_create_content_type_fields();
+  _asu_clas_shesc_research_topics_panelizer_setup();
+  _asu_clas_shesc_research_topics_set_pathauto_node_pattern();
+  _asu_clas_shesc_research_topics_create_menu_links();
+
+  module_load_include('inc', 'asu_clas_shesc_research_topics', 'includes/content');
+  _asu_clas_shesc_research_topics_create_placeholder_nodes();
+}
+
+/**
+ * Implements hook_enable().
+ */
+function _asu_clas_shesc_research_topics_enable() {
+  return TRUE;
+}
+
+/**
+ * Implements hook_disable().
+ */
+function asu_clas_shesc_research_topics_disable() {
+  return TRUE;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function asu_clas_shesc_research_topics_uninstall() {
+  module_load_include('inc', 'asu_clas_shesc_research_topics', 'includes/uninstall');
+
+  _asu_clas_shesc_research_topics_delete_content_type();
+  _asu_clas_shesc_research_topics_delete_custom_fields();
+  _asu_clas_shesc_research_topics_delete_placeholder_nodes();
+  _asu_clas_shesc_research_topics_delete_views();
+}
