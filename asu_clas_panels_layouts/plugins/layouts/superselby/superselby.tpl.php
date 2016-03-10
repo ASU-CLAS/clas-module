@@ -31,29 +31,27 @@
   <section class="section">
     <div class="container">
       <div class="row">
-        <div class="col-md-<?php print kalatheme_grid_size(KALATHEME_GRID_THIRD); ?> superselby-sidebar-main-area">
-          <div class="row">
-            <div class="col-md-<?php print kalatheme_grid_size(KALATHEME_GRID_FULL); ?> superselby-sidebar-area">
+        <div class="col-md-4 superselby-sidebar-main-area">
+          
               <?php print $content['sidebar']; ?>
-            </div>
-          </div>
+            
         </div> <!-- /.superselby-sidebar -->
-        <div class="col-md-<?php print kalatheme_grid_size(KALATHEME_GRID_THIRD * 2); ?> superselby-column-content-region-area">
+        <div class="col-md-8 superselby-column-content-region-area">
           <div class="row">
-            <div class="col-md-<?php print kalatheme_grid_size(KALATHEME_GRID_FULL); ?> superselby-column-content-region-area">
+            <div class="col-md-12 superselby-column-content-region-area">
               <?php print $content['contentheader']; ?>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-<?php print kalatheme_grid_size(KALATHEME_GRID_HALF); ?> superselby-column-content-region-1">
+            <div class="col-md-6 superselby-column-content-region-1">
               <?php print $content['contentcolumn1']; ?>
             </div>
-            <div class="col-md-<?php print kalatheme_grid_size(KALATHEME_GRID_HALF); ?> superselby-column-content-region-2">
+            <div class="col-md-6 superselby-column-content-region-2">
               <?php print $content['contentcolumn2']; ?>
             </div>
           </div><!-- /.superselby-content-container row-->
           <div class="row">
-            <div class="col-md-<?php print kalatheme_grid_size(KALATHEME_GRID_FULL); ?> superselby-content-footer-area">
+            <div class="col-md-12 superselby-content-footer-area">
               <?php print $content['contentfooter']; ?>
             </div>
           </div>
