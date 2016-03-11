@@ -68,10 +68,11 @@ $field_paragraph_background_right = image_style_url('clas_bg_image', $field_para
         <div class="cta-text">
     		  <?php print $field_paragraph_text_left; ?>
         </div>
-
-        <a class="btn btn-primary btn-lg cta-button" href="<?php print $field_paragraph_links_left[0]['url']; ?>">
-          <?php print $field_paragraph_links_left[0]['title']; ?>
-        </a>
+        <?php if (isset($field_paragraph_links_left[0]['title'])): ?>
+          <a class="btn btn-primary btn-lg cta-button" href="<?php print $field_paragraph_links_left[0]['url']; ?>">
+            <?php print $field_paragraph_links_left[0]['title']; ?>
+          </a>
+        <?php endif ?>
 
       </div>
 
@@ -87,9 +88,11 @@ $field_paragraph_background_right = image_style_url('clas_bg_image', $field_para
           <?php print $field_paragraph_text_right; ?>
         </div>
 
-        <a class="btn btn-primary btn-lg cta-button" href="<?php print $field_paragraph_links_right[0]['url']; ?>">
-          <?php print $field_paragraph_links_right[0]['title']; ?>
-        </a>
+        <?php if (isset($field_paragraph_links_right[0]['title'])): ?>
+          <a class="btn btn-primary btn-lg cta-button" href="<?php print $field_paragraph_links_right[0]['url']; ?>">
+            <?php print $field_paragraph_links_right[0]['title']; ?>
+          </a>
+        <?php endif ?>
 
       </div>
 
