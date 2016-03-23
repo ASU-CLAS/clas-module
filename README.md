@@ -8,10 +8,16 @@ clas_module-7.x-1.7
 
 ## Version Updates
 
+#### 1.8
+	* Incorporated Fervor developed modules for specific units
+	* Fixed some paragraph bundle bugs
+	* Classocial block now generates .ics file for non ASU Events imported (local) event nodes
+	* Added new layouts
+
 #### 1.7
 	* Added CLAS Paragraphs
 	* Added CLAS pane styles
-	* Reorganized module structure to seperate academic specific features
+	* Reorganized module structure to separate academic specific features
 
 #### 1.6
 	* Added CLAS Social Icons Block
