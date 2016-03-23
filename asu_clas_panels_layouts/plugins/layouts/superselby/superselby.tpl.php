@@ -18,9 +18,9 @@
 
 	      <div class="row row-1 superselby-header row-full">
 	        <div class="column col-md-12">
-	          
+
 			  		<?php print $content['header']; ?>
-			  
+
 	        </div>
 	      </div>
 
@@ -32,9 +32,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 superselby-sidebar-main-area">
-          
+
               <?php print $content['sidebar']; ?>
-            
+
         </div> <!-- /.superselby-sidebar -->
         <div class="col-md-8 superselby-column-content-region-area">
           <div class="row">
@@ -59,7 +59,7 @@
       </div><!-- /.superselby-content-container row-->
     </div>
   </section>
-  
+
   <!-- Footer -->
 		<section class="section">
 			<div class="container">
@@ -74,6 +74,6 @@
 
 				</div>
 			</section>
-<!-- Footer -->  
-  
+<!-- Footer -->
+
 </div><!-- /.superselby -->
