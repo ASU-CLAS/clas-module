@@ -4,7 +4,7 @@ The CLAS Module extends [Webspark](https://drupal.asu.edu/) with features for [C
 
 ## Current Version
 
-clas_module-7.x-1.7
+clas_module-7.x-1.8
 
 ## Version Updates
 
