@@ -1,6 +1,6 @@
 <?php
 //! Drupal hook implementations.
-  
+
 //! Tokens:
 
 /**
@@ -8,7 +8,7 @@
  **/
 function classocial_token_info() {
   $info = array();
-  
+
   $info['types']['classocial'] = array(
     'name' => t('classocial tokens'),
     'description' => t("classocial tokens."),
@@ -23,7 +23,7 @@ function classocial_token_info() {
     'name' => t("Social button bar, horizontal"),
     'description' => t("Social button bar, horizontal layout."),
   );
-  
+
   return $info;
 }
 
@@ -38,7 +38,7 @@ function classocial_tokens($type, $tokens, $data = array(), $options = array()) 
     $horizontal = classocial_buttons('horizontal');
 
     // Loop through the available tokens.
-    foreach ($tokens as $name => $original) {      
+    foreach ($tokens as $name => $original) {
       // Find our custom tokens by name.
       switch ($name) {
         case 'vertical':
@@ -53,7 +53,7 @@ function classocial_tokens($type, $tokens, $data = array(), $options = array()) 
       }
     }
   }
-  
+
   return $replacements;
 }
 
@@ -72,11 +72,11 @@ function classocial_block_info() {
     'region' => 'sidebar_second',
     'cache' => DRUPAL_CACHE_PER_PAGE,
   );*/
-  
+
   $blocks['horizontal'] = array(
     // info: The name of the block.
     // 'info' => t('Social buttons: horizontal layout'),
-    'info' => t('CLAS Share: Social Buttons'),    
+    'info' => t('CLAS Share: Social Buttons'),
     'status' => FALSE,
     'region' => 'sidebar_second',
     'cache' => DRUPAL_CACHE_PER_PAGE,
@@ -94,7 +94,7 @@ function classocial_block_info() {
 function classocial_block_view($delta = '') {
   // The $delta parameter tells us which block is being requested.
   $block = array();
-  
+
   switch ($delta) {
     case 'vertical':
       $block['subject'] = NULL;
@@ -106,7 +106,7 @@ function classocial_block_view($delta = '') {
       $block['content'] = classocial_buttons('horizontal');
       break;
   }
-  
+
   return $block;
 }
 
@@ -146,10 +146,10 @@ function classocial_block_view($delta = '') {
  */
 function classocial_buttons($layout = 'vertical', $msg_parts = array()) {
   global $base_url;
-  
+
   $modulepath = drupal_get_path('module', 'classocial');
   $horizontal = ($layout == 'horizontal');
-  
+
   $tag = $horizontal ? 'span' : 'div';
   $horizontal_class = $horizontal ? ' inline' : '';
 
@@ -160,14 +160,14 @@ function classocial_buttons($layout = 'vertical', $msg_parts = array()) {
     'body' => $current_page_full_url,
     'url' => $current_page_full_url,
   );
-  
+
   $msg_parts = array_merge($msg_parts_defaults, $msg_parts);
-  
+
   // URL encode so the strings can be used inside URLs;
   foreach ($msg_parts as $key => $msg) {
     $msg_parts[$key] = rawurlencode($msg);
   }
-  
+
   $subject = $msg_parts['subject'];
   $body    = $msg_parts['body'];
   $url     = $msg_parts['url'];
@@ -177,17 +177,18 @@ function classocial_buttons($layout = 'vertical', $msg_parts = array()) {
     '#suffix' => '</ul></div>',
     '#attached' => array(
       'css' => array($modulepath . '/css/classocial.min.css'),
+      'js' => array($modulepath . '/js/ics.deps.min.js'),
     ),
   );
-  
+
   //$btn_classes = array('btn', 'btn-info', 'btn-xs');
-  $btn_classes = array('clas-social-link');  
-  
+  $btn_classes = array('clas-social-link');
+
   if ($layout == 'vertical') {
     $btn_classes[] = 'btn-block';
   }
-  
-  
+
+
   // mailto: link for email
   $link = "mailto:?subject=$subject&body=$body";
   $text = '<i class="fa fa-envelope fa-lg"></i>';
@@ -201,7 +202,7 @@ function classocial_buttons($layout = 'vertical', $msg_parts = array()) {
   	  )
 	  )),
   );
-  
+
   // Facebook share:
   $link = "https://www.facebook.com/sharer/sharer.php?u=$url";
   $text = '<i class="fa fa-facebook fa-lg"></i>';
@@ -231,11 +232,11 @@ function classocial_buttons($layout = 'vertical', $msg_parts = array()) {
         'class' => $btn_classes,
       )
     )),
-  );  
-  
+  );
+
   // Google Plus share:
   $link = "https://plus.google.com/share?url=$url";
-  $text = '<i class="fa fa-google-plus fa-lg"></i>';  
+  $text = '<i class="fa fa-google-plus fa-lg"></i>';
   $output['gplus'] = array(
     '#prefix' => "<li>",
     '#suffix' => "</li>",
@@ -250,7 +251,7 @@ function classocial_buttons($layout = 'vertical', $msg_parts = array()) {
 
   // LinkedIn share:
   $link = "https://www.linkedin.com/shareArticle?mini=true&url=$url";
-  $text = '<i class="fa fa-linkedin fa-lg"></i>';  
+  $text = '<i class="fa fa-linkedin fa-lg"></i>';
   $output['linkedin'] = array(
     '#prefix' => "<li>",
     '#suffix' => "</li>",
@@ -261,12 +262,12 @@ function classocial_buttons($layout = 'vertical', $msg_parts = array()) {
         'class' => $btn_classes,
       )
     )),
-  ); 
+  );
 
   // -- Calendar icon if asu_event type
   $our_alias = $_GET['q'];
   $our_normal_path = drupal_get_normal_path($our_alias);
-  $our_normal_path_parts = explode("/",$our_normal_path);  
+  $our_normal_path_parts = explode("/",$our_normal_path);
 
   if (count($our_normal_path_parts)>1){
 
@@ -277,25 +278,45 @@ function classocial_buttons($layout = 'vertical', $msg_parts = array()) {
 
     //echo $our_node_type;
 
-    if ($our_node_type == "ASU Event"){    
-		if(isset($node->field_asuevent_nid['und'][0]['value'])) {
-		  $asu_event_id = $node->field_asuevent_nid['und'][0]['value'];
+    if ($our_node_type == "ASU Event"){
+  		if(isset($node->field_asuevent_nid['und'][0]['value'])) {
+  		  $asu_event_id = $node->field_asuevent_nid['und'][0]['value'];
 
-		  // Calendar Add:
-		  $link = "https://asuevents.asu.edu/calendar/ical/".$asu_event_id;
-		  $text = '<i class="fa fa-calendar fa-lg"></i>';  
-		  $output['addtocalendar'] = array(
-			'#prefix' => "<li>",
-			'#suffix' => "</li>",
-			'#markup' => l($text, $link, array(
-			  'html' => TRUE,
-			  'attributes' => array(
-				'target' => '_blank',
-				'class' => $btn_classes,
-			  )
-			)),
-		  );
-		}	
+  		  // Calendar Add:
+  		  $link = "https://asuevents.asu.edu/calendar/ical/".$asu_event_id;
+  		  $text = '<i class="fa fa-calendar fa-lg"></i>';
+  		  $output['addtocalendar'] = array(
+    			'#prefix' => "<li>",
+    			'#suffix' => "</li>",
+    			'#markup' => l($text, $link, array(
+    			  'html' => TRUE,
+    			  'attributes' => array(
+    				      'target' => '_blank',
+    				      'class' => $btn_classes,
+    			  )
+    			)),
+		    );
+		  }
+      else {
+  		  $link = "";
+  		  $text = '';
+        $eventargs = "'".$node->title."', '";
+        $eventargs .= $node->body['und'][0]['value']."', '";
+        $eventargs .= $node->field_asuevent_location['und'][0]['value']."', '";
+        $eventargs .= $node->field_asuevent_date['und'][0]['value']."', '";
+        $eventargs .= $node->field_asuevent_date['und'][0]['value2']."'";
+  		  $output['addtocalendar'] = array(
+    			'#prefix' => "<li><script>var socialcal = ics(); socialcal.addEvent(".$eventargs.");</script><i class='fa fa-calendar fa-lg' id='eventics' style='cursor:pointer;'></i>",
+    			'#suffix' => '<script>(function ($, Drupal) {$("#eventics").click(function() {socialcal.download("Event");});})(jQuery, Drupal);</script></li>',
+    			'#markup' => l($text, $link, array(
+    			  'html' => TRUE,
+    			  'attributes' => array(
+    				      'target' => '_blank',
+    				      'class' => $btn_classes,
+    			  )
+    			)),
+		    );
+      }
 
     };
 
@@ -315,4 +336,3 @@ function classocial_buttons($layout = 'vertical', $msg_parts = array()) {
  */
 
 include_once 'classocial.features.inc';
-
