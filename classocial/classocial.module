@@ -300,13 +300,17 @@ function classocial_buttons($layout = 'vertical', $msg_parts = array()) {
       else {
   		  $link = "";
   		  $text = '';
-        $eventbody = $node->body['und'][0]['value'] ?: '';
-        $eventlocation = $node->field_asuevent_location['und'][0]['value'] ?: '';
-        $eventdate1 = $node->field_asuevent_date['und'][0]['value'] ?: '';
-        $eventdate2 = $node->field_asuevent_date['und'][0]['value2'] ?: '';
+        $eventbody = '';
+        if(isset($node->body['und'][0]['value'])) {$eventbody = $node->body['und'][0]['value'];}
+        $eventlocation = '';
+        if(isset($node->field_asuevent_location['und'][0]['value'])) {$eventlocation = $node->field_asuevent_location['und'][0]['value'];}
+        $eventdate1 = '';
+        if(isset($node->field_asuevent_very_start_date['und'][0]['value'])) {$eventdate1 = $node->field_asuevent_very_start_date['und'][0]['value'];}
+        $eventdate2 = '';
+        if(isset($node->field_asuevent_very_start_date['und'][0]['value2'])) {$eventdate2 = $node->field_asuevent_very_start_date['und'][0]['value2'];}
         $eventargs = "'".$node->title."', '";
         $eventargs .= $eventbody."', '";
-        $eventargs .= $$eventlocation."', '";
+        $eventargs .= $eventlocation."', '";
         $eventargs .= $eventdate1."', '";
         $eventargs .= $eventdate2."'";
   		  $output['addtocalendar'] = array(
