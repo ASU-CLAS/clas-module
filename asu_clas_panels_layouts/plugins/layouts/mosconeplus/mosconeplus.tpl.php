@@ -53,8 +53,9 @@
 
 				      </div>
 
-				      <div class="mosconeplus-column-content-region-inner mosconeplus-content-inner panel-panel-inner">
+				      <div class="mosconeplus-column-content-region-inner mosconeplus-content-inner panel-panel-inner clearfix">
 
+				        <!-- clearfix applied to this element is specific to shesc's research topic image -->
 				        <?php print $content['rowtwo']; ?>
 
 				      </div>
