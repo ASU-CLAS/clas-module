@@ -35,3 +35,11 @@
     margin-right: 0;
   }
 }
+
+/**
+ * Applying lightgraybg or darkgraybg shouldn't make the whole page that color
+ */
+
+.moscone-multi-column-fix {
+  background-color: #FFFFFF !important;
+}

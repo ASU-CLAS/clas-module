@@ -32,7 +32,7 @@
 	<section class="section">
 		<div class="container">
 
-  		<div class="mosconeplus-container mosconeplus-column-content clearfix row">
+  		<div class="mosconeplus-container mosconeplus-column-content clearfix row moscone-multi-column-fix">
 
 				<!-- Left Side -->
 				    <div class="mosconeplus-column-content-region mosconeplus-sidebar panel-panel span3">
