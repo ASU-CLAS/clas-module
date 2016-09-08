@@ -9,10 +9,10 @@ clas_module-7.x-1.8
 ## Version Updates
 
 #### 1.8
-	* Incorporated Fervor developed modules for specific units
-	* Fixed some paragraph bundle bugs
+	* Fixed some paragraph bundle bugs and enhanced responsiveness
 	* Classocial block now generates .ics file for non ASU Events imported (local) event nodes
 	* Added new layouts
+	* Removed unneeded modules
 
 #### 1.7
 	* Added CLAS Paragraphs
