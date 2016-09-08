@@ -274,6 +274,11 @@ function asu_clas_paragraphs_paragraphs_info() {
       'bundle' => 'clas_two_column_video_left',
       'locked' => '1',
     ),
+    'clas_full_bg_image_co' => array(
+      'name' => 'CLAS Full Background Image Callout',
+      'bundle' => 'clas_full_bg_image_co',
+      'locked' => '1',
+    ),
   );
   return $items;
 }

@@ -1,9 +1,10 @@
-name = ASU CLAS Paragraphs: Advanced Bundle
-description = Provides extra functionality for building out paragraphs for different types of content for CLAS
+name = ASU CLAS Paragraphs
+description = Adds a CLAS content pane for placing Paragraphs on a page.
 core = 7.x
 package = ASU CLAS
-version = 7.x-1.x
+version = 7.x-1.1
 project = asu_clas_paragraphs
+
 dependencies[] = defaultconfig
 dependencies[] = features
 dependencies[] = field_collection
@@ -17,17 +18,26 @@ dependencies[] = panelizer
 dependencies[] = paragraphs
 dependencies[] = text
 dependencies[] = video_embed_field
-dependencies[] = clas_paragraphs
+
 scripts[] = js/vendor/jquery.matchHeight-0.6.0.min.js
 scripts[] = js/vendor/jquery.featherlight-1.3.4.min.js
 scripts[] = js/vendor/jquery.featherlight.gallery-1.3.4.min.js
 scripts[] = js/clas-common.js
+scripts[] = js/clas-full-background.js
+
 stylesheets[all][] = css/roboto-thin.css
 stylesheets[all][] = css/vendor/featherlight.min.css
 stylesheets[all][] = css/vendor/featherlight.gallery.min.css
+
 features[ctools][] = field_group:field_group:1
 features[defaultconfig][] = field_default_fields:fieldable_panels_pane-clas_paragraph_pane-field_clas_paragraph_bundle
 features[features_api][] = api:2
+
+features[field_base][] = field_callout_background_image
+features[field_instance][] = paragraphs_item-clas_full_bg_image_co-field_callout_background_image
+features[field_instance][] = paragraphs_item-clas_full_bg_image_co-field_callout_body
+features[paragraphs][] = clas_full_bg_image_co
+
 features[field_base][] = field_button_title_1
 features[field_base][] = field_button_title_2
 features[field_base][] = field_button_title_3

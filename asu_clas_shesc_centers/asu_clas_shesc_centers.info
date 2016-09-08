@@ -1,9 +1,0 @@
-name = ASU CLAS SHESC Centers
-description = ""
-package = ASU CLAS
-core = 7.x
-version = 7.x-1.x
-project = asu_clas_shesc_centers
-
-; Dependencies
-dependencies[] = asu_clas_shesc_tb_megamenu

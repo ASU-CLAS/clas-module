@@ -8,29 +8,22 @@
 include_once 'asu_clas_paragraphs.features.inc';
 
 /**
- * Implements hook_enable()
+ * Implementation of hook_entity_info_alter().
  */
-function asu_clas_paragraphs_enable() {
-  // Doing a db variable check to see if content has been installed (so we don't throw up duplicates)
-  $footer_fpid = variable_get('asu_class_footer_pane_fpid', '');
-  if (empty($footer_fpid)) {
-    // Basically this installs our default content whenever this module is turned on
-    asu_clas_paragraphs_cta_footer_setup();
-  }
-}
-
-/**
- * Implements hook_init()
- */
-function asu_clas_paragraphs_init() {
-  // Create our content on the first page load - for some reason it doesn't fire on module enable
-  // Doing a db variable check to see if content has been installed (so we don't throw up duplicates)
-  $footer_fpid = variable_get('asu_class_footer_pane_fpid', '');
-  $content_installed = variable_get('asu_class_footer_content_installed', 0);
-  if (!empty($footer_fpid) && $content_installed == 0) {
-    // Basically this installs our default content whenever this module is turned on
-    asu_clas_paragraphs_cta_footer_content_setup($footer_fpid);
-  }
+function asu_clas_paragraphs_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['clas_paragraph_pane'] = array(
+    'label' => t('CLAS Paragraph Pane'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'pane icon' => drupal_get_path('module', 'clas_paragraphs') . '/images/icon_clas_paragraph_pane.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_pane_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/clas-paragraph-pane',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
 }
 
 /**
@@ -56,6 +49,7 @@ function asu_clas_paragraphs_preprocess_html(&$variables) {
     '/css/clas-carousel-background-cover.css',
     '/css/clas-media-object.css',
     '/css/clas-discipline-icon-grid-w-text.css',
+    '/css/clas-full-background-image-callout.css',
   );
 
   foreach ($stylesheets as $stylesheet) {
@@ -155,6 +149,11 @@ function asu_clas_paragraphs_theme() {
       'template' => 'paragraphs-item--clas-discipline-icon-grid-w-text',
       'path' => drupal_get_path('module', 'asu_clas_paragraphs') . '/theme',
     ),
+    'paragraphs_item__clas_full_bg_image_co' => array(
+      'render element' => 'elements',
+      'template' => 'paragraphs-item--clas-full-bg-image-co',
+      'path' => drupal_get_path('module', 'asu_clas_paragraphs') . '/theme',
+    ),
   );
 }
 
@@ -183,128 +182,4 @@ function asu_clas_paragraphs_format_column_classes($template_type = 'Two Columns
     $classes = 'col-xs-12 col-sm-6 col-md-6';
   }
   return $classes;
-}
-
-/**
-* Implements hook_block_info().
-*/
-function asu_clas_paragraphs_block_info() {
-  $blocks = array();
-  $blocks['asu_clas_global_footer'] = array(
-    'info' => t('ASU CLAS Global Footer'),
-    'region' => 'footer',
-    'status' => 1,
-    'weight' => -20,
-  );
-  return $blocks;
-}
-
-/**
-* Implements hook_block_view().
-*/
-function asu_clas_paragraphs_block_view($delta = '') {
-  $block = array();
-  switch ($delta) {
-    case 'asu_clas_global_footer':
-      $block['subject'] = '';
-      $block['content'] = _asu_clas_paragraphs_get_footer_pane_content();
-      break;
-  }
-  return $block;
-}
-
-/**
- * Grabs our field panels pane for footer content and returns it as a block
- */
-function _asu_clas_paragraphs_get_footer_pane_content() {
-  $output = '';
-  $pane_fpid = variable_get('asu_class_footer_pane_fpid', '');
-  if (is_numeric($pane_fpid)) {
-    $pane = fieldable_panels_panes_load($pane_fpid);
-    if (!empty($pane->field_clas_paragraph_bundle[LANGUAGE_NONE][0]['value'])) {
-      $paragraph = entity_load('paragraphs_item', array($pane->field_clas_paragraph_bundle[LANGUAGE_NONE][0]['value']));
-      $paragraph_view = entity_view('paragraphs_item', $paragraph, 'full');
-      $output = render($paragraph_view);
-    }
-  }
-  return $output;
-}
-
-/**
- * This creates our default footer for ASU CLAS
- */
-function asu_clas_paragraphs_cta_footer_setup() {
-  // Create our fieldable panels pane first
-  $pane_values = array();
-  $pane_values['bundle'] = 'clas_paragraph_pane';
-  $pane_values['uid'] = 1;
-  $pane_values['created'] = time();
-  $pane_values['reusable'] = 0;
-  $pane_values['admin_title'] = 'clas-cta-footer';
-  $pane_values['category'] = 'Reusable Content';
-  $pane_values['admin_description'] = 'Auto-created fieldable panel pane for ASU CLAS Global Footer';
-  $pane_values['language'] = LANGUAGE_NONE;
-
-  $entity = fieldable_panels_panes_create($pane_values);
-  $pane = fieldable_panels_panes_save($entity);
-
-  if (!empty($pane->fpid)) {
-    // Save the fpid as we'll need for later
-    variable_set('asu_class_footer_pane_fpid', $pane->fpid);
-    watchdog('asu_clas_paragraphs', 'Footer structure has been setup.');
-  }
-}
-
-/**
- * Adds default footer content
- */
-function asu_clas_paragraphs_cta_footer_content_setup($footer_fpid) {
-
-  $pane = fieldable_panels_panes_load($footer_fpid);
-
-  if (!empty($pane)) {
-
-    // Bring our icons into files
-    $icon_1_filename = 'icon111.png';
-    $icon_1 = file_get_contents(drupal_get_path('module', 'asu_clas_paragraphs').'/images/'.$icon_1_filename);
-    $icon_1_file = file_save_data($icon_1, 'public://' . $icon_1_filename, FILE_EXISTS_RENAME);
-    $icon_2_filename = 'icon222.png';
-    $icon_2 = file_get_contents(drupal_get_path('module', 'asu_clas_paragraphs').'/images/'.$icon_2_filename);
-    $icon_2_file = file_save_data($icon_2, 'public://' . $icon_2_filename, FILE_EXISTS_RENAME);
-    $icon_3_filename = 'icon333.png';
-    $icon_3 = file_get_contents(drupal_get_path('module', 'asu_clas_paragraphs').'/images/'.$icon_3_filename);
-    $icon_3_file = file_save_data($icon_3, 'public://' . $icon_3_filename, FILE_EXISTS_RENAME);
-
-    // Create our default footer paragraph
-    $paragraph = new ParagraphsItemEntity(
-      array(
-        'bundle' => 'clas_cta_footer',
-        'field_name' => 'field_clas_paragraph_bundle',
-      )
-    );
-    $paragraph->field_icon_1[LANGUAGE_NONE][0] = (array)$icon_1_file;
-    $paragraph->field_title_1[LANGUAGE_NONE][0]['value'] = 'Degree Programs';
-    $paragraph->field_text_1[LANGUAGE_NONE][0]['value'] = 'Undergraduate and Graduate Opportunities';
-    $paragraph->field_button_title_1[LANGUAGE_NONE][0]['value'] = 'Explore Degrees';
-    $paragraph->field_link_1[LANGUAGE_NONE][0]['value'] = '/degrees/undergrad';
-    $paragraph->field_icon_2[LANGUAGE_NONE][0] = (array)$icon_2_file;
-    $paragraph->field_title_2[LANGUAGE_NONE][0]['value'] = 'Undergraduate Admissions';
-    $paragraph->field_text_2[LANGUAGE_NONE][0]['value'] = 'Learn more about the application process';
-    $paragraph->field_button_title_2[LANGUAGE_NONE][0]['value'] = 'Apply Now';
-    $paragraph->field_link_2[LANGUAGE_NONE][0]['value'] = '/admissions/undergraduate-admissions';
-    $paragraph->field_icon_3[LANGUAGE_NONE][0] = (array)$icon_2_file;
-    $paragraph->field_title_3[LANGUAGE_NONE][0]['value'] = 'Graduate Admissions';
-    $paragraph->field_text_3[LANGUAGE_NONE][0]['value'] = 'Learn more about the application process';
-    $paragraph->field_button_title_3[LANGUAGE_NONE][0]['value'] = 'Apply Now';
-    $paragraph->field_link_3[LANGUAGE_NONE][0]['value'] = '/admissions/graduate-admissions';
-    $paragraph->is_new = TRUE;
-    $paragraph->setHostEntity('fieldable_panels_pane', $pane);
-    $paragraph->save();
-
-    variable_set('asu_class_footer_content_installed', 1);
-
-    watchdog('asu_clas_paragraphs', 'Footer content has been installed.');
-
-    drupal_set_message(t(sprintf('ASU CLAS Global Footer block installed. <a href="%s">Edit the Fieldable Panels Pane</a> to make customizations.', '/admin/structure/fieldable-panels-panes/view/1/edit')), 'status');
-  }
 }

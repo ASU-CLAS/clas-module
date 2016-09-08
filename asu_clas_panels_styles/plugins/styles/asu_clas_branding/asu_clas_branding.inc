@@ -67,13 +67,13 @@ function asu_clas_branding_pane_settings_form($style_settings) {
    $bgcolors_default_value = isset($style_settings['bgcolors']) ? $style_settings['bgcolors'] : '';
 
    $bgcolor_options = array(
-      ''                         => t('None'),
-      'pane-background-black'    => t('Black (#000)'),
-      'pane-background-white'    => t('White (#fff)'),
+      '' => t('None'),
+      'pane-background-black' => t('Black (#000)'),
+      'pane-background-white' => t('White (#fff)'),
       'pane-background-midnight' => t('Midnight (#2a2a2a)'),
-      'pane-background-gray'     => t('Gray (#f1f1f1)'),
+      'pane-background-gray' => t('Gray (#f1f1f1)'),
       'pane-background-charcoal' => t('Charcoal (#353535)'),
-      'pane-background-gold'     => t('Gold (#ffb30f)'),
+      'pane-background-gold' => t('Gold (#ffb30f)'),
     );
 
     $form['bgcolors'] = array(
@@ -85,21 +85,6 @@ function asu_clas_branding_pane_settings_form($style_settings) {
       '#required' => FALSE,
       '#options' => $bgcolor_options,
       '#default_value' => $bgcolors_default_value,
-    );
-
-    $well_default_value = isset($style_settings['well_style']) ? $style_settings['well_style'] : '';
-
-    $form['well_style'] = array(
-      '#prefix' => '<div class="well">',
-      '#suffix' => '</div>',
-      '#type'   => 'radios',
-      '#title'  => t('Well Style:'),
-      '#description' => t('Note: Renders pane as a well.'),
-      '#options' => array(
-        '' => t('None'),
-        'pane-well pane-well-basic' => t('Basic'),
-      ),
-      '#default_value' => $well_default_value,
     );
 
   return $form;

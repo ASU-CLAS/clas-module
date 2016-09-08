@@ -1,9 +1,0 @@
-name = ASU CLAS SHESC TB MegaMenu
-description = ""
-package = ASU CLAS
-core = 7.x
-version = 7.x-1.x
-
-stylesheets[all][] = css/asu-clas-shesc-tb-megamenu.css
-
-dependencies[] = webspark_featurescustom

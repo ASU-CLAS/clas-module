@@ -2,32 +2,24 @@
  * CLAS Number Highlighter
  */
 
-.row-number-highlighter {
-  background-color: #353535;
-  padding: 78px 0 !important;
-}
 
-@media (min-width: 931px) {
-  .row-number-highlighter .col-sm-4 {
-    padding: 0 100px;
-  }
-}
+ .number-highlighter-row {
+ 	padding: 40px 0 !important;
+ 	/*background-color: #353535;*/
+ }
 
-.stat-title {
-  color: #fff;
-  margin-bottom: 1em;
-}
+ .statbar-title {
+ 	color: #FFFFFF;
+ }
 
-.stat-number {
-  color: #ffb130;
-  font-family: "Roboto", sans-serif;
-  font-size: 96px;
-  font-weight: 100;
-  line-height: 1;
-  margin: 0;
-  margin-bottom: 28px;
-}
+ .statbar-number {
+ 	color: #FFB130;
+ 	font-size: 64px;
+ 	text-align: center;
+ 	margin-bottom: 0;
+ }
 
-.stat-text {
-  color: #fff;
-}
+ .statbar-description {
+ 	color: #FFFFFF;
+ 	text-align: center;
+ }

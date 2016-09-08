@@ -55,7 +55,7 @@ if (!empty($column_template_type[0]['value'])) {
 
 ?>
 
-<div class="container clas-discipline-icon-grid">
+<div class="clas-discipline-icon-grid">
 
   <div class="row">
 

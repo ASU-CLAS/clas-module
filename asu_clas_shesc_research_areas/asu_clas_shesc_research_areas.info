@@ -1,9 +1,0 @@
-name = ASU CLAS SHESC Research Areas
-description = ""
-core = 7.x
-package = ASU CLAS
-version = 7.x-1.x
-project = asu_clas_shesc_research_areas
-
-; Dependencies
-dependencies[] = asu_clas_shesc_research_topics

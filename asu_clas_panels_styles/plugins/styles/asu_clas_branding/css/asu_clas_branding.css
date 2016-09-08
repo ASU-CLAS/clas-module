@@ -25,15 +25,3 @@
 .pane-background-gold {
   background-color: #ffb30f;
 }
-
-/**
- * Well styles
- */
-.pane-well-basic {
-  padding: 40px;
-}
-.pane-well-basic .pane-title {
-  font-size: 1.1em;
-  font-weight: bold;
-  text-transform: uppercase;
-}

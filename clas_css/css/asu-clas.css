@@ -120,16 +120,14 @@ mark,
 /* Moved from previous CLAS module version */
 
 /* Make College link in footer gold instead of maroon */
-.megafoot h1 a, .mega-dept-title a, .megafoot-description a {
-	color: #ffb310;
-    border-bottom: 1px dotted #ffb310;
+.megafoot h1 a, .megafoot .mega-dept-title a {
+	color: #ffb310 !important;
+    border-bottom: 1px dotted #ffb310  !important;
 }
 .megafoot h1 a:hover,
-.mega-dept-title a:hover,
 .megafoot h1 a:focus,
-.mega-dept-title a:focus,
-.megafoot-description a:hover,
-.megafoot-description a:focus {
+.megafoot .mega-dept-title a:hover,
+.megafoot .mega-dept-title a:focus  {
 	color: #fff;
 	border-bottom: 1px dotted #fff;
 }

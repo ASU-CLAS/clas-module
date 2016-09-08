@@ -46,7 +46,7 @@ $field_paragraph_btn_callouts = field_get_items('paragraphs_item', $variables['p
 
 ?>
 
-<div class="container clas-discipline-icon-grid-t-text">
+<div class="clas-discipline-icon-grid-t-text">
 
   <div class="row">
     <h2><?php print $field_paragraph_title; ?></h2>
