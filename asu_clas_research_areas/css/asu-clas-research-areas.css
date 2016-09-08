@@ -134,7 +134,9 @@
   padding-top: 25px;
 }
 
-.research-area-grid-horizontal .research-area-image {
+.research-area-grid-horizontal .research-area-image img {
+  display: block;
+  margin: auto;
 }
 
 .research-area-grid-horizontal .research-area-name {
@@ -142,6 +144,14 @@
   margin-bottom: 0;
   margin-top: 0;
 }
+
+@media (max-width: 991px) {
+  .research-area-grid-horizontal .research-area-name {
+    text-align: center;
+  }
+}
+
+
 
 .research-area-grid-horizontal .research-area-description {
   font-size: 16px;
