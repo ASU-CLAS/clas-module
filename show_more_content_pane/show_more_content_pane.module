@@ -1,0 +1,65 @@
+<?php
+/**
+ * @file
+ * Code for the Show More Content Pane feature.
+ */
+
+include_once 'show_more_content_pane.features.inc';
+
+function show_more_content_pane_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['show_more'] = array(
+    'label' => t('Show More Content section'),
+    'description' => t('Content pane broken into sections, each hidden with a more button.'),
+    'pane category' => t('CLAS'),
+    'pane top level' => FALSE,
+    'pane icon' => drupal_get_path('module', 'show_more_content_pane') . '/images/icon_show_more_content_pane.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/show_more',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_preprocess_fieldable_panels_pane().
+ */
+function show_more_content_pane_preprocess_fieldable_panels_pane(&$variables){
+  if($variables['elements']['#bundle'] === 'show_more'){
+    /*
+    $title = $variables['elements']['#fieldable_panels_pane']->title;
+    $variables['elements']['title'] = array(
+      '#theme' => 'html_tag',
+      '#tag' => 'h2',
+      '#value' => $title
+    );
+    */
+  }
+}
+
+/**
+ * Implements hook_preprocess_panels_pane().
+ */
+function show_more_content_pane_preprocess_panels_pane(&$variables){
+  if(isset($variables['content']['#bundle']) && $variables['content']['#bundle']==='show_more' ){
+    //$variables['title'] = '';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function show_more_content_pane_theme(){
+  return array(
+    'fieldable_panels_pane__show_more' => array(
+      'template' => 'templates/fieldable-panels-pane--show-more',
+      'render element' => 'elements',
+      'type' => 'module'
+    )
+  );
+}
+
+function show_more_content_pane_init() {
+	drupal_add_js(drupal_get_path('module', 'show_more_content_pane') . '/js/show_more_content_pane.js', array('scope' => 'footer', 'group' => JS_THEME, 'weight' => 95));
+}

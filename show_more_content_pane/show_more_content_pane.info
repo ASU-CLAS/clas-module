@@ -1,0 +1,21 @@
+name = Show More Content Pane
+description = Adds a content pane with a show more button for use with Panels' IPE.
+core = 7.x
+package = ASU CLAS
+version = 7.x-1.0
+project = show_more_content_pane
+
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = fieldable_panels_panes
+dependencies[] = text
+
+stylesheets[all][] = css/show_more_content_pane.css
+
+features[ctools][] = fieldable_panels_panes:fieldable_panels_pane_type:1
+features[defaultconfig][] = default_fieldable_panels_pane_type:show_more
+features[features_api][] = api:2
+features[field_base][] = field_show_more_content
+features[field_instance][] = fieldable_panels_pane-show_more-field_show_more_content
+features[fieldable_panels_pane_type][] = show_more
+features_exclude[dependencies][defaultconfig] = defaultconfig

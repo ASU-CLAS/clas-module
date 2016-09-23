@@ -1,0 +1,34 @@
+/**
+ * CSS file for Show More Content Pane module.
+ */
+.show-more-button-wrapper {
+	text-align:center;
+	height: 55px;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+.pane-bundle-show-more {
+	background-size: cover;
+	width: 100%;
+}
+
+.content-type-button a {
+  display: inline-block;
+  width: 99%;
+  padding: 5px;
+  font-size: 90%;
+  border-bottom: dotted 1px #ffffff;
+}
+
+.content-type-button div, .content-type-button span {
+    top: 0px !important;
+}
+
+.panopoly-magic-preview-link a.button {
+  border-bottom: none;
+  color: black;
+}
+
+.content-type-button img:hover {
+  border: 2px solid white !important;
+}
