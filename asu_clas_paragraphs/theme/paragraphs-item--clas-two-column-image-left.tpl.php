@@ -43,7 +43,10 @@ $field_paragraph_text_left = $field_paragraph_text[0]['value'];
 /**
  * Links
  */
-$field_paragraph_links_left = $content['field_paragraph_links'];
+ $field_paragraph_links_left = "";
+ if(isset($content['$field_paragraph_links_left'])) {
+  $field_paragraph_links_left = $content['field_paragraph_links'];
+ }
 ?>
 
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>

@@ -300,16 +300,16 @@ if (module_exists('metatag')) {
                               $a = true;
                               switch ($campus['value']) {
                                 case 'Tempe':
-                                  echo '<a href="//www.asu.edu/tour/tempe/index.html">'.$campus['value'].'</a>';
+                                  echo '<a href="//www.asu.edu/tour/tempe">'.$campus['value'].'</a>';
                                   break;
                                 case 'Polytechnic':
-                                  echo '<a href="//www.asu.edu/tour/polytechnic/index.html">'.$campus['value'].'</a>';
+                                  echo '<a href="//www.asu.edu/tour/polytechnic">'.$campus['value'].'</a>';
                                   break;
                                 case 'Downtown':
-                                  echo '<a href="//www.asu.edu/tour/downtown/index.html">'.$campus['value'].'</a>';
+                                  echo '<a href="//www.asu.edu/tour/downtown">'.$campus['value'].'</a>';
                                   break;
                                 case 'West':
-                                  echo '<a href="//www.asu.edu/tour/west/index.html">'.$campus['value'].'</a>';
+                                  echo '<a href="//www.asu.edu/tour/west">'.$campus['value'].'</a>';
                                   break;
                                 case 'Lake Havasu':
                                   echo '<a href="//havasu.asu.edu/">'.$campus['value'].'</a>';
