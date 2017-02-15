@@ -8,6 +8,7 @@ files[] = views/clas_module.views_default.inc
 stylesheets[all][] = /css/clas_academic_styles.css
 dependencies[] = asu_degrees
 dependencies[] = field_collection
+dependencies[] = paragraphs
 dependencies[] = quicktabs
 dependencies[] = quicktabs_field_collection
 dependencies[] = text
