@@ -119,6 +119,11 @@ mark,
 
 /* Moved from previous CLAS module version */
 
+/* make top of logo image align with other columns in the footer */
+.megafoot-border {
+    margin-top: 25px;
+}
+
 /* Make College link in footer gold instead of maroon */
 .megafoot h1 a, .megafoot .mega-dept-title a {
 	color: #ffb310 !important;
