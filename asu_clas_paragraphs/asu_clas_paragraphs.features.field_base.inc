@@ -705,32 +705,6 @@ function asu_clas_paragraphs_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_paragraph_research_areas_content_setup'
-  $field_bases['field_paragraph_research_areas_content_setup'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_paragraph_research_areas_content_setup',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'Research Areas' => 'Yes',
-        'Paragraph Callouts' => 'No',
-      ),
-      'allowed_values_function' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
   // Exported field_base: 'field_paragraph_discipline_icon'
   $field_bases['field_paragraph_discipline_icon'] = array(
     'active' => 1,
