@@ -1889,6 +1889,135 @@ function asu_clas_paragraphs_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-clas_cta_footer-field_button_color_1'.
+  $field_instances['paragraphs_item-clas_cta_footer-field_button_color_1'] = array(
+    'bundle' => 'clas_cta_footer',
+    'default_value' => array(
+      0 => array(
+        'value' => 'btn-gold',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_button_color_1',
+    'label' => 'Button Color 1',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-clas_cta_footer-field_button_color_2'.
+  $field_instances['paragraphs_item-clas_cta_footer-field_button_color_2'] = array(
+    'bundle' => 'clas_cta_footer',
+    'default_value' => array(
+      0 => array(
+        'value' => 'btn-gold',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 11,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_button_color_2',
+    'label' => 'Button Color 2',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-clas_cta_footer-field_button_color_3'.
+  $field_instances['paragraphs_item-clas_cta_footer-field_button_color_3'] = array(
+    'bundle' => 'clas_cta_footer',
+    'default_value' => array(
+      0 => array(
+        'value' => 'btn-gold',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 17,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_button_color_3',
+    'label' => 'Button Color 3',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 17,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-clas_cta_footer-field_text_1'
   $field_instances['paragraphs_item-clas_cta_footer-field_text_1'] = array(
     'bundle' => 'clas_cta_footer',
@@ -2275,6 +2404,49 @@ function asu_clas_paragraphs_field_default_field_instances() {
       'settings' => array(),
       'type' => 'link_field',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-clas_discipline_icon_grid-field_button_callout_color'.
+  $field_instances['paragraphs_item-clas_discipline_icon_grid-field_button_callout_color'] = array(
+    'bundle' => 'clas_discipline_icon_grid',
+    'default_value' => array(
+      0 => array(
+        'value' => 'btn-gold',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 22,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_button_callout_color',
+    'label' => 'Button Callout Color',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 5,
     ),
   );
 
@@ -5168,6 +5340,9 @@ function asu_clas_paragraphs_field_default_field_instances() {
   t('Link 1');
   t('Link 2');
   t('Link 3');
+  t('Button Color 1');
+  t('Button Color 2');
+  t('Button Color 3');
   t('List Item');
   t('List Text');
   t('List Title');
@@ -5225,6 +5400,7 @@ function asu_clas_paragraphs_field_default_field_instances() {
   t('Title 3');
   t('Background Image');
   t('Callout Text');
+  t('Button Callout Color');
 
   return $field_instances;
 }

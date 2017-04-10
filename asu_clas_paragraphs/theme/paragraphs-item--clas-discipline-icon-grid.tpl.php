@@ -49,6 +49,11 @@ $field_paragraph_research_option = $field_paragraph_research_option[0]['value'];
 
 $field_paragraph_btn_callouts = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_button_callout');
 
+//-- Button Callouts color
+$field_paragraph_callouts_color = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_button_callout_color');
+$field_paragraph_callouts_color = $field_paragraph_callouts_color[0]['value'];
+
+
 //-- Column Template Type
 
 $column_template_type = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_column_setup');
@@ -115,7 +120,7 @@ if (!empty($column_template_type[0]['value'])) {
     <div class="disc-btn-callouts">
       <?php if (!empty($field_paragraph_btn_callouts)): ?>
         <?php foreach ($field_paragraph_btn_callouts as $field_paragraph_btn_callout): ?>
-          <a class="btn btn-gold btn-lg btn-cta cta-button cta-button-link" href="<?php echo $field_paragraph_btn_callout['url']; ?>">
+          <a class="btn <?php echo $field_paragraph_callouts_color; ?> btn-lg btn-cta cta-button cta-button-link" href="<?php echo $field_paragraph_btn_callout['url']; ?>">
             <?php echo $field_paragraph_btn_callout['title']; ?>
           </a>
         <?php endforeach; ?>

@@ -70,7 +70,16 @@ $field_link_2 = $field_link_2[0]['value'];
 $field_link_3 = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_link_3');
 $field_link_3 = $field_link_3[0]['value'];
 
-//--
+//-- Button Colors
+$field_button_color_1 = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_button_color_1');
+$field_button_color_1 = $field_button_color_1[0]['value'];
+
+$field_button_color_2 = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_button_color_2');
+$field_button_color_2 = $field_button_color_2[0]['value'];
+
+$field_button_color_3 = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_button_color_3');
+$field_button_color_3 = $field_button_color_3[0]['value'];
+
 
 ?>
 
@@ -80,23 +89,21 @@ $field_link_3 = $field_link_3[0]['value'];
 		<?php echo render($content['field_icon_1']); ?>
 		<p class="title-cta"><?php echo $field_title_1; ?></p>
 		<p class="sub-title-cta"><?php echo $field_text_1; ?></p>
-		<p class="btn btn-gold btn-lg btn-block btn-cta"><a href="<?php echo $field_link_1; ?>"><?php echo $field_button_title_1; ?></a></p>
+		<p class="btn <?php echo $field_button_color_1; ?> btn-lg btn-block btn-cta"><a href="<?php echo $field_link_1; ?>"><?php echo $field_button_title_1; ?></a></p>
 	</div>
 
 	<div class="column col-sm-4">
 		<?php echo render($content['field_icon_2']); ?>
 		<p class="title-cta"><?php echo $field_title_2; ?></p>
 		<p class="sub-title-cta"><?php echo $field_text_2; ?></p>
-		<p class="btn btn-gold btn-lg btn-block btn-cta"><a href="<?php echo $field_link_2; ?>"><?php echo $field_button_title_2; ?></a></p>
+		<p class="btn <?php echo $field_button_color_2; ?> btn-lg btn-block btn-cta"><a href="<?php echo $field_link_2; ?>"><?php echo $field_button_title_2; ?></a></p>
 	</div>
 
 	<div class="column col-sm-4">
 		<?php echo render($content['field_icon_3']); ?>
 		<p class="title-cta"><?php echo $field_title_3; ?></p>
 		<p class="sub-title-cta"><?php echo $field_text_3; ?></p>
-		<p class="btn btn-gold btn-lg btn-block btn-cta"><a href="<?php echo $field_link_3; ?>"><?php echo $field_button_title_3; ?></a></p>
+		<p class="btn <?php echo $field_button_color_3; ?> btn-lg btn-block btn-cta"><a href="<?php echo $field_link_3; ?>"><?php echo $field_button_title_3; ?></a></p>
 	</div>
 
 </div>
-
-

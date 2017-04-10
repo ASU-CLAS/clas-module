@@ -424,6 +424,88 @@ function asu_clas_paragraphs_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_button_color_1'.
+  $field_bases['field_button_color_1'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_button_color_1',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'btn-gold' => 'Gold',
+        'btn-primary' => 'Maroon',
+        'btn-blue' => 'Blue',
+        'btn-default' => 'Gray',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_button_color_2'.
+  $field_bases['field_button_color_2'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_button_color_2',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'btn-gold' => 'Gold',
+        'btn-primary' => 'Maroon',
+        'btn-blue' => 'Blue',
+        'btn-default' => 'Gray',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_button_color_3'.
+  $field_bases['field_button_color_3'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_button_color_3',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'btn-gold' => 'Gold',
+        'btn-primary' => 'Maroon',
+        'btn-blue' => 'Blue',
+        'btn-default' => 'Gray',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+
   // Exported field_base: 'field_media_object'
   $field_bases['field_media_object'] = array(
     'active' => 1,
@@ -677,6 +759,33 @@ function asu_clas_paragraphs_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'link_field',
+  );
+
+  // Exported field_base: 'field_button_callout_color'.
+  $field_bases['field_button_callout_color'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_button_callout_color',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'btn-gold' => 'Gold',
+        'btn-primary' => 'Maroon',
+        'btn-blue' => 'Blue',
+        'btn-default' => 'Gray',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_paragraph_column_setup'
