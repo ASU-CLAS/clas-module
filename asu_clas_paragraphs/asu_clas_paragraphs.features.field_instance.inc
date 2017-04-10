@@ -2503,6 +2503,49 @@ function asu_clas_paragraphs_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-clas_discipline_icon_grid_w_text-field_paragraph_research_areas'.
+  $field_instances['paragraphs_item-clas_discipline_icon_grid_w_text-field_paragraph_research_areas'] = array(
+    'bundle' => 'clas_discipline_icon_grid_w_text',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Taxonomies must be added via admin/structure/taxonomy > Research Area',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 21,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_research_areas',
+    'label' => 'Use Research Area Taxonomies?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-clas_discipline_icon_grid_w_text-field_paragraph_icon_dw_callouts'
   $field_instances['paragraphs_item-clas_discipline_icon_grid_w_text-field_paragraph_icon_dw_callouts'] = array(
     'bundle' => 'clas_discipline_icon_grid_w_text',

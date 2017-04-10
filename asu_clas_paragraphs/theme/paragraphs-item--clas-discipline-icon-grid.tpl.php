@@ -36,6 +36,11 @@ $field_paragraph_title = $field_paragraph_title[0]['value'];
 $field_paragraph_text = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_text_disc_grid');
 $field_paragraph_text = $field_paragraph_text[0]['value'];
 
+//-- Research area option
+
+$field_paragraph_research_option = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_research_areas');
+$field_paragraph_research_option = $field_paragraph_research_option[0]['value'];
+
 //-- Icons
 
 //$field_paragraph_icon_1_icon = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_icon_1_icon');
@@ -64,11 +69,21 @@ if (!empty($column_template_type[0]['value'])) {
     <?php print $field_paragraph_text; ?>
 
     <?php
-      if ($research_areas_view = views_embed_view('research_areas', 'research_area_grid_horizontal_pane')) {
-        $hide = TRUE;
+      if ($field_paragraph_research_areas[0]['value'] == TRUE) {
+        if ($research_areas_view = views_embed_view('research_areas', 'research_area_grid_horizontal_pane')) {
+          $hide = TRUE;
 
-        printf('<section class="research-areas-view">%s</section>', $research_areas_view);
+          printf('<section class="research-areas-view">%s</section>', $research_areas_view);
+        }
+        else {
+          $hide = TRUE;
+          printf('ERROR: The research_area_grid_horizontal_pane VIEW or research area taxonomies are not available.');
+        }
       }
+      else {
+        $hide = FALSE;
+      }
+
     ?>
 
     <?php if (!empty($content['field_paragraph_icon_callouts']) && is_array($content['field_paragraph_icon_callouts'])): ?>

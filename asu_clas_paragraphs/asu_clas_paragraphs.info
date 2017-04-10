@@ -235,6 +235,7 @@ features[field_instance][] = paragraphs_item-clas_two_column_video_left-field_pa
 features[field_instance][] = paragraphs_item-clas_two_column_video_left-field_paragraph_text_video_left
 features[field_instance][] = paragraphs_item-clas_two_column_video_left-field_paragraph_title_video_left
 features[field_instance][] = paragraphs_item-clas_two_column_video_left-field_paragraph_video_video_left
+features[field_instance][] = paragraphs_item-clas_discipline_icon_grid_w_text-field_paragraph_research_areas
 features[image][] = clas_bg_image
 features[image][] = clas_carousel_starburst_gray_photo
 features[image][] = clas_cta_footer_icons
