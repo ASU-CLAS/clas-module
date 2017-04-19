@@ -156,3 +156,8 @@ mark,
 .file-responsive-image {
 	max-width:100%;
 }
+
+/*remove local search results metadata author information*/
+.search-info{
+  display: none;
+}
