@@ -161,3 +161,54 @@ mark,
 .search-info{
   display: none;
 }
+
+/*Calendar module styles overide- ASU theme*/
+.calendar-calendar .week-view .full div.single-day div.weekview,
+.calendar-calendar .day-view .full div.single-day div.dayview {
+  background: #f5f5f5 !important;
+  border: 1px solid #5f5f5f !important;
+}
+
+.calendar-calendar th.days {
+  background-color: #353535 !important;
+  color: #ededed !important;
+}
+
+.calendar-calendar td.empty {
+  color: #d2d2d2 !important;
+}
+
+.calendar-calendar td .inner div.day a {
+  color: #353535 !important;
+}
+
+.calendar-calendar .month-view .full .inner .monthview,
+.calendar-calendar .week-view .full .inner .weekview,
+.calendar-calendar .day-view .full .inner .dayview {
+  margin: .45em auto !important;
+}
+
+.calendar-calendar .month-view .full td.single-day div.monthview,
+.calendar-calendar .week-view .full td.single-day div.weekview,
+.calendar-calendar .day-view .full td.single-day div.dayview {
+  background: #ececec !important;
+  padding: 6px !important;
+}
+
+.calendar-calendar .month-view .full td.multi-day div.monthview,
+.calendar-calendar .week-view .full td.multi-day div.weekview,
+.calendar-calendar .day-view .full td.multi-day div.dayview {
+  background: #FFC627 !important;
+}
+
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues,
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff,
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .continues,
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
+  width: 15px !important;
+  background: #ffc627 !important;
+}
+
+.view .date-nav-wrapper .date-prev {
+  right: 74px !important;
+}
