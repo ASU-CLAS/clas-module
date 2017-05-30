@@ -1,14 +1,12 @@
-/*! 
+/*!
  * CLAS Innovation Theme Styles
- */ 
+ */
 
 
 /* needed for asu degree tabs */
 .node-type-asu-degree .ui-widget {
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
-    font-size: 20px;
-    line-height: 1.44;
     color: #2a2a2a;
     background-color: white;
 }
@@ -23,7 +21,7 @@
 .node-type-asu-degree .asu-degree-grey-section h2 {
 	font-size: 30px;
 }
- 
+
 
 /* Make College link in footer gold instead of maroon */
 .megafoot h1 a {
@@ -35,7 +33,7 @@
 	color: #fff;
 	border-bottom: 1px dotted #fff;
 }
- 
+
 
 /* Degree list view switch buttons */
 
@@ -96,4 +94,3 @@
 		padding-bottom: 35px;
 	}
 }
-
