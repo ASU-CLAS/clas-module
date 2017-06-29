@@ -212,3 +212,8 @@ mark,
 .view .date-nav-wrapper .date-prev {
   right: 74px !important;
 }
+
+/*Webspark tabs - quick fix: remove border from tab on focus*/
+.ui-tabs .ui-tabs-nav li.ui-state-focus a{
+  border: none !important;
+}
