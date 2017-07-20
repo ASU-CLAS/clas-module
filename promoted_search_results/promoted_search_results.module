@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Promoted search results feature.
+ */
+
+include_once 'promoted_search_results.features.inc';

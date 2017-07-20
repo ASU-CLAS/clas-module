@@ -1,0 +1,248 @@
+<?php
+/**
+ * @file
+ * Code for the Promoted search results feature.
+ */
+
+include_once 'promoted_search_results.features.field_base.inc';
+include_once 'promoted_search_results.features.field_instance.inc';
+
+// activate the block
+function _activate_block($module, $block, $region, $weight, $theme, $pages, $visibility) {
+  drupal_set_message("Activating block $module:$block\n");
+  db_merge('block')
+  ->key(array('theme' => $theme, 'delta' => $block, 'module' => $module))
+  ->fields(array(
+    'region' => ($region == BLOCK_REGION_NONE ? '' : $region),
+    'weight' => $weight,
+    'pages' => trim($pages),
+    'status' => (int) ($region != BLOCK_REGION_NONE),
+    'visibility' => $visibility,
+  ))
+  ->execute();
+}
+
+function promoted_search_results_enable() {
+
+  // install the fields manually, so we can add nodes during the enable hook
+  node_types_rebuild();
+
+  foreach (promoted_search_results_field_default_field_bases() as $field) {
+    field_create_field($field);
+  }
+  foreach (promoted_search_results_field_default_field_instances() as $fieldinstance) {
+    field_create_instance($fieldinstance);
+  }
+
+
+
+  _activate_block('views', 'promoted_search_result-block', 'content', -30, 'innovation', 'search/*', 1);
+
+
+   // Science and Society
+   $node = new stdClass();
+   $node->type = "promoted_search_result";
+   $node->title = "Science and society";
+   $node->language = LANGUAGE_NONE;
+   node_object_prepare($node); // Set some default values.
+
+   $node->body[$node->language][0]['value'] = '<div class="row" style="margin:0 -15px;">
+    <div class="col col-sm-6">
+    <p><strong>Science and society</strong></p>
+    <p>If you’re pursuing a Bachelor of Science, you’ll need to fulfil science and society credits. Check out how many credits are required, what courses are approved and the learning goals of these courses.</p>
+    <p><span class="btn btn-primary"><a href="https://clas.asu.edu/resources/science-society" onclick="ga(\'send\', \'event\', \'clas-promoted-search\', \'click\', \'science and society\');">Science and society</a></span></p>
+    </div>
+    <div class="col col-sm-6"><img src="https://clas.asu.edu/sites/default/files/styles/panopoly_image_original/public/scienceandsociety_promotedsearch.jpg" /></div>
+    </div>';
+   $node->body[$node->language][0]['summary'] = '';
+   $node->body[$node->language][0]['format'] = 'full_html';
+   $node->field_search_terms[$node->language][0]['value'] = 'science and society';
+   $node = node_submit($node);
+   node_save($node);
+
+
+   // Courses
+   $node = new stdClass();
+   $node->type = "promoted_search_result";
+   $node->title = "Courses at ASU";
+   $node->language = LANGUAGE_NONE;
+   node_object_prepare($node); // Set some default values.
+
+   $node->body[$node->language][0]['value'] = '<div class="row" style="margin:0 -15px;">
+
+<div class="col col-sm-6">
+<p><strong>Courses at ASU</strong></p>
+<p>Visit the academic catalog to view a complete listing of courses at ASU. From course descriptions to class schedules, you’ll find all the course information you need in ASU’s academic catalog.
+</p>
+<p>
+<span class="btn btn-primary"><a href="https://webapp4.asu.edu/catalog/" onclick="ga(\'send\', \'event\', \'clas-promoted-search\', \'click\', \'courses\');">Search for classes</a></span>
+</p>
+</div>
+
+<div class="col col-sm-6">
+<img src="https://clas.asu.edu/sites/default/files/courses_promotedsearch.jpg" />
+</div>
+
+</div>';
+   $node->body[$node->language][0]['summary'] = '';
+   $node->body[$node->language][0]['format'] = 'full_html';
+   $node->field_search_terms[$node->language][0]['value'] = 'courses';
+   $node->field_search_terms[$node->language][1]['value'] = 'course';
+   $node->field_search_terms[$node->language][2]['value'] = 'catalog';
+   $node = node_submit($node);
+   node_save($node);
+
+
+   // Academic Calendar
+   $node = new stdClass();
+   $node->type = "promoted_search_result";
+   $node->title = "Academic calendar";
+   $node->language = LANGUAGE_NONE;
+   node_object_prepare($node); // Set some default values.
+
+   $node->body[$node->language][0]['value'] = '<div class="row" style="margin:0 -15px;">
+
+<div class="col col-sm-6">
+<p><strong>Academic calendar</strong></p>
+<p>Avoid missing a class with ASU’s academic calendar. Stay on top of course registration, class sessions, academic status reports, course withdrawal dates, the deadline to apply for graduation and more.</p>
+<p>
+<span class="btn btn-primary"><a href="https://students.asu.edu/academic-calendar" onclick="ga(\'send\', \'event\', \'clas-promoted-search\', \'click\', \'academic calendar\');">Academic calendar</a></span>
+</p>
+</div>
+
+<div class="col col-sm-6">
+<img src="https://clas.asu.edu/sites/default/files/academiccalendar_promotedsearch.jpg" />
+</div>
+
+</div>';
+   $node->body[$node->language][0]['summary'] = '';
+   $node->body[$node->language][0]['format'] = 'full_html';
+   $node->field_search_terms[$node->language][0]['value'] = 'academic calendar';
+   $node->field_search_terms[$node->language][1]['value'] = 'calendar';
+   $node = node_submit($node);
+   node_save($node);
+
+
+
+   // Override
+   $node = new stdClass();
+   $node->type = "promoted_search_result";
+   $node->title = "Override options";
+   $node->language = LANGUAGE_NONE;
+   node_object_prepare($node); // Set some default values.
+
+   $node->body[$node->language][0]['value'] = '<div class="row" style="margin:0 -15px;">
+
+<div class="col col-sm-6">
+<p><strong>Override options</strong></p>
+<p>Request a course overload override to register for more credits in a semester at ASU. You must be in good academic standing for an override to be approved. Other petition overrides are also available.
+</p>
+<p>
+<span class="btn btn-primary"><a href="https://clas.asu.edu/resources/advising" onclick="ga(\'send\', \'event\', \'clas-promoted-search\', \'click\', \'override\');">Advising forms</a></span>
+&nbsp;
+<span class="btn btn-primary"><a href="https://clas.asu.edu/resources/advising/override" onclick="ga(\'send\', \'event\', \'clas-promoted-search\', \'click\', \'override\');">Course overload petition</a></span>
+</p>
+</div>
+
+<div class="col col-sm-6">
+<img src="https://clas.asu.edu/sites/default/files/overrideoptions_promotedsearchfull.jpg" />
+</div>
+
+</div>';
+   $node->body[$node->language][0]['summary'] = '';
+   $node->body[$node->language][0]['format'] = 'full_html';
+   $node->field_search_terms[$node->language][0]['value'] = 'override';
+   $node = node_submit($node);
+   node_save($node);
+
+
+   // Graduation
+   $node = new stdClass();
+   $node->type = "promoted_search_result";
+   $node->title = "Graduation ceremonies";
+   $node->language = LANGUAGE_NONE;
+   node_object_prepare($node); // Set some default values.
+
+   $node->body[$node->language][0]['value'] = '<div class="row" style="margin:0 -15px;">
+
+<div class="col col-sm-6">
+<p><strong>Graduation ceremonies</strong></p>
+<p>Prepare for graduation from the College of Liberal Arts and Sciences at Arizona State University. We have information regarding commencement and convocation as well as important dates and times. </p>
+<p>
+<span class="btn btn-primary"><a href="https://clas.asu.edu/resources/student/graduation" onclick="ga(\'send\', \'event\', \'clas-promoted-search\', \'click\', \'graduation\');">Graduation</a></span>
+</p>
+</div>
+
+<div class="col col-sm-6">
+<img src="https://clas.asu.edu/sites/default/files/graduationceremonies_promotedsearch.jpg" />
+</div>
+
+</div>';
+   $node->body[$node->language][0]['summary'] = '';
+   $node->body[$node->language][0]['format'] = 'full_html';
+   $node->field_search_terms[$node->language][0]['value'] = 'graduation';
+   $node = node_submit($node);
+   node_save($node);
+
+
+
+   // DARS
+   $node = new stdClass();
+   $node->type = "promoted_search_result";
+   $node->title = "DARS";
+   $node->language = LANGUAGE_NONE;
+   node_object_prepare($node); // Set some default values.
+
+   $node->body[$node->language][0]['value'] = '<div class="row" style="margin:0 -15px;">
+
+<div class="col col-sm-6">
+<p><strong>DARS</strong></p>
+<p>Start your path to graduation with help from an advisor. Advising in the College of Liberal Arts and Sciences is tailored to fit your needs and help you stay on track throughout your time at ASU.</p>
+<p>
+<span class="btn btn-primary"><a href="https://provost.asu.edu/curriculum-development/dars" onclick="ga(\'send\', \'event\', \'clas-promoted-search\', \'click\', \'dars\');">Learn more about DARS</a></span>
+</p>
+</div>
+
+<div class="col col-sm-6">
+<img src="https://clas.asu.edu/sites/default/files/styles/panopoly_image_original/public/dars_promotedsearch.png" />
+</div>
+
+</div>';
+   $node->body[$node->language][0]['summary'] = '';
+   $node->body[$node->language][0]['format'] = 'full_html';
+   $node->field_search_terms[$node->language][0]['value'] = 'graduation';
+   $node = node_submit($node);
+   node_save($node);
+
+
+ }
+
+function promoted_search_results_uninstall() {
+
+  if ($view = views_get_view('promoted_search_result')) {
+    // Delete the view if it is the one that you are looking for.
+    views_delete_view($view);
+  }
+
+  // delete the block
+  db_delete('block')
+  ->condition('module', 'views')
+  ->condition('delta', 'promoted_search_result-block')
+  ->execute();
+
+  // Gather all the example content that might have been created while this
+  // module was enabled.  Simple selects still use db_query().
+  // http://api.drupal.org/api/function/db_query/7
+  $sql = 'SELECT nid FROM {node} n WHERE n.type = :type';
+  $result = db_query($sql, array(':type' => 'promoted_search_result'));
+  $nids = array();
+  foreach ($result as $row) {
+    $nids[] = $row->nid;
+  }
+  // Delete all the nodes at once
+  // http://api.drupal.org/api/function/node_delete_multiple/7
+  node_delete_multiple($nids);
+  // Delete our content type
+  // http://api.drupal.org/api/function/node_type_delete/7
+  node_type_delete('promoted_search_result');
+}
