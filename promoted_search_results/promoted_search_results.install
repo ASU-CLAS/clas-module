@@ -210,7 +210,7 @@ function promoted_search_results_enable() {
 </div>';
    $node->body[$node->language][0]['summary'] = '';
    $node->body[$node->language][0]['format'] = 'full_html';
-   $node->field_search_terms[$node->language][0]['value'] = 'graduation';
+   $node->field_search_terms[$node->language][0]['value'] = 'dars';
    $node = node_submit($node);
    node_save($node);
 
