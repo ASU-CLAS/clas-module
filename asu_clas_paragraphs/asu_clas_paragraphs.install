@@ -15,16 +15,3 @@ function asu_clas_paragraphs_install() {
     field_create_instance($fieldinstance);
   }
 }
-
-/**
- * Creates the needed fields on asu_degrees content type
- */
-function asu_clas_paragraphs_update_7000() {
-  node_types_rebuild();
-  foreach (asu_clas_paragraphs_field_default_field_bases() as $field) {
-    field_create_field($field);
-  }
-  foreach (asu_clas_paragraphs_field_default_field_instances() as $fieldinstance) {
-    field_create_instance($fieldinstance);
-  }
-}
