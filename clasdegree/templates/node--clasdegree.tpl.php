@@ -82,7 +82,7 @@
 <?php // if ($node->type == 'clas_degree' && $view_mode == 'full'): ?>
 <?php if ($node->type == 'clas_degree'): ?>
 
-  <div class="container">
+  <div class="container clas-degree-node-container">
 
     <div class="row">
 

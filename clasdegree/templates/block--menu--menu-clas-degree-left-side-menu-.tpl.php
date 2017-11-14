@@ -78,23 +78,30 @@
 
   <div class="content">
 
-    <ul class="menu clearfix">
+    <h2 class="pane-title"><?php print $ourNodeTitle; ?></h2>
 
-      <li class="first expanded active-trail"><a href="/<?php print $node_alias; ?>" title="" class="active-trail active"><?php print $ourNodeTitle; ?></a>
+
         <ul class="menu clearfix">
 
           <?php
           foreach ($menu as $key => $value) {
             if (is_numeric($key)) {
-              echo "<li class='leaf'><a href='/{drupal_get_path_alias($value['#href'])}' title='{$value['#title']}'>{$value['#title']}</a></li>";
+              $value['#href'] = drupal_get_path_alias($value['#href']);
+              $liClasses = '';
+              $aClasses = '';
+              if($value['#href'] == $node_alias) {
+                $liClasses = 'active-trail';
+                $aClasses = 'active-trail active';
+              }
+              echo "<li class='leaf {$liClasses}'><a class='{$aClasses}' href='/{$value['#href']}' title='{$value['#title']}'>{$value['#title']}</a></li>";
             }
           }
           ?>
 
         </ul>
-      </li>
 
-    </ul>
+
+
 
   </div>
 
