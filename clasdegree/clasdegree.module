@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Code for the CLAS Degree Feature feature.
+ */
+
+include_once 'clasdegree.features.inc';
+
+/**
+ * Implements hook_theme().
+ */
+function clasdegree_theme($existing, $type, $theme, $path) {
+  $theme = array();
+  $theme['node__clas_degree'] = array(
+    'render element' => 'content',
+    'base hook' => 'node',
+    'template' => 'node--clasdegree',
+    'path' => drupal_get_path('module', 'clasdegree') . '/templates',
+   );
+   $theme['page__clas_degree'] = array(
+   'render element' => 'content',
+   'base hook' => 'page',
+   'template' => 'page--clas-degree',
+   'path' => drupal_get_path('module', 'clasdegree') . '/templates',
+   );
+   $theme['block__menu__menu_clas_degree_left_side_menu_'] = array(
+    'variables' => array('block' => array()),
+    'template' => 'block--menu--menu-clas-degree-left-side-menu-',
+    'path' => drupal_get_path('module', 'clasdegree') . '/templates',
+   );
+  return $theme;
+}
+
+/*
+ * Preprocess page to use template.
+ */
+function clasdegree_preprocess_page(&$variables) {
+  if (isset($variables['node']->type)) {
+   // If the content type's machine name is "my_machine_name" the file
+   // name will be "page--my-machine-name.tpl.php".
+   $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
+   $variables['template_file'][] = 'page--clas-degree';
+   }
+}
+
+/*
+ * Implements hook_system_info_alter().
+ */
+function clasdegree_system_info_alter(&$info, $file, $type) {
+  if ($type == 'theme') {
+    $info['regions']['clas_degree_left_side_content'] = t('CLAS Degree Left Side Content');
+    $info['regions']['clas_degree_main_content'] = t('CLAS Degree Main Content');
+  }
+}

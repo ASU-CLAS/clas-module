@@ -1,0 +1,398 @@
+/*Header*/
+.clas-degree-banner-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 110px 0 20px 0;
+}
+
+#clas-degree-title {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-weight: 900;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+/*Header*/
+
+h5 {
+  font-size: 18px !important;
+  margin: 36px 0 0 0px !important;
+}
+
+/*Left Side Menu*/
+#block-menu-menu-clas-degree-left-side-menu- {
+  margin-top: 1.2em;
+}
+/*Left Side Menu*/
+
+/*Right Side*/
+.clas-degree-main-description {
+  font-size: 1.2em;
+}
+.quicktabs-tabpage {
+  margin-top: 20px !important;
+}
+/*Right Side*/
+
+/*Key Stats*/
+.key-stats {
+  background-color: #ffc627;
+  padding: 0px 10px;
+  /* height: 80px; */
+}
+
+.key-stats-icon {
+  float: left;
+  /* width: 25%; */
+  margin: 15px 0 14px 0;
+}
+
+.key-stats-label {
+  float: left;
+  width: 75%;
+  margin-top: 20px;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+/*Key Stats*/
+
+/*One Marketing Number*/
+.one-marketing-number {
+
+}
+
+.one-marketing-number-number {
+  text-align: center;
+  font-size: 60px;
+  color: #8c1d40;
+  border-right: 1px solid #d7d7d7;
+  font-weight: 400;
+}
+
+.one-marketing-number-description {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+/*One Marketing Number*/
+
+/*Three Marketing Numbers*/
+.marketing-numbers {
+  background-color: #353535;
+  height: 100px;
+}
+
+.marketing-numbers-container {
+  text-align: center;
+}
+
+.marketing-number-number {
+  font-size: 40px;
+  color: #FFC627;
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.marketing-number-label {
+  color: #ffffff;
+}
+/*Three Marketing Numbers*/
+
+/*Quote*/
+.marketing-quote {
+  /*height: 100px;*/
+}
+
+.marketing-quote-text {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 400;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+
+.marketing-quote-text blockquote {
+  position: relative;
+  text-align: center;
+  border: none !important;
+  font-size: 16px;
+}
+
+.marketing-quote-text blockquote:before, .marketing-quote-text blockquote:after {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 120px;
+  line-height: 1;
+}
+
+.marketing-quote-text blockquote:before {
+  top: -10px;
+  left: -60px;
+  content: "\201C";
+  font-size: 50px;
+}
+
+.marketing-quote-text blockquote:after {
+  top: 50px;
+  right: -60px;
+  content: "\201D";
+  font-size: 40px;
+}
+
+div > blockquote > p {
+  margin-top: 0 !important;
+}
+/*Quote*/
+
+/*Responsive Video*/
+.clas-degree-video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.clas-degree-video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+/*Responsive Video*/
+
+/*Carousel*/
+.carousel-container {
+  background-color: #FFC627 !important;
+}
+
+.carousel-content {
+    color:black;
+    /*display:flex;*/
+    /*align-items:center;*/
+    text-align: center;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+#text-carousel {
+  /*width: 100%;
+  height: auto;
+  padding: 50px;*/
+  height: 100px;
+}
+
+.carousel-control.left {
+  background: none !important;
+}
+
+.carousel-control.right {
+  background: none !important;
+}
+/*Carousel*/
+
+/*Media Queries*/
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .key-stats-label {
+    font-size: 12px;
+  }
+
+  .one-marketing-number-number {
+    border-right: 1px solid #d7d7d7 !important;
+  }
+
+  div > blockquote > p {
+    margin-top: -6px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .key-stats-icon {
+    width: 10%;
+  }
+
+  .key-stats-label {
+    font-size: 10px;
+    width: 23%;
+  }
+
+  .one-marketing-number-number {
+    margin-top: -8px;
+    border-right: none;
+  }
+
+  .one-marketing-number-description {
+    text-align: center;
+  }
+
+  div > blockquote > p {
+    margin-top: -18px !important;
+  }
+
+  .marketing-numbers {
+    height: auto;
+  }
+
+  #text-carousel {
+    height: auto !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .key-stats-icon {
+    width: 8%;
+  }
+
+  .key-stats-label {
+    font-size: 10px;
+    width: 25%;
+  }
+
+  .marketing-numbers {
+    height: auto;
+  }
+
+  .one-marketing-number-number {
+    border-right: none !important;
+  }
+
+  #text-carousel {
+    height: auto !important;
+  }
+}
+@media (max-width: 575px) {
+  .key-stats-icon {
+    width: 10%;
+  }
+
+  .key-stats-label {
+    font-size: 8px;
+    width: 23%;
+  }
+
+  .marketing-numbers {
+    height: auto;
+  }
+
+  .one-marketing-number-number {
+    border-right: none !important;
+  }
+
+  #text-carousel {
+    height: auto !important;
+  }
+}
+/*Media Queries*/
+
+
+
+/* EDIT PAGE STYLES */
+
+/* MARKETING QUOTE */
+.page-node-edit .field-name-field-cd-quote {
+  background-color: #f7f7f3;
+  border: 1px solid #ccc;
+  padding: 0 15px 15px 15px;
+  margin:15px 0;
+}
+
+/* MARKETING NUMBER ROW */
+.page-node-edit .field-name-field-cd-first-marketing-number {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-first-marketing-number input {
+    width:90%;
+}
+.page-node-edit .field-name-field-cd-first-marketing-label {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-first-marketing-label input {
+    width:90%;
+}
+
+.page-node-edit .field-name-field-cd-second-marketing-number {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-second-marketing-number input {
+    width:90%;
+}
+.page-node-edit .field-name-field-cd-second-marketing-label {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-second-marketing-label input {
+    width:90%;
+}
+
+.page-node-edit .field-name-field-cd-third-marketing-number {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-third-marketing-number input {
+    width:90%;
+}
+.page-node-edit .field-name-field-cd-third-marketing-label {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-third-marketing-label input {
+    width:90%;
+}
+
+
+/* KEY STATS */
+.page-node-edit .field-name-field-cd-icon-1 {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-icon-1 input {
+    width:90%;
+}
+.page-node-edit .field-name-field-cd-label-1 {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-label-1 input {
+    width:90%;
+}
+
+.page-node-edit .field-name-field-cd-icon-2 {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-icon-2 input {
+    width:90%;
+}
+.page-node-edit .field-name-field-cd-label-2 {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-label-2 input {
+    width:90%;
+}
+
+.page-node-edit .field-name-field-cd-icon-3 {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-icon-3 input {
+    width:90%;
+}
+.page-node-edit .field-name-field-cd-label-3 {
+    width: 50%;
+    float: left;
+}
+.page-node-edit .field-name-field-cd-label-3 input {
+    width:90%;
+}
