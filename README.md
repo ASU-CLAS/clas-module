@@ -4,9 +4,13 @@ The CLAS Module extends [Webspark](https://drupal.asu.edu/) with features for [C
 
 ## Current Version
 
-clas_module-7.x-1.9
+clas_module-7.x-1.10
 
 ## Version Updates
+
+#### 1.10
+	* Added CLAS Degree module
+	* Fixed update error
 
 #### 1.9
 	* Added Promoted search results module
