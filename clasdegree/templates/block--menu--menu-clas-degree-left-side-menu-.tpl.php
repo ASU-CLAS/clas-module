@@ -86,7 +86,7 @@
           <?php
           foreach ($menu as $key => $value) {
             if (is_numeric($key)) {
-              echo "<li class='leaf'><a href='{$value['#href']}' title='{$value['#title']}'>{$value['#title']}</a></li>";
+              echo "<li class='leaf'><a href='/{drupal_get_path_alias($value['#href'])}' title='{$value['#title']}'>{$value['#title']}</a></li>";
             }
           }
           ?>
