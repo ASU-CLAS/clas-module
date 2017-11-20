@@ -36,7 +36,7 @@ function clasdegree_theme($existing, $type, $theme, $path) {
  * Preprocess page to use template.
  */
 function clasdegree_preprocess_page(&$variables) {
-  if (isset($variables['node']->type)) {
+  if (isset($variables['node']->type) && $variables['node']->type == 'clas-degree') {
    // If the content type's machine name is "my_machine_name" the file
    // name will be "page--my-machine-name.tpl.php".
    $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
