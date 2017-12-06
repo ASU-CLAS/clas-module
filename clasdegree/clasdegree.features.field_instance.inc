@@ -1420,7 +1420,7 @@ function clasdegree_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_cd_requirements',
-    'label' => 'Requirements',
+    'label' => 'Degree overview',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -1757,7 +1757,7 @@ function clasdegree_field_default_field_instances() {
   t('One Marketing Number');
   t('Quote');
   t('Request Information Link');
-  t('Requirements');
+  t('Degree overview');
   t('Second Marketing Label');
   t('Second Marketing Number');
   t('Some options for key stats to list are: time-to-degree, % of students funded, completion rate, placement rate, faculty student ratio. The icon must be a font awesome icon (list here: http://fontawesome.io/icons/). Copy the icon code into the field (example: "fa-users" http://fontawesome.io/icon/users/ ). If Icon 1 is left empty, this widget will not be shown.');
