@@ -172,10 +172,10 @@
         </p>
         <?php } ?>
 
-        <?php if($node->field_degree_overview) { ?>
+        <?php // if($node->field_degree_overview) { ?>
         <!-- <h5>Degree overview</h5> -->
-        <p><?php print $node->field_degree_overview['und'][0]['value']; ?></p>
-        <?php } ?>
+        <p><?php // print $node->field_degree_overview['und'][0]['value']; ?></p>
+        <?php // } ?>
 
         <?php if($node->field_cd_how_to_apply) { ?>
         <h5>How to apply</h5>
@@ -374,15 +374,15 @@
         <p><?php print $node->field_concentrations['und'][0]['value']; ?></p>
         <?php } ?>
 
-        <?php if($node->field_program_funding) { ?>
-        <h5>Program funding</h5>
-        <p><?php print $node->field_program_funding['und'][0]['value']; ?></p>
-        <?php } ?>
+        <?php // if($node->field_program_funding) { ?>
+        <!-- <h5>Program funding</h5> -->
+        <p><?php // print $node->field_program_funding['und'][0]['value']; ?></p>
+        <?php // } ?>
 
-        <?php if($node->field_faculty) { ?>
-        <h5>Faculty</h5>
-        <p><?php print $node->field_faculty['und'][0]['value']; ?></p>
-        <?php } ?>
+        <?php // if($node->field_faculty) { ?>
+        <!-- <h5>Faculty</h5> -->
+        <p><?php // print $node->field_faculty['und'][0]['value']; ?></p>
+        <?php // } ?>
 
         <!-- RFI BLOCK and TABS BLOCK BELOW -->
         <?php
