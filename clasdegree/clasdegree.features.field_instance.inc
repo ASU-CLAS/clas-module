@@ -600,6 +600,71 @@ function clasdegree_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-clas_degree-field_accordion_section'.
+  $field_instances['node-clas_degree-field_accordion_section'] = array(
+    'bundle' => 'clas_degree',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 21,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_accordion_section',
+    'label' => 'Accordion Section',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_label_summary' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_summary' => '',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 41,
+    ),
+  );
+
   // Exported field_instance: 'node-clas_degree-field_apply_now_link'.
   $field_instances['node-clas_degree-field_apply_now_link'] = array(
     'bundle' => 'clas_degree',
@@ -717,7 +782,7 @@ function clasdegree_field_default_field_instances() {
         'enable' => 0,
         'profile' => '',
       ),
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1420,7 +1485,7 @@ function clasdegree_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_cd_requirements',
-    'label' => 'Degree overview',
+    'label' => 'Requirements (Deprecated)',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -1595,6 +1660,67 @@ function clasdegree_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-clas_degree-field_concentrations'.
+  $field_instances['node-clas_degree-field_concentrations'] = array(
+    'bundle' => 'clas_degree',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 22,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_concentrations',
+    'label' => 'Concentrations',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 42,
+    ),
+  );
+
   // Exported field_instance: 'node-clas_degree-field_request_information_link'.
   $field_instances['node-clas_degree-field_request_information_link'] = array(
     'bundle' => 'clas_degree',
@@ -1732,10 +1858,12 @@ function clasdegree_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Accordion Section');
   t('Additional degree information');
   t('Apply Now Link');
   t('Carousel text');
   t('Class degree banner image.');
+  t('Concentrations');
   t('Courses and electives');
   t('Curriculum');
   t('Degree Description');
@@ -1757,7 +1885,7 @@ function clasdegree_field_default_field_instances() {
   t('One Marketing Number');
   t('Quote');
   t('Request Information Link');
-  t('Degree overview');
+  t('Requirements (Deprecated)');
   t('Second Marketing Label');
   t('Second Marketing Number');
   t('Some options for key stats to list are: time-to-degree, % of students funded, completion rate, placement rate, faculty student ratio. The icon must be a font awesome icon (list here: http://fontawesome.io/icons/). Copy the icon code into the field (example: "fa-users" http://fontawesome.io/icon/users/ ). If Icon 1 is left empty, this widget will not be shown.');
