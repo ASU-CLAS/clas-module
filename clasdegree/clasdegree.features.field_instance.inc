@@ -638,7 +638,7 @@ function clasdegree_field_default_field_instances() {
     'label' => 'Accordion Section',
     'required' => 0,
     'settings' => array(
-      'display_summary' => 0,
+      'display_summary' => 1,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
