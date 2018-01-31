@@ -401,3 +401,86 @@ div > blockquote > p {
 .page-node-edit .field-name-field-cd-label-3 input {
     width:90%;
 }
+
+
+/* RFI form modifications */
+
+.fieldset-legend {
+    display: none !important;
+}
+.form-item-location {
+    display:none !important;
+}
+.form-item-program-code {
+    display:none !important;
+}
+.block-multiblock .form-wrapper {
+    margin-top: 0;
+    border-bottom: none;
+}
+.block-multiblock .form-wrapper legend {
+ margin:0;
+}
+.form-item-zipcode {
+  display:none !important;
+}
+#edit-dob-field--2 {
+ margin-bottom:0;
+}
+
+.form-item-mobile-check {
+ display:none !important;
+}
+.form-item-citizenship {
+ display:none !important;
+}
+.form-item-military {
+ display:none !important;
+}
+.form-item-address, .form-item-city, .form-item-state {
+ display:none !important;
+}
+.block-multiblock {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+.block-multiblock textarea.form-control {
+    height: 60px;
+}
+.rfi_button {
+ margin-left:0 !important;
+ margin-bottom:2px !important;
+ margin-top: 2px !important;
+}
+.form-item-country label, .form-item-start-date label {
+ font-weight:bold;
+ font-size:inherit;
+}
+.help-block {
+ font-size:.8em;
+}
+.form-item-first-name, .form-item-last-name, .form-item-email, .phone_field_rfi {
+    float:left;
+    width:49%;
+}
+.form-item-country {
+ clear:both;
+}
+.block-multiblock .content {
+ border: solid 1px #e0e0e0;
+ padding:7px;
+ border-radius:7px;
+ margin-bottom:30px;
+}
+.block-multiblock h2 {
+ margin-bottom:6px;
+ margin-top:30px;
+}
+.block-multiblock .form-item {
+    margin-top:.5em;
+}
+.form-item-birthdate {
+ margin-top:0 !important;
+}

@@ -82,7 +82,7 @@
 <?php // if ($node->type == 'clas_degree' && $view_mode == 'full'): ?>
 <?php if ($node->type == 'clas_degree'): ?>
 
-  <div class="container clas-degree-node-container">
+  <div class="container">
 
     <div class="row">
 
@@ -172,10 +172,10 @@
         </p>
         <?php } ?>
 
-        <?php if($node->field_cd_requirements) { ?>
-        <h5>Degree overview</h5>
-        <p><?php print $node->field_cd_requirements['und'][0]['value']; ?></p>
-        <?php } ?>
+        <?php // if($node->field_degree_overview) { ?>
+        <!-- <h5>Degree overview</h5> -->
+        <p><?php // print $node->field_degree_overview['und'][0]['value']; ?></p>
+        <?php // } ?>
 
         <?php if($node->field_cd_how_to_apply) { ?>
         <h5>How to apply</h5>
@@ -236,6 +236,42 @@
         <?php if($node->field_cd_courses_and_electives) { ?>
         <h5>Courses and electives</h5>
         <p><?php print $node->field_cd_courses_and_electives['und'][0]['value']; ?></p>
+        <?php } ?>
+
+        <?php if(field_get_items('node', $node, 'field_accordion_section')) { ?>
+        <!-- <h5>Accordion Section</h5> -->
+            <?php
+               $items = field_get_items('node', $node, 'field_accordion_section');
+               $i = 0;
+               foreach ($items as $item) {
+                 if ($i == 0) {
+                   print '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">';
+
+                     print '<div class="panel panel-default">';
+
+                       print '<div class="panel-heading" role="tab" id="heading'.$i.'"><h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'.$i.'" aria-expanded="true" aria-controls="collapse'.$i.'">'.$node->field_accordion_section['und'][$i]['summary'].'</a></h4></div>';
+
+                       print '<div id="collapse'.$i.'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'.$i.'"><div class="panel-body">'.$node->field_accordion_section['und'][$i]['safe_value'].'</div></div>';
+
+                     print '</div>';
+
+                   print '</div>';
+                 } else {
+                   print '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">';
+
+                     print '<div class="panel panel-default">';
+
+                       print '<div class="panel-heading" role="tab" id="heading'.$i.'"><h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'.$i.'" aria-expanded="true" aria-controls="collapse'.$i.'">'.$node->field_accordion_section['und'][$i]['summary'].'</a></h4></div>';
+
+                       print '<div id="collapse'.$i.'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'.$i.'"><div class="panel-body">'.$node->field_accordion_section['und'][$i]['safe_value'].'</div></div>';
+
+                     print '</div>';
+
+                   print '</div>';
+                 }
+                $i++;
+               }
+            ?>
         <?php } ?>
 
         <?php
@@ -332,6 +368,21 @@
         <!-- <h5>Optional text space</h5> -->
         <p><?php print $node->field_cd_additional_degree_infor['und'][0]['value']; ?></p>
         <?php } ?>
+
+        <?php if($node->field_concentrations) { ?>
+        <h5>Concentrations</h5>
+        <p><?php print $node->field_concentrations['und'][0]['value']; ?></p>
+        <?php } ?>
+
+        <?php // if($node->field_program_funding) { ?>
+        <!-- <h5>Program funding</h5> -->
+        <p><?php // print $node->field_program_funding['und'][0]['value']; ?></p>
+        <?php // } ?>
+
+        <?php // if($node->field_faculty) { ?>
+        <!-- <h5>Faculty</h5> -->
+        <p><?php // print $node->field_faculty['und'][0]['value']; ?></p>
+        <?php // } ?>
 
         <!-- RFI BLOCK and TABS BLOCK BELOW -->
         <?php
