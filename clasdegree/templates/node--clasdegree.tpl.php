@@ -107,11 +107,12 @@
 
       <div class="col-sm-8">
 
-        <?php if($node->field_cd_description) { ?>
-        <!-- <h5>Main description</h5> -->
-        <div class="clas-degree-main-description"><p><?php print $node->field_cd_description['und'][0]['value']; ?></p></div>
+        <?php if($node->field_cd_marketing_description) { ?>
+        <!-- <h5>Marketing description</h5> -->
+        <div class="clas-degree-main-description"><p><?php print $node->field_cd_marketing_description['und'][0]['value']; ?></p></div>
         <?php } ?>
 
+        <!-- <h5>Key stats</h5> -->
         <?php
 
           if (isset($node->field_cd_key_stats['und'][0]['value'])) {
@@ -141,7 +142,6 @@
           }
         ?>
         <?php if(isset($cd_icon_1)) { ?>
-        <!-- <h5>Key stats</h5> -->
         <p>
           <div class="row key-stats">
             <div class="col-md-4">
@@ -172,10 +172,15 @@
         </p>
         <?php } ?>
 
-        <?php // if($node->field_degree_overview) { ?>
-        <!-- <h5>Degree overview</h5> -->
-        <p><?php // print $node->field_degree_overview['und'][0]['value']; ?></p>
-        <?php // } ?>
+        <?php if($node->field_cd_description) { ?>
+        <!-- <h5>Degree description</h5> -->
+        <div class="clas-degree-main-description"><p><?php print $node->field_cd_description['und'][0]['value']; ?></p></div>
+        <?php } ?>
+
+        <?php if($node->field_concentrations) { ?>
+        <h5>Concentrations</h5>
+        <p><?php print $node->field_concentrations['und'][0]['value']; ?></p>
+        <?php } ?>        
 
         <?php if($node->field_cd_how_to_apply) { ?>
         <h5>How to apply</h5>
@@ -365,24 +370,9 @@
         <?php } ?>
 
         <?php if($node->field_cd_additional_degree_infor) { ?>
-        <!-- <h5>Optional text space</h5> -->
+        <!-- <h5>Additional degree information</h5> -->
         <p><?php print $node->field_cd_additional_degree_infor['und'][0]['value']; ?></p>
         <?php } ?>
-
-        <?php if($node->field_concentrations) { ?>
-        <h5>Concentrations</h5>
-        <p><?php print $node->field_concentrations['und'][0]['value']; ?></p>
-        <?php } ?>
-
-        <?php // if($node->field_program_funding) { ?>
-        <!-- <h5>Program funding</h5> -->
-        <p><?php // print $node->field_program_funding['und'][0]['value']; ?></p>
-        <?php // } ?>
-
-        <?php // if($node->field_faculty) { ?>
-        <!-- <h5>Faculty</h5> -->
-        <p><?php // print $node->field_faculty['und'][0]['value']; ?></p>
-        <?php // } ?>
 
         <!-- RFI BLOCK and TABS BLOCK BELOW -->
         <?php

@@ -661,7 +661,7 @@ function clasdegree_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 41,
+      'weight' => 18,
     ),
   );
 
@@ -794,7 +794,7 @@ function clasdegree_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 17,
+      'weight' => 20,
     ),
   );
 
@@ -857,7 +857,7 @@ function clasdegree_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 18,
+      'weight' => 21,
     ),
   );
 
@@ -865,7 +865,7 @@ function clasdegree_field_default_field_instances() {
   $field_instances['node-clas_degree-field_cd_banner_image'] = array(
     'bundle' => 'clas_degree',
     'deleted' => 0,
-    'description' => 'Class degree banner image.',
+    'description' => 'CLAS degree banner image.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1011,7 +1011,7 @@ function clasdegree_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 15,
+      'weight' => 17,
     ),
   );
 
@@ -1073,7 +1073,7 @@ function clasdegree_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 14,
+      'weight' => 16,
     ),
   );
 
@@ -1082,7 +1082,7 @@ function clasdegree_field_default_field_instances() {
     'bundle' => 'clas_degree',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This text appears at the very top of the page.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1135,7 +1135,7 @@ function clasdegree_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -1197,7 +1197,7 @@ function clasdegree_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 
@@ -1263,6 +1263,67 @@ function clasdegree_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-clas_degree-field_cd_marketing_description'.
+  $field_instances['node-clas_degree-field_cd_marketing_description'] = array(
+    'bundle' => 'clas_degree',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 23,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cd_marketing_description',
+    'label' => 'Marketing Description',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'node-clas_degree-field_cd_marketing_numbers'.
   $field_instances['node-clas_degree-field_cd_marketing_numbers'] = array(
     'bundle' => 'clas_degree',
@@ -1321,7 +1382,7 @@ function clasdegree_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 16,
+      'weight' => 19,
     ),
   );
 
@@ -1383,7 +1444,7 @@ function clasdegree_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 11,
+      'weight' => 13,
     ),
   );
 
@@ -1445,7 +1506,7 @@ function clasdegree_field_default_field_instances() {
         'rows' => 4,
       ),
       'type' => 'text_textarea',
-      'weight' => 12,
+      'weight' => 14,
     ),
   );
 
@@ -1507,7 +1568,7 @@ function clasdegree_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -1717,7 +1778,7 @@ function clasdegree_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 42,
+      'weight' => 10,
     ),
   );
 
@@ -1852,7 +1913,7 @@ function clasdegree_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 13,
+      'weight' => 15,
     ),
   );
 
@@ -1861,8 +1922,8 @@ function clasdegree_field_default_field_instances() {
   t('Accordion Section');
   t('Additional degree information');
   t('Apply Now Link');
+  t('CLAS degree banner image.');
   t('Carousel text');
-  t('Class degree banner image.');
   t('Concentrations');
   t('Courses and electives');
   t('Curriculum');
@@ -1880,6 +1941,7 @@ function clasdegree_field_default_field_instances() {
   t('Label 1');
   t('Label 2');
   t('Label 3');
+  t('Marketing Description');
   t('Marketing Numbers');
   t('Number');
   t('One Marketing Number');
@@ -1892,7 +1954,6 @@ function clasdegree_field_default_field_instances() {
   t('Student handbook pdf');
   t('Third Marketing Label');
   t('Third Marketing Number');
-  t('This text appears at the very top of the page.');
   t('Thumbnail');
   t('Use these three numbers with labels to showcase diversity, rankings and achievements. If First Marketing Number is left empty, this widget will not be shown.');
   t('Use this in place of three marketing numbers. Content could be quotes, testimonials, from alumni or faculty. If Carousel Text is left empty, this widget will not be shown.');

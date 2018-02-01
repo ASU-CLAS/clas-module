@@ -9,7 +9,7 @@ clas_module-7.x-1.10.2
 ## Version Updates
 
 #### 1.10.2
-	* Updated clas degree content type template, added accordion options, and concentrations fields.
+	* Updated CLAS Degree content type template, added marketing description, accordion options, and concentrations fields.
 	* Deprecated requirements field.
 	* Adjusted quotes carousel to allow html.
 
