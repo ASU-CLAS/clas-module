@@ -39,3 +39,10 @@ function clasdegree_node_info() {
   drupal_alter('node_info', $items);
   return $items;
 }
+
+/**
+ * Implements hook_views_api().
+ */
+function clasdegree_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
