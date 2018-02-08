@@ -404,6 +404,14 @@ div > blockquote > p {
 
 
 /* RFI form modifications */
+#RFI {
+  position: relative;
+  top: -80px;
+}
+.block-multiblock .form-wrapper, .block-multiblock .form-wrapper {
+    margin-top: 0;
+    border-bottom: none !important;
+}
 
 .fieldset-legend {
     display: none !important;

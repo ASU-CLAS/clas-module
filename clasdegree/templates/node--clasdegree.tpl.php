@@ -180,7 +180,7 @@
         <?php if($node->field_concentrations) { ?>
         <h5>Concentrations</h5>
         <p><?php print $node->field_concentrations['und'][0]['value']; ?></p>
-        <?php } ?>        
+        <?php } ?>
 
         <?php if($node->field_cd_how_to_apply) { ?>
         <h5>How to apply</h5>
@@ -375,6 +375,7 @@
         <?php } ?>
 
         <!-- RFI BLOCK and TABS BLOCK BELOW -->
+        <div id="RFI"></div>
         <?php
           $region = block_get_blocks_by_region('clas_degree_main_content');
           print render($region);
