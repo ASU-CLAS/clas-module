@@ -408,7 +408,7 @@ div > blockquote > p {
   position: relative;
   top: -80px;
 }
-.block-multiblock .form-wrapper, .block-multiblock .form-wrapper {
+.node-type-clas-degree .block-multiblock .form-wrapper, .node-type-clas-degree .block-multiblock .form-wrapper {
     margin-top: 0;
     border-bottom: none !important;
 }
