@@ -9,20 +9,22 @@ Drupal.behaviors.myBehavior = {
     $(window).load(function(){
     	console.log("Preselecting start date");
       var numOptions = 0;
-      $("#edit-start-date--2 option").each(function(index,val){
+      var selectionWasMade = false;
+      $(".node-type-clas-degree .form-item-start-date select option").each(function(index,val){
         if(index == 0 ) {
           $(this).removeAttr('selected');
           console.log("Removed default selection");
         }
         if(index == 1) {
           $(this).attr("selected",true);
+          selectionWasMade = true;
           console.log("Selected first option");
         }
         numOptions += 1;
       });
-      if(numOptions < 3) {
+      if(numOptions < 3 && selectionWasMade == true) {
         console.log("Hiding start date because there is only 1 valid option");
-        $(".form-item-start-date").css("display","none");
+        $(".node-type-clas-degree .form-item-start-date").css("display","none");
       }
 
     });
