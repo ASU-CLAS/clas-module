@@ -173,12 +173,16 @@
         <?php } ?>
 
         <?php if($node->field_cd_description) { ?>
-        <!-- <h5>Degree description</h5> -->
+        <h5>Degree Overview</h5>
         <div class="clas-degree-main-description"><p><?php print $node->field_cd_description['und'][0]['value']; ?></p></div>
         <?php } ?>
 
+        <?php if($node->field_dstitle) { ?>
+        <h5><?php print $node->field_dstitle['und'][0]['value']; ?></h5>
+        <?php } ?>
+
         <?php if($node->field_concentrations) { ?>
-        <h5>Concentrations</h5>
+        <!-- <h5>Concentrations</h5> -->
         <p><?php print $node->field_concentrations['und'][0]['value']; ?></p>
         <?php } ?>
 

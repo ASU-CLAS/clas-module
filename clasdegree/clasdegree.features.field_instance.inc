@@ -1721,12 +1721,61 @@ function clasdegree_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-clas_degree-field_dstitle'.
+  $field_instances['node-clas_degree-field_dstitle'] = array(
+    'bundle' => 'clas_degree',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 24,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_dstitle',
+    'label' => 'Degree Specializations Title',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'node-clas_degree-field_concentrations'.
   $field_instances['node-clas_degree-field_concentrations'] = array(
     'bundle' => 'clas_degree',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If you list concentrations/areas of interest/ etc., you must select a Degree Specializations Title.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1928,6 +1977,7 @@ function clasdegree_field_default_field_instances() {
   t('Courses and electives');
   t('Curriculum');
   t('Degree Description');
+  t('Degree Specializations Title');
   t('Description');
   t('First Marketing Label');
   t('First Marketing Number');

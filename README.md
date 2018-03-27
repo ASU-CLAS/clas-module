@@ -4,9 +4,13 @@ The CLAS Module extends [Webspark](https://drupal.asu.edu/) with features for [C
 
 ## Current Version
 
-clas_module-7.x-1.10.2
+clas_module-7.x-1.10.3
 
 ## Version Updates
+
+#### 1.10.3
+	* Added Degree Specializations title selection dropdown for CLAS Degree content type.
+	* Degree Overview title now shown on CLAS Degree content type template.
 
 #### 1.10.2
 	* Updated CLAS Degree content type template, added marketing description, accordion options, and concentrations fields.

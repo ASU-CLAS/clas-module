@@ -656,6 +656,34 @@ function clasdegree_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_dstitle'.
+  $field_bases['field_dstitle'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_dstitle',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Concentrations' => 'Concentrations',
+        'Tracks' => 'Tracks',
+        'Areas of Interest' => 'Areas of Interest',
+        'Fields of Study' => 'Fields of Study',
+        'Focus Areas' => 'Focus Areas',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_concentrations'.
   $field_bases['field_concentrations'] = array(
     'active' => 1,
