@@ -86,8 +86,7 @@
   			<div class="column col-md-12">
 					<?php print render($page['header']); ?>
 					<?php if ($site_name): ?>
-                      <div class="header__sitename"><span><?php print $site_name; ?></span>
-                      </div>
+                      
 					<?php endif; ?>
 				</div>
 			</div>
