@@ -88,7 +88,7 @@ h5 {
 /*Three Marketing Numbers*/
 .marketing-numbers {
   background-color: #353535;
-  height: 100px;
+  /* height: 100px; */
 }
 
 .marketing-numbers-container {
@@ -221,12 +221,13 @@ div > blockquote > p {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .key-stats-icon {
-    width: 10%;
+    width: 20%;
+    text-align: center;
   }
 
   .key-stats-label {
-    font-size: 10px;
-    width: 23%;
+    font-size: 14px;
+    width: 80%;
   }
 
   .one-marketing-number-number {
@@ -275,12 +276,13 @@ div > blockquote > p {
 }
 @media (max-width: 575px) {
   .key-stats-icon {
-    width: 10%;
+    width: 25%;
+    text-align: center;
   }
 
   .key-stats-label {
-    font-size: 8px;
-    width: 23%;
+    font-size: 14px;
+    width: 75%;
   }
 
   .marketing-numbers {

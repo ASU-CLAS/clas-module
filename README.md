@@ -11,6 +11,7 @@ clas_module-7.x-1.10.3
 #### 1.10.3
 	* Added Degree Specializations title selection dropdown for CLAS Degree content type.
 	* Degree Overview title now shown on CLAS Degree content type template.
+	* Style adjustments for CLAS Degree widgets to stack better.
 
 #### 1.10.2
 	* Updated CLAS Degree content type template, added marketing description, accordion options, and concentrations fields.

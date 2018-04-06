@@ -144,7 +144,7 @@
         <?php if(isset($cd_icon_1)) { ?>
         <p>
           <div class="row key-stats">
-            <div class="col-md-4">
+            <div class="col-md-4 col-xs-12">
               <div class="key-stats-icon">
                 <i class="fa <?php print $cd_icon_1; ?> fa-2x" aria-hidden="true"></i>
               </div>
@@ -152,7 +152,7 @@
                 <?php print $cd_label_1; ?>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-xs-12">
               <div class="key-stats-icon">
                 <i class="fa <?php print $cd_icon_2; ?> fa-2x" aria-hidden="true"></i>
               </div>
@@ -160,7 +160,7 @@
                 <?php print $cd_label_2; ?>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-xs-12">
               <div class="key-stats-icon">
                 <i class="fa <?php print $cd_icon_3; ?> fa-2x" aria-hidden="true"></i>
               </div>
