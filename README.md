@@ -4,9 +4,12 @@ The CLAS Module extends [Webspark](https://drupal.asu.edu/) with features for [C
 
 ## Current Version
 
-clas_module-7.x-1.10.3
+clas_module-7.x-1.10.4
 
 ## Version Updates
+
+#### 1.10.4
+	* Added caret fix for mega menu and Oregon Webspark version to asu-clas.css in clas_css folder.
 
 #### 1.10.3
 	* Added Degree Specializations title selection dropdown for CLAS Degree content type.

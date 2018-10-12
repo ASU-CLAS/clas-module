@@ -217,3 +217,22 @@ mark,
 .ui-tabs .ui-tabs-nav li.ui-state-focus a{
   border: none !important;
 }
+
+/* =TEMPORARY MEGAMENU Caret FIX (OREGON)
+-------------------------------------------------------------- */
+.tb-megamenu .nav .caret {
+  display: inline-block;
+  border-top-color: #ffffff;
+}
+
+.tb-megamenu-column-inner.mega-inner.clearfix .caret {
+  display: none;
+}
+
+.tb-megamenu-column-inner.mega-inner.clearfix .mega-group a {
+  color: #ffb130;
+}
+
+.tb-megamenu-column-inner.mega-inner.clearfix .mega-dropdown-inner a {
+  color: #ffffff;
+}
