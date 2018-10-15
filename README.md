@@ -10,6 +10,7 @@ clas_module-7.x-1.10.4
 
 #### 1.10.4
 	* Added caret fix for mega menu and Oregon Webspark version to asu-clas.css in clas_css folder.
+	* Second title removed from clas degree template header.
 
 #### 1.10.3
 	* Added Degree Specializations title selection dropdown for CLAS Degree content type.
