@@ -163,10 +163,12 @@ function asu_clas_paragraphs_theme() {
  */
 function asu_clas_paragraphs_format_with_pipes($items) {
   $items_formatted = '';
-  foreach($items as $item) {
-    $items_formatted .= l($item['title'], $item['url'], array('html' => TRUE, 'attributes' => array('class' => array('pipe-link')))).' | ';
+  if (!empty($items)) {
+    foreach($items as $item) {
+      $items_formatted .= l($item['title'], $item['url'], array('html' => TRUE, 'attributes' => array('class' => array('pipe-link')))).' | ';
+    }
+    $items_formatted = rtrim($items_formatted, '| ');
   }
-  $items_formatted = rtrim($items_formatted, '| ');
   return $items_formatted;
 }
 
